@@ -1,6 +1,7 @@
 # carla-ped-bench — đo độ lệch CARLA so với mô hình động học lý tưởng (ca người đi bộ)
 
-**Trạng thái:** thiết kế, chờ duyệt — chưa có code. **Ngày:** 14/11/2026.
+**Trạng thái:** đã có code (repo phutro); thử trên CARLA 0.9.16 máy người làm ngày 14/11/2026 (13 run: G1 20–30 km/h, 1 ca mỗi nhóm G2–G4),
+chờ chạy đủ 56 run trên máy chạy CARLA. **Ngày:** 14/11/2026.
 **Nguồn ca:** [kế hoạch đo độ lệch người đi bộ](https://github.com/Menakanchi/SEP490-FA26-G15/blob/main/docs/exec-plans/active/2026-11-13-do-do-lech-carla-dong-hoc.md) (commit `a139b20`),
 chuyển sang dạng **không có AEB (open-loop)**.
 
@@ -14,7 +15,7 @@ vào, rồi xuất một file Excel kết quả.
 
 - **Không có AEB.** Thời điểm và profile phanh cố định trước cho mỗi ca, nên kết quả không lẫn quyết định của AEB.
 - **Code độc lập hoàn toàn với VehicSim:** không gọi Java, không dùng ScenarioRunner, không đọc / ghi DB, không import gì từ repo này. Công
-  cụ chỉ cần một server CARLA 0.9.16 đang chạy. Thứ duy nhất nó ghi vào repo VehicSim là kết quả, qua `--publish` (mục 9).
+  cụ chỉ cần một server CARLA 0.9.16 đang chạy. Kết quả về repo VehicSim qua `pack` (máy chạy CARLA) → `import` (máy người nhận) (mục 9).
 - **Ngoài phạm vi:** đánh giá AEB, so với code bộ động học của project, ca xe phía trước (CCR).
 
 ## 2. Mô hình tham chiếu (tính trong công cụ)
@@ -138,7 +139,7 @@ Mỗi run ghi thêm: physics đọc lại (khối lượng, mô-men phanh từng
 
 | Chỉ số | Cách tính | Nhóm |
 |---|---|---|
-| $a_{dải}$ | Hồi quy $v(t)$ từ 0,95·$v_0$ xuống 6 m/s sau lệnh phanh | G1, G3, G5 |
+| $a_{dải}$ | Hồi quy $v(t)$ (đã làm mượt 0,1 s) trong pha phanh đều: sau $t_d + a_e/J$ kể từ lệnh, từ ≤ 0,95·$v_0$ xuống 6 m/s. Ở 20–30 km/h dải này quá ngắn nên không đo được — dùng Δ quãng dừng và giảm tốc vùng thấp | G1, G3, G5 |
 | η | $a_{dải}$ / $a_e$ | G1, G5 |
 | Trễ đạt lực | Thời điểm giảm tốc đạt 90 % $a_e$ (CARLA) − (mô hình) | G1 |
 | Giảm tốc vùng thấp | Giảm tốc trung bình dưới 6 m/s (vùng "dừng tức thì") | G1 |
@@ -170,7 +171,9 @@ Loại run (ghi lý do vào sheet Bị loại) khi: physics đọc lại sai (kh
 
 Kèm mỗi run một thư mục `runs/<ngày-giờ>/<id>/` (`frames.csv`, `run.json`) để xuất lại Excel không cần chạy lại CARLA.
 
-**Dữ liệu đưa về repo VehicSim:** `--publish` chép `ket-qua.xlsx`, `run.json` và `frames.csv` của mỗi run vào
+**Dữ liệu đưa về repo VehicSim:** máy chạy CARLA đóng gói bằng `bench.py pack` (zip cả thư mục run); người nhận chạy
+`bench.py import <zip> --to <repo VehicSim>/docs/vehicsim/carla-ped-bench/ket-qua`, lệnh này chép `ket-qua.xlsx`, `meta.json`,
+`run.json` và `frames.csv` của mỗi run vào
 `docs/vehicsim/carla-ped-bench/ket-qua/<ngày-giờ>/` kèm `README.md` ghi phiên bản công cụ (commit repo code), máy, server CARLA. Ước lượng
 vài MB một lần chạy; vượt 10 MB thì chỉ đưa Excel + `run.json`, `frames.csv` để ở repo code / ổ riêng và ghi đường dẫn. Đây là bộ dữ liệu
 bằng chứng có chọn lọc, khác thư mục `data/` (artifact chạy web, không commit).
@@ -184,6 +187,7 @@ carla-ped-bench/
 ├─ bench.py             lệnh chính
 ├─ cases.yaml           danh sách ca (mục 4), sửa tay được
 ├─ config.yaml          host / port, đường dẫn CarlaUE4.exe, xe, t_d, J, a_100, hành lang
+├─ config.local.yaml   (tùy chọn, không commit) bản riêng của máy — ưu tiên hơn config.yaml
 ├─ bench/
 │  ├─ model.py          mô hình tham chiếu (mục 2)
 │  ├─ scene.py          dựng cảnh, profile bàn đạp, điều khiển người, ghi tick
@@ -197,12 +201,14 @@ carla-ped-bench/
 
 ```powershell
 py -3.12 -m venv .venv; .venv\Scripts\pip install -r requirements.txt
-.venv\Scripts\python bench.py                       # chạy mọi ca, xuất runs\<ngày-giờ>\ket-qua.xlsx
-.venv\Scripts\python bench.py --only G1,G3          # chỉ một số nhóm
-.venv\Scripts\python bench.py --resume runs\<thư mục>   # chạy tiếp, bỏ run đã hợp lệ
-.venv\Scripts\python bench.py --excel-only runs\<thư mục>
-.venv\Scripts\python bench.py --dry-run             # chỉ tính mô hình tham chiếu, không cần CARLA
-.venv\Scripts\python bench.py --excel-only runs\<thư mục> --publish <repo VehicSim>\docs\vehicsim\carla-ped-bench\ket-qua
+.venv\Scripts\python bench.py check                          # kiểm máy + server trước khi chạy
+.venv\Scripts\python bench.py dry-run                        # số tham chiếu, không cần CARLA
+.venv\Scripts\python bench.py run                            # chạy mọi ca, xuất runs\<ngày-giờ>\ket-qua.xlsx
+.venv\Scripts\python bench.py run --only G1,G3               # chỉ một số nhóm / ca
+.venv\Scripts\python bench.py run --resume runs\<thư mục>    # chạy tiếp, bỏ run đã xong
+.venv\Scripts\python bench.py excel runs\<thư mục>           # xuất lại Excel
+.venv\Scripts\python bench.py pack runs\<thư mục>            # máy chạy CARLA: đóng gói zip để gửi
+.venv\Scripts\python bench.py import <zip> --to <repo VehicSim>\docs\vehicsim\carla-ped-bench\ket-qua   # máy người nhận
 ```
 
 ## 10. An toàn khi chạy CARLA
@@ -229,4 +235,4 @@ py -3.12 -m venv .venv; .venv\Scripts\pip install -r requirements.txt
 | 2 | `scene.py` + `guard.py`: chạy 1 ca G1 và 1 ca G2 trên CARLA thật | Physics đọc lại đúng; frames.csv hợp lý |
 | 3 | `metrics.py` + `excel.py` | Mở file Excel, kiểm từng sheet với 2 run ở bước 2 |
 | 4 | Chạy cả 56 run | Số run hợp lệ, sheet Bị loại |
-| 5 | Đọc kết quả, viết nhận xét ngắn ở sheet Tổng quan; `--publish` về repo VehicSim, commit kèm nhận xét | — |
+| 5 | Máy chạy CARLA `pack` gửi zip; người nhận `import` vào repo VehicSim, điền nhận xét trong `README.md` của lần chạy, commit | — |

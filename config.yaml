@@ -1,0 +1,47 @@
+# Cấu hình máy chạy. Sửa phần "may" cho đúng máy của bạn; phần còn lại giữ nguyên để kết quả so được giữa các máy.
+
+may:
+  host: 127.0.0.1
+  port: 2000
+  timeout_s: 60
+  # Thư mục chứa CarlaUE4.exe. Điền thì công cụ tự bật lại server khi CARLA chết; để trống thì công cụ dừng và báo bật tay.
+  carla_root: ""
+  # Tham số khi tự bật CarlaUE4.exe
+  carla_args: ["/Game/Carla/Maps/Town04", "-windowed", "-ResX=800", "-ResY=600", "-quality-level=Low"]
+
+# --- Không sửa phần dưới (thiết kế mục 2–3) ---------------------------------------------------------------------------
+canh:
+  map: Town04
+  road_id: 40
+  lane_id: -4
+  road_length_m: 228.0
+  start_s: 10.0               # vị trí xuất phát của xe trên road 40
+  step_s: 0.01                # fixed_delta_seconds, chế độ đồng bộ
+  settle_s: 1.5               # chạy đều trước điểm phanh / kích hoạt
+  lane_half_width_m: 1.75     # mép làn so với tâm làn (người dừng ở lề tại đây)
+
+xe:
+  blueprint: vehicle.audi.etron
+  mass_kg: 2100.0
+  max_brake_torque_nm: 1800.0
+  width_m: 1.93
+  full_brake_decel_mps2: 9.13 # phanh 100% đã đo (ADR-051 của VehicSim) — đổi mức đích ra bàn đạp
+
+phanh:
+  delay_s: 0.15               # t_d
+  jerk_mps3: 20.0             # J
+  margin_m: 2.0               # G3: điểm phanh = quãng dừng tham chiếu + margin trước vạch băng qua
+
+nguoi_di_bo:
+  blueprint: walker.pedestrian.0001
+  start_lat_m: -3.6           # trên vỉa hè, cách mép làn 1,85 m
+  corridor_margin_m: 0.3      # hành lang = nửa bề ngang xe + lề
+
+thoi_tiet:                    # preset CARLA và ma sát dùng cho mô hình tham chiếu
+  CLEAR: {preset: ClearNoon, mu: 1.0}
+  RAIN: {preset: WetNoon, mu: 0.65}
+  HEAVY_RAIN: {preset: HardRainNoon, mu: 0.55}
+
+gioi_han:
+  run_timeout_s: 25.0         # thời gian mô phỏng tối đa một run
+  retries: 2                  # số lần chạy lại một run khi server mất kết nối

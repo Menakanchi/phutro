@@ -1,0 +1,73 @@
+# Danh sách ca (thiết kế mục 4). Mỗi mục là một ca hoặc một lưới (grid) sinh nhiều ca.
+# kind: brake (xe phanh, không người) | walker (người, không xe) | combined (xe + người)
+# Trường không ghi lấy theo "defaults". "a" = mức phanh đích m/s², hoặc "max" = bàn đạp 1,0.
+# "repeat": số lần chạy (mặc định 1).
+
+defaults:
+  ego_kmh: 40
+  a: 8.0
+  ped_mps: 1.5
+  trigger_m: 25
+  stop_at_curb: false
+  weather: CLEAR
+  tire_friction_scale: 1.0
+
+cases:
+  # G1 — Phanh, không người đi bộ: 6 tốc độ × 5 mức đích
+  - id: "G1-{ego_kmh}-{a}"
+    group: G1
+    kind: brake
+    grid: {ego_kmh: [20, 30, 40, 50, 60, 70], a: [4.0, 5.6, 6.8, 8.0, max]}
+
+  # G2 — Người đi bộ, không xe
+  - id: "G2-{ped_mps}"
+    group: G2
+    kind: walker
+    grid: {ped_mps: [1.0, 1.5, 2.2, 3.0, 5.0]}
+
+  # G3 — Xe 40 km/h + người 1,5 m/s, theo khoảng kích hoạt; phanh 8 m/s² tại điểm cố định
+  - id: "G3-{trigger_m}"
+    group: G3
+    kind: combined
+    grid: {trigger_m: [15, 20, 25, 30, 40, 60]}
+
+  # G4 — Người dừng ở lề, không xe
+  - id: "G4-{ped_mps}"
+    group: G4
+    kind: walker
+    stop_at_curb: true
+    grid: {ped_mps: [1.0, 1.5, 2.2, 3.0]}
+
+  # G5 — Đường ướt, phanh 8 m/s²
+  - id: "G5-{ego_kmh}-RAIN"
+    group: G5
+    kind: brake
+    weather: RAIN
+    grid: {ego_kmh: [40, 60]}
+  - id: "G5-40-HEAVY"
+    group: G5
+    kind: brake
+    weather: HEAVY_RAIN
+  - id: "G5-{ego_kmh}-TF"
+    group: G5
+    kind: brake
+    tire_friction_scale: 0.65
+    grid: {ego_kmh: [40, 60]}
+
+  # G6 — Độ lặp lại: thêm 2 lần cho mỗi ca gốc (G1-50-8.0, G2-1.5, G3-25) → mỗi ca 3 mẫu. "same_as" chỉ ca gốc.
+  - id: "G6-a"
+    group: G6
+    kind: brake
+    ego_kmh: 50
+    same_as: G1-50-8.0
+    repeat: 2
+  - id: "G6-b"
+    group: G6
+    kind: walker
+    same_as: G2-1.5
+    repeat: 2
+  - id: "G6-c"
+    group: G6
+    kind: combined
+    same_as: G3-25
+    repeat: 2
