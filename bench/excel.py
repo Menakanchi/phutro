@@ -122,8 +122,8 @@ def export(run_dir: Path) -> Path:
     _table(ws, rows, CASE_COLS + [("valid", "Hợp lệ"), ("end_reason", "Kết thúc")])
 
     brake_rows = [r for r in valid if r["kind"] == "brake"]
-    ws = wb.create_sheet("Phanh")
-    _table(ws, brake_rows, BRAKE_COLS)
+    ws = wb.create_sheet("Phanh")  # G1, G5 và cả G3 (xe + người cũng phanh theo profile cố định)
+    _table(ws, [r for r in valid if r["kind"] in ("brake", "combined")], BRAKE_COLS)
 
     ws = wb.create_sheet("Theo tốc độ")
     g1 = [r for r in brake_rows if r["group"] == "G1"]
