@@ -1,0 +1,61 @@
+{
+ "case": {
+  "run_id": "G1-30-5.6",
+  "case_id": "G1-30-5.6",
+  "group": "G1",
+  "kind": "brake",
+  "ego_kmh": 30.0,
+  "a": 5.6,
+  "ped_mps": 1.5,
+  "trigger_m": 25.0,
+  "stop_at_curb": false,
+  "weather": "CLEAR",
+  "tire_friction_scale": 1.0,
+  "same_as": null,
+  "repeat_index": 1
+ },
+ "reference": {
+  "a_e": 5.6,
+  "pedal_target": 0.613,
+  "stop_dist_m": 8.599,
+  "stop_time_s": 1.778
+ },
+ "carla": {
+  "events": {
+   "brake_cmd": 1.50999996624887,
+   "stopped": 2.349999947473407
+  },
+  "s_cross": 60.0,
+  "front_offset_m": 2.424255058867857,
+  "d_brake_m": 10.598770158730161,
+  "a_e": 5.6,
+  "corridor_half_m": 1.265,
+  "physics": {
+   "mass": 2100.0,
+   "wheels": [
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    }
+   ]
+  },
+  "v_at_cmd": 8.154801063754839,
+  "s_front_at_cmd": 25.00401587269596,
+  "end_reason": "STOPPED",
+  "collisions": [],
+  "sim_duration_s": 2.86,
+  "wall_s": 1.1
+ }
+}
