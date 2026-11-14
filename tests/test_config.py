@@ -47,10 +47,6 @@ def test_invalid_case_is_rejected():
 
 def test_bad_indentation_gives_line_number(tmp_path):
     bad = tmp_path / "config.local.yaml"
-    bad.write_text("may:
-  host: 127.0.0.1
-  port: 2000
-    carla_root: \"D:/CARLA\"
-", encoding="utf-8")
+    bad.write_text('may:\n  host: 127.0.0.1\n  port: 2000\n    carla_root: "D:/CARLA"\n', encoding="utf-8")
     with pytest.raises(config.ConfigError, match="dòng 4"):
         config.load_config(bad)
