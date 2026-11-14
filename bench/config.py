@@ -39,8 +39,16 @@ class ConfigError(ValueError):
 
 
 def load_yaml(path: str | Path) -> dict:
-    with open(path, encoding="utf-8") as f:
-        data = yaml.safe_load(f)
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+    except yaml.YAMLError as e:
+        mark = getattr(e, "problem_mark", None)
+        where = f" dòng {mark.line + 1}, cột {mark.column + 1}" if mark else ""
+        raise ConfigError(f"{path}{where}: sai cú pháp YAML ({getattr(e, 'problem', e)}). "
+                          "Thường do thụt lề: dòng con phải bắt đầu bằng đúng 2 dấu cách như các dòng cùng nhóm, không dùng Tab.") from None
+    except OSError as e:
+        raise ConfigError(f"không đọc được {path}: {e}") from None
     if not isinstance(data, dict):
         raise ConfigError(f"{path}: không phải một bảng YAML")
     return data

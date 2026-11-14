@@ -43,3 +43,14 @@ def test_invalid_case_is_rejected():
            "cases": [{"id": "X", "kind": "brake", "weather": "SNOW"}]}
     with pytest.raises(config.ConfigError, match="SNOW"):
         config.expand_cases(doc, cfg)
+
+
+def test_bad_indentation_gives_line_number(tmp_path):
+    bad = tmp_path / "config.local.yaml"
+    bad.write_text("may:
+  host: 127.0.0.1
+  port: 2000
+    carla_root: \"D:/CARLA\"
+", encoding="utf-8")
+    with pytest.raises(config.ConfigError, match="dòng 4"):
+        config.load_config(bad)
