@@ -1,0 +1,229 @@
+{
+ "done": {
+  "G1-20-4.0": {
+   "end": "STOPPED",
+   "wall_s": 1.1
+  },
+  "G1-20-5.6": {
+   "end": "STOPPED",
+   "wall_s": 1.0
+  },
+  "G1-20-6.8": {
+   "end": "STOPPED",
+   "wall_s": 1.0
+  },
+  "G1-20-8.0": {
+   "end": "STOPPED",
+   "wall_s": 1.0
+  },
+  "G1-20-max": {
+   "end": "STOPPED",
+   "wall_s": 1.0
+  },
+  "G1-30-4.0": {
+   "end": "STOPPED",
+   "wall_s": 2.4
+  },
+  "G1-30-5.6": {
+   "end": "STOPPED",
+   "wall_s": 1.1
+  },
+  "G1-30-6.8": {
+   "end": "STOPPED",
+   "wall_s": 1.1
+  },
+  "G1-30-8.0": {
+   "end": "STOPPED",
+   "wall_s": 1.1
+  },
+  "G1-30-max": {
+   "end": "STOPPED",
+   "wall_s": 5.1
+  },
+  "G1-40-4.0": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "G1-40-5.6": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "G1-40-6.8": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "G1-40-8.0": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "G1-40-max": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "G1-50-4.0": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "G1-50-5.6": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "G1-50-6.8": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "G1-50-8.0": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "G1-50-max": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "G1-60-4.0": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "G1-60-5.6": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "G1-60-6.8": {
+   "end": "STOPPED",
+   "wall_s": 2.2
+  },
+  "G1-60-8.0": {
+   "end": "STOPPED",
+   "wall_s": 3.3
+  },
+  "G1-60-max": {
+   "end": "STOPPED",
+   "wall_s": 2.0
+  },
+  "G1-70-4.0": {
+   "end": "STOPPED",
+   "wall_s": 3.2
+  },
+  "G1-70-5.6": {
+   "end": "STOPPED",
+   "wall_s": 3.1
+  },
+  "G1-70-6.8": {
+   "end": "STOPPED",
+   "wall_s": 3.1
+  },
+  "G1-70-8.0": {
+   "end": "STOPPED",
+   "wall_s": 2.6
+  },
+  "G1-70-max": {
+   "end": "STOPPED",
+   "wall_s": 2.3
+  },
+  "G2-1.0": {
+   "end": "CROSSED",
+   "wall_s": 7.2
+  },
+  "G2-1.5": {
+   "end": "CROSSED",
+   "wall_s": 4.8
+  },
+  "G2-2.2": {
+   "end": "CROSSED",
+   "wall_s": 3.5
+  },
+  "G2-3.0": {
+   "end": "CROSSED",
+   "wall_s": 3.1
+  },
+  "G2-5.0": {
+   "end": "CROSSED",
+   "wall_s": 2.0
+  },
+  "G3-15": {
+   "end": "STOPPED",
+   "wall_s": 3.9
+  },
+  "G3-20": {
+   "end": "STOPPED",
+   "wall_s": 5.2
+  },
+  "G3-25": {
+   "end": "STOPPED",
+   "wall_s": 1.0
+  },
+  "G3-30": {
+   "end": "STOPPED",
+   "wall_s": 1.0
+  },
+  "G3-40": {
+   "end": "STOPPED",
+   "wall_s": 1.1
+  },
+  "G3-60": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "G4-1.0": {
+   "end": "STOPPED_AT_CURB",
+   "wall_s": 0.8
+  },
+  "G4-1.5": {
+   "end": "STOPPED_AT_CURB",
+   "wall_s": 0.7
+  },
+  "G4-2.2": {
+   "end": "STOPPED_AT_CURB",
+   "wall_s": 0.7
+  },
+  "G4-3.0": {
+   "end": "STOPPED_AT_CURB",
+   "wall_s": 0.7
+  },
+  "G5-40-RAIN": {
+   "end": "STOPPED",
+   "wall_s": 0.5
+  },
+  "G5-60-RAIN": {
+   "end": "STOPPED",
+   "wall_s": 0.6
+  },
+  "G5-40-HEAVY": {
+   "end": "STOPPED",
+   "wall_s": 0.5
+  },
+  "G5-40-TF": {
+   "end": "STOPPED",
+   "wall_s": 0.6
+  },
+  "G5-60-TF": {
+   "end": "STOPPED",
+   "wall_s": 0.7
+  },
+  "G6-a-r1": {
+   "end": "STOPPED",
+   "wall_s": 2.0
+  },
+  "G6-a-r2": {
+   "end": "STOPPED",
+   "wall_s": 0.8
+  },
+  "G6-b-r1": {
+   "end": "CROSSED",
+   "wall_s": 1.3
+  },
+  "G6-b-r2": {
+   "end": "CROSSED",
+   "wall_s": 2.4
+  },
+  "G6-c-r1": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "G6-c-r2": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  }
+ },
+ "failed": {}
+}

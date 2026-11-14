@@ -1,0 +1,67 @@
+{
+ "case": {
+  "run_id": "G3-40",
+  "case_id": "G3-40",
+  "group": "G3",
+  "kind": "combined",
+  "ego_kmh": 40.0,
+  "a": 8.0,
+  "ped_mps": 1.5,
+  "trigger_m": 40.0,
+  "stop_at_curb": false,
+  "weather": "CLEAR",
+  "tire_friction_scale": 1.0,
+  "same_as": null,
+  "repeat_index": 1
+ },
+ "reference": {
+  "a_e": 8.0,
+  "pedal_target": 0.876,
+  "stop_dist_m": 11.552,
+  "stop_time_s": 1.739,
+  "walker_enter_s": 1.557,
+  "d_brake_m": 13.552,
+  "ref_collision": false,
+  "ref_min_gap_m": 5.09
+ },
+ "carla": {
+  "events": {
+   "walker_start": 2.849999936297536,
+   "brake_cmd": 5.22999988310039,
+   "stopped": 6.369999857619405
+  },
+  "s_cross": 84.09092172553451,
+  "front_offset_m": 2.424255058867857,
+  "d_brake_m": 13.551604938271606,
+  "a_e": 8.0,
+  "corridor_half_m": 1.265,
+  "physics": {
+   "mass": 2100.0,
+   "wheels": [
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    }
+   ]
+  },
+  "walker_start_lat": -3.59998331166555,
+  "v_at_cmd": 11.008400418630831,
+  "s_front_at_cmd": 70.54818882374627,
+  "end_reason": "STOPPED",
+  "collisions": [],
+  "sim_duration_s": 6.88,
+  "wall_s": 1.1
+ }
+}

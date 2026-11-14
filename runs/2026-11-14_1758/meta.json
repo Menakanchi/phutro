@@ -1,0 +1,73 @@
+{
+ "started": "2026-11-14T17:58:02",
+ "tool_commit": "07d717c",
+ "machine": {
+  "os": "Windows-10-10.0.19045-SP0",
+  "python": "3.12.10",
+  "machine": "DESKTOP-LULG63N",
+  "tool_version": "0.1.0",
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "carla_server": "0.9.16",
+  "carla_client": "0.9.16"
+ },
+ "config": {
+  "may": {
+   "host": "192.168.119.109",
+   "port": 2000,
+   "timeout_s": 60,
+   "carla_root": "",
+   "carla_args": [
+    "/Game/Carla/Maps/Town04",
+    "-windowed",
+    "-ResX=800",
+    "-ResY=600",
+    "-quality-level=Low"
+   ]
+  },
+  "canh": {
+   "map": "Town04",
+   "road_id": 40,
+   "lane_id": -4,
+   "road_length_m": 228.0,
+   "start_s": 10.0,
+   "step_s": 0.01,
+   "settle_s": 1.5,
+   "lane_half_width_m": 1.75
+  },
+  "xe": {
+   "blueprint": "vehicle.audi.etron",
+   "mass_kg": 2100.0,
+   "max_brake_torque_nm": 1800.0,
+   "width_m": 1.93,
+   "full_brake_decel_mps2": 9.13
+  },
+  "phanh": {
+   "delay_s": 0.15,
+   "jerk_mps3": 20.0,
+   "margin_m": 2.0
+  },
+  "nguoi_di_bo": {
+   "blueprint": "walker.pedestrian.0001",
+   "start_lat_m": -3.6,
+   "corridor_margin_m": 0.3
+  },
+  "thoi_tiet": {
+   "CLEAR": {
+    "preset": "ClearNoon",
+    "mu": 1.0
+   },
+   "RAIN": {
+    "preset": "WetNoon",
+    "mu": 0.65
+   },
+   "HEAVY_RAIN": {
+    "preset": "HardRainNoon",
+    "mu": 0.55
+   }
+  },
+  "gioi_han": {
+   "run_timeout_s": 25.0,
+   "retries": 2
+  }
+ }
+}

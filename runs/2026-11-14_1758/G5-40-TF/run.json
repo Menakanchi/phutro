@@ -1,0 +1,61 @@
+{
+ "case": {
+  "run_id": "G5-40-TF",
+  "case_id": "G5-40-TF",
+  "group": "G5",
+  "kind": "brake",
+  "ego_kmh": 40.0,
+  "a": 8.0,
+  "ped_mps": 1.5,
+  "trigger_m": 25.0,
+  "stop_at_curb": false,
+  "weather": "CLEAR",
+  "tire_friction_scale": 0.65,
+  "same_as": null,
+  "repeat_index": 1
+ },
+ "reference": {
+  "a_e": 8.0,
+  "pedal_target": 0.876,
+  "stop_dist_m": 11.552,
+  "stop_time_s": 1.739
+ },
+ "carla": {
+  "events": {
+   "brake_cmd": 1.50999996624887,
+   "stopped": 2.9299999345093966
+  },
+  "s_cross": 60.0,
+  "front_offset_m": 2.424255058867857,
+  "d_brake_m": 13.551604938271606,
+  "a_e": 8.0,
+  "corridor_half_m": 1.265,
+  "physics": {
+   "mass": 2100.0,
+   "wheels": [
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 2.2750000953674316
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 2.2750000953674316
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 2.2750000953674316
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 2.2750000953674316
+    }
+   ]
+  },
+  "v_at_cmd": 11.02722237919924,
+  "s_front_at_cmd": 29.19839984589381,
+  "end_reason": "STOPPED",
+  "collisions": [],
+  "sim_duration_s": 3.44,
+  "wall_s": 0.6
+ }
+}
