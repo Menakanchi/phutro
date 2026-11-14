@@ -70,6 +70,8 @@ Nếu bị dừng giữa chừng (CARLA tắt, mất điện…): bật lại CA
 
 Gửi file `runs\ket-qua_<tên máy>_2026-11-15_1430.zip` qua Drive / Zalo.
 
+**Đừng `git add` / `git push`** thư mục công cụ: lệnh đó sẽ đẩy cả `.venv` (hàng nghìn file) và cấu hình riêng của máy lên repo. Chỉ gửi file zip.
+
 ## Lỗi hay gặp
 
 | Hiện tượng | Cách xử lý |
