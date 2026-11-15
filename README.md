@@ -22,7 +22,7 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1     # venv + thư viện + 
 .venv\Scripts\python bench.py pack runs\<ngày-giờ>       # zip để gửi lại
 ```
 
-Đợt 2 (4 xe còn lại + ca bổ sung e-tron, 161 run): `.venv\Scripts\python bench.py --cases cases_dot2.yaml run` — xem
+Đợt 2 (4 xe còn lại + ca bổ sung, edge case và ca lặp, 205 run): `.venv\Scripts\python bench.py --cases cases_dot2.yaml run` — xem
 [THIET-KE.md](THIET-KE.md) mục 13.
 
 Các lệnh khác (`dry-run`, `run --only/--resume`, `excel`, `import`): `python bench.py -h` và mục 9 của [THIET-KE.md](THIET-KE.md).

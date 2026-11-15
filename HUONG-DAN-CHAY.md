@@ -72,7 +72,7 @@ Gửi file `runs\ket-qua_<tên máy>_2026-11-15_1430.zip` qua Drive / Zalo.
 
 **Đừng `git add` / `git push`** thư mục công cụ: lệnh đó sẽ đẩy cả `.venv` (hàng nghìn file) và cấu hình riêng của máy lên repo. Chỉ gửi file zip.
 
-## Đợt 2: 4 xe còn lại và ca bổ sung (161 run, khoảng 35–50 phút)
+## Đợt 2: 4 xe còn lại và ca bổ sung (205 run, khoảng 45–65 phút)
 
 Nếu đã chạy đợt 1 trên máy này thì chỉ cần cập nhật công cụ rồi chạy với danh sách ca mới:
 

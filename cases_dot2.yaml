@@ -1,4 +1,4 @@
-# Đợt 2 (15/11/2026): 4 xe chưa hiệu chuẩn + ca bổ sung cho e-tron. Chạy:
+# Đợt 2 (15/11/2026): 4 xe chưa hiệu chuẩn + ca bổ sung cho e-tron + edge case (E1–E6) + ca lặp (R). 205 run. Chạy:
 #   .venv\Scripts\python bench.py --cases cases_dot2.yaml run
 # Thiết kế từng nhóm: THIET-KE.md mục 13. Không AEB (lệnh phanh cố định) như đợt 1.
 #
@@ -113,3 +113,162 @@ cases:
     kind: walker
     ped_mps: 1.39
     stop_at_curb: true
+
+  # ---------------------------------------------------------------- Edge case (giá trị biên)
+  # E1 — Tốc độ biên (e-tron): 10 km/h phanh nhẹ (cả quá trình nằm trong vùng < 6 m/s), 90–100 km/h (ngoài dải đã đo).
+  - id: "E1-10-2.0"
+    group: E1
+    kind: brake
+    ego_kmh: 10
+    a: 2.0
+  - id: "E1-{ego_kmh}-{a}"
+    group: E1
+    kind: brake
+    grid: {ego_kmh: [90, 100], a: [max]}
+  - id: "E1-100-8.0"
+    group: E1
+    kind: brake
+    ego_kmh: 100
+    a: 8.0
+
+  # E2 — Mức phanh biên: rất nhẹ (bàn đạp 0,05 / 0,11 — có vùng chết không; chạy 20 km/h để không quá giới hạn 25 s mỗi run),
+  # sát max (9,0) và vượt max (12 → kẹp 1,0) ở 40 km/h.
+  - id: "E2-20-{a}"
+    group: E2
+    kind: brake
+    ego_kmh: 20
+    grid: {a: [0.5, 1.0]}
+  - id: "E2-40-{a}"
+    group: E2
+    kind: brake
+    grid: {a: [9.0, 12.0]}
+
+  # E3 — Ma sát biên, phanh 100%: lốp 0,3 (gần băng), lốp 1,5 (bám hơn mặc định), mưa to + lốp 0,65 (chồng hai yếu tố).
+  - id: "E3-{ego_kmh}-tf0.3"
+    group: E3
+    kind: brake
+    tire_friction_scale: 0.3
+    grid: {ego_kmh: [40, 60]}
+  - id: "E3-60-tf1.5"
+    group: E3
+    kind: brake
+    ego_kmh: 60
+    tire_friction_scale: 1.5
+  - id: "E3-40-heavy-tf0.65"
+    group: E3
+    kind: brake
+    weather: HEAVY_RAIN
+    tire_friction_scale: 0.65
+
+  # E4 — Người đi bộ biên: 0,5 m/s (rất chậm) và 8 m/s (chạy nước rút), đi thẳng và dừng ở lề.
+  - id: "E4-{ped_mps}"
+    group: E4
+    kind: walker
+    grid: {ped_mps: [0.5, 8.0]}
+  - id: "E4-le-{ped_mps}"
+    group: E4
+    kind: walker
+    stop_at_curb: true
+    grid: {ped_mps: [0.5, 8.0]}
+
+  # E5 — Xe + người biên: kích hoạt sát (5 m) / xa (80 m), người chạy trước xe nhanh, người rất chậm,
+  # xe tải rộng phanh yếu, và đường trơn (lốp 0,3) trong khi mô hình tham chiếu coi là đường khô → dự kiến va chạm.
+  - id: "E5-trig-{trigger_m}"
+    group: E5
+    kind: combined
+    a: 8.0
+    grid: {trigger_m: [5, 80]}
+  - id: "E5-60-ped3.0"
+    group: E5
+    kind: combined
+    ego_kmh: 60
+    a: 8.0
+    ped_mps: 3.0
+  - id: "E5-20-ped0.5"
+    group: E5
+    kind: combined
+    ego_kmh: 20
+    a: 8.0
+    ped_mps: 0.5
+  - id: "E5-hgv-40"
+    group: E5
+    kind: combined
+    vehicle: hgv
+  - id: "E5-tf0.3-40"
+    group: E5
+    kind: combined
+    tire_friction_scale: 0.3
+
+  # E6 — Thông số xe biên: khối lượng × 0,5 / × 2,0, mô-men × 0,2 (e-tron); xe tải mô-men × 5 và chở nặng × 2.
+  - id: "E6-etron-m{mass_scale}"
+    group: E6
+    kind: brake
+    ego_kmh: 50
+    grid: {mass_scale: [0.5, 2.0]}
+  - id: "E6-etron-t0.2"
+    group: E6
+    kind: brake
+    ego_kmh: 50
+    torque_scale: 0.2
+  - id: "E6-hgv-t5.0"
+    group: E6
+    kind: brake
+    vehicle: hgv
+    ego_kmh: 50
+    torque_scale: 5.0
+  - id: "E6-hgv-m2.0"
+    group: E6
+    kind: brake
+    vehicle: hgv
+    mass_scale: 2.0
+
+  # ---------------------------------------------------------------- Lặp lại (độ tất định ở các vùng khó)
+  # R — Chạy lại các ca dễ dao động nhất: vùng dừng gấp, xe + người, va chạm, đường ướt, tốc độ cao, đường băng.
+  # Đặt cuối file để chạy sau nhiều ca khác (kiểm cả việc CARLA có "trôi" theo thời gian chạy không).
+  - id: "R-B1-10-max"
+    group: R
+    kind: brake
+    ego_kmh: 10
+    same_as: B1-10-max
+    repeat: 3
+  - id: "R-B5-xe-50"
+    group: R
+    kind: combined
+    ego_kmh: 50
+    a: 8.0
+    ped_mps: 1.39
+    same_as: B5-xe-50
+    repeat: 3
+  - id: "R-E5-tf0.3-40"
+    group: R
+    kind: combined
+    tire_friction_scale: 0.3
+    same_as: E5-tf0.3-40
+    repeat: 3
+  - id: "R-X2-model3-40-1.5"
+    group: R
+    kind: brake
+    vehicle: model3
+    a: 1.5
+    same_as: X2-model3-40-1.5
+    repeat: 2
+  - id: "R-X3-hgv-60-HEAVY_RAIN"
+    group: R
+    kind: brake
+    vehicle: hgv
+    ego_kmh: 60
+    weather: HEAVY_RAIN
+    same_as: X3-hgv-60-HEAVY_RAIN
+    repeat: 2
+  - id: "R-B2-80-max"
+    group: R
+    kind: brake
+    ego_kmh: 80
+    same_as: B2-80-max
+    repeat: 2
+  - id: "R-E3-40-tf0.3"
+    group: R
+    kind: brake
+    tire_friction_scale: 0.3
+    same_as: E3-40-tf0.3
+    repeat: 2

@@ -265,6 +265,13 @@ với từng xe; đồng thời bổ sung các vùng đợt 1 chưa có cho e-tr
 | B3 | e-tron 40 / 60 km/h × 2 / 3 m/s² (bàn đạp 0,22 / 0,33) | 4 | Độ tuyến tính bàn đạp ở mức thấp |
 | B4 | e-tron 50 km/h, khối lượng × 1,15 (~2415 kg) × 8 m/s² / 100% | 2 | Ảnh hưởng của tải |
 | B5 | Ma trận Euro NCAP: người 1,39 m/s (5 km/h); xe + người ở 20 / 30 / 50 / 60 km/h; người đi một mình; dừng ở lề | 6 | Đối chiếu dải thử Euro NCAP AEB VRU (v2.0.2, mục 7.2.4) |
+| E1 | e-tron 10 km/h × 2 m/s²; 90 / 100 km/h × 100%; 100 km/h × 8 m/s² | 4 | Tốc độ biên: cả quá trình dưới 6 m/s; ngoài dải đã đo |
+| E2 | e-tron 20 km/h × 0,5 / 1,0 m/s² (bàn đạp 0,05 / 0,11); 40 km/h × 9,0 / 12 m/s² | 4 | Bàn đạp rất nhẹ có vùng chết không; sát max và vượt max (kẹp 1,0) |
+| E3 | e-tron phanh 100%: lốp × 0,3 ở 40 / 60 km/h; lốp × 1,5 ở 60 km/h; mưa to + lốp × 0,65 | 4 | Ma sát biên (gần băng, bám hơn mặc định, chồng hai yếu tố) |
+| E4 | Người 0,5 / 8 m/s, đi thẳng và dừng ở lề | 4 | Tốc độ người biên (rất chậm, chạy nước rút) |
+| E5 | Xe + người: kích hoạt 5 m / 80 m; 60 km/h + người 3 m/s; 20 km/h + người 0,5 m/s; xe tải 40 km/h; lốp × 0,3 (mô hình coi đường khô) | 6 | Ca biên có va chạm: tham chiếu báo va chạm ở kích hoạt 5 m và xe tải; lốp × 0,3 tham chiếu báo không va chạm, dự kiến CARLA va chạm |
+| E6 | e-tron 50 km/h: khối lượng × 0,5 / × 2,0, mô-men × 0,2; xe tải 50 km/h mô-men × 5; xe tải 40 km/h khối lượng × 2 | 5 | Thông số xe biên |
+| R | Lặp: B1-10-max, B5-xe-50, E5-tf0.3-40 (3 lần mỗi ca); X2-model3-40-1.5, X3-hgv-60-HEAVY_RAIN, B2-80-max, E3-40-tf0.3 (2 lần) | 17 | Độ tất định ở vùng khó (dừng gấp, xe + người, va chạm, đường ướt, tốc độ cao, đường băng); đặt cuối file để thấy CARLA có trôi theo thời gian chạy không |
 
-**Tổng:** 161 run, ước lượng 35–50 phút (xe tải phanh chậm, mỗi run tới ~15 s mô phỏng). Đã thử trên CARLA máy người làm 15/11/2026:
+**Tổng:** 205 run (180 ca khác nhau + 25 lần chạy lặp ở X4 và R), ước lượng 45–65 phút (xe tải phanh chậm, mỗi run tới ~15 s mô phỏng). Đã thử trên CARLA máy người làm 15/11/2026:
 `X1-hgv-t1.0-40` (6 bánh đều 1500 N·m, a_dải 1,80 m/s²), `X1-model3-t2.0-50` (1400 N·m, a_dải 7,85 m/s²), `B5-xe-20` — đều hợp lệ.
