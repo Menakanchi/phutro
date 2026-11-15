@@ -17,10 +17,12 @@ HEAD = PatternFill("solid", fgColor="DDDDDD")
 RED = PatternFill("solid", fgColor="F4CCCC")
 GREY = PatternFill("solid", fgColor="EEEEEE")
 
-CASE_COLS = [("run_id", "Run"), ("group", "Nhóm"), ("kind", "Loại"), ("ego_kmh", "Ego (km/h)"), ("a", "Mức đích (m/s²)"),
+CASE_COLS = [("run_id", "Run"), ("group", "Nhóm"), ("kind", "Loại"), ("vehicle", "Xe"), ("torque_scale", "Mô-men ×"), ("mass_scale", "Khối lượng ×"),
+             ("ego_kmh", "Ego (km/h)"), ("a", "Mức đích (m/s²)"),
              ("ped_mps", "Người (m/s)"), ("trigger_m", "Kích hoạt (m)"), ("stop_at_curb", "Dừng lề"), ("weather", "Thời tiết"),
              ("tire_friction_scale", "Hệ số ma sát lốp"), ("same_as", "Lặp của")]
-BRAKE_COLS = [("run_id", "Run"), ("ego_kmh", "Ego đích (km/h)"), ("a", "Mức đích"), ("weather", "Thời tiết"),
+BRAKE_COLS = [("run_id", "Run"), ("vehicle", "Xe"), ("torque_scale", "Mô-men ×"), ("mass_scale", "Khối lượng ×"),
+              ("ego_kmh", "Ego đích (km/h)"), ("a", "Mức đích"), ("weather", "Thời tiết"),
               ("tire_friction_scale", "Ma sát lốp ×"), ("v0_kmh", "v lúc phanh (km/h)"), ("a_e", "a_e mô hình (m/s²)"),
               ("pedal_max", "Bàn đạp tối đa"), ("a_band", "a_dải CARLA (m/s²)"), ("eta", "η = a_dải / a_e"),
               ("a_peak", "Đỉnh giảm tốc ≥7 m/s"), ("t90_carla_s", "Đạt 90% lực CARLA (s)"), ("t90_ref_s", "Đạt 90% mô hình (s)"),
@@ -126,7 +128,7 @@ def export(run_dir: Path) -> Path:
     _table(ws, [r for r in valid if r["kind"] in ("brake", "combined")], BRAKE_COLS)
 
     ws = wb.create_sheet("Theo tốc độ")
-    g1 = [r for r in brake_rows if r["group"] == "G1"]
+    g1 = [r for r in brake_rows if r["group"] == "G1" and r.get("vehicle", "etron") == "etron"]
     if g1:
         end1, nlv = _pivot(ws, g1, "eta", "η = a_dải / a_e (G1)", 1)
         _chart(ws, "η theo tốc độ", "η", 1, end1 - 3, nlv, "I2")
@@ -138,6 +140,15 @@ def export(run_dir: Path) -> Path:
         top4 = top3 + 10
         _pivot(ws, g1, "low_speed_decel", "Giảm tốc dưới 6 m/s (m/s²) (G1)", top4)
     _widths(ws, 12, 12)
+
+    calib = [r for r in brake_rows if str(r["a"]) == "max"]
+    if any(r.get("vehicle", "etron") != "etron" for r in calib):
+        ws = wb.create_sheet("Theo xe")
+        _header(ws, ["Xe", "Mô-men ×", "Ego (km/h)", "a_dải phanh 100% (m/s²)", "Đỉnh ≥7 m/s", "Quãng dừng CARLA (m)", "Giảm tốc dưới 6 m/s"])
+        for r in sorted(calib, key=lambda r: (r.get("vehicle", ""), r.get("torque_scale", 1), r["ego_kmh"])):
+            ws.append([r.get("vehicle"), r.get("torque_scale"), r["ego_kmh"], r.get("a_band"), r.get("a_peak"), r.get("stop_dist_carla_m"),
+                       r.get("low_speed_decel")])
+        _widths(ws, 14, 12)
 
     ws = wb.create_sheet("Người đi bộ")
     _table(ws, [r for r in valid if r["kind"] == "walker"], WALKER_COLS)

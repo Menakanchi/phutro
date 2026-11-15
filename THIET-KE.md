@@ -236,3 +236,35 @@ py -3.12 -m venv .venv; .venv\Scripts\pip install -r requirements.txt
 | 3 | `metrics.py` + `excel.py` | Mở file Excel, kiểm từng sheet với 2 run ở bước 2 |
 | 4 | Chạy cả 56 run | Số run hợp lệ, sheet Bị loại |
 | 5 | Máy chạy CARLA `pack` gửi zip; người nhận `import` vào repo VehicSim, điền nhận xét trong `README.md` của lần chạy, commit | — |
+
+## 13. Đợt 2 (15/11/2026): 4 xe chưa hiệu chuẩn và ca bổ sung cho e-tron
+
+**Vì sao:** đợt 1 mới kiểm chứng e-tron. Bốn xe còn lại trong danh mục VehicSim (migration 011) dùng physics mặc định của CARLA, phanh 100%
+chỉ 1,77–6,01 m/s² so với 9,5 m/s² giả định trong DB (TD-17). Đợt 2 đo để biết cần nhân mô-men phanh bao nhiêu và CARLA lệch mô hình thế nào
+với từng xe; đồng thời bổ sung các vùng đợt 1 chưa có cho e-tron. Danh sách ca: [cases_dot2.yaml](cases_dot2.yaml), chạy
+`bench.py --cases cases_dot2.yaml run`.
+
+**Công cụ:** mỗi ca chọn được `vehicle` (mục `cac_xe` trong `config.yaml`), `torque_scale` (mô-men phanh mọi bánh × hệ số) và `mass_scale`
+(khối lượng × hệ số). Kiểm hợp lệ so physics đọc lại với giá trị đã nhân. `config.local.yaml` giờ chỉ được dùng cho mục `may`.
+
+| Xe (`vehicle`) | Blueprint | Khối lượng | Mô-men phanh / bánh | Rộng | Phanh 100% đo 26/10 |
+|---|---|---|---|---|---|
+| `model3` | `vehicle.tesla.model3` | 1845 kg | 700 N·m | 2,163 m | 3,56 m/s² |
+| `patrol` | `vehicle.nissan.patrol_2021` | 2355 kg | 1500 N·m | 2,150 m | 6,01 m/s² |
+| `sprinter` | `vehicle.mercedes.sprinter` | 3000 kg | 1500 N·m | 1,988 m | 5,69 m/s² |
+| `hgv` | `vehicle.carlamotors.european_hgv` (6 bánh) | 7000 kg | 1500 N·m | 2,891 m | 1,77 m/s² |
+
+| Nhóm | Ca | Số run | Đo gì |
+|---|---|---|---|
+| X1 | 4 xe × `torque_scale` 1,0 / 1,5 / 2,0 / 2,5 / 3,0 × 40 / 50 / 60 / 70 km/h, phanh 100% | 80 | Hệ số mô-men để phanh hết cỡ ≈ 9,5 m/s² (đọc `a_dải`, sheet "Theo xe"). Cột Δ so với mô hình không có nghĩa khi `torque_scale` ≠ 1 (mô hình vẫn dùng phanh 100% đo ở mô-men mặc định) |
+| X2 | 4 xe × 20 / 40 / 60 km/h × mức đích 1,5 / 3,0 / 100% | 36 | Độ lệch so với mô hình ở physics mặc định (như DB); có cú dừng gấp dưới 6 m/s như e-tron không |
+| X3 | 4 xe × 40 / 60 km/h × RAIN / HEAVY_RAIN, phanh 100% | 16 | CARLA có giảm bám theo thời tiết với các xe này không |
+| X4 | Lặp 2 lần X1-`<xe>`-t1.0-50 | 8 | Độ lặp lại theo xe |
+| B1 | e-tron 10 / 15 / 25 km/h × 8 m/s² / 100% | 6 | Ngưỡng bắt đầu cú dừng gấp (đợt 1 chỉ từ 20 km/h) |
+| B2 | e-tron 80 km/h × 4 / 8 m/s² / 100% | 3 | Tốc độ cao ngoài dải đợt 1 |
+| B3 | e-tron 40 / 60 km/h × 2 / 3 m/s² (bàn đạp 0,22 / 0,33) | 4 | Độ tuyến tính bàn đạp ở mức thấp |
+| B4 | e-tron 50 km/h, khối lượng × 1,15 (~2415 kg) × 8 m/s² / 100% | 2 | Ảnh hưởng của tải |
+| B5 | Ma trận Euro NCAP: người 1,39 m/s (5 km/h); xe + người ở 20 / 30 / 50 / 60 km/h; người đi một mình; dừng ở lề | 6 | Đối chiếu dải thử Euro NCAP AEB VRU (v2.0.2, mục 7.2.4) |
+
+**Tổng:** 161 run, ước lượng 35–50 phút (xe tải phanh chậm, mỗi run tới ~15 s mô phỏng). Đã thử trên CARLA máy người làm 15/11/2026:
+`X1-hgv-t1.0-40` (6 bánh đều 1500 N·m, a_dải 1,80 m/s²), `X1-model3-t2.0-50` (1400 N·m, a_dải 7,85 m/s²), `B5-xe-20` — đều hợp lệ.

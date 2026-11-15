@@ -50,3 +50,27 @@ def test_bad_indentation_gives_line_number(tmp_path):
     bad.write_text('may:\n  host: 127.0.0.1\n  port: 2000\n    carla_root: "D:/CARLA"\n', encoding="utf-8")
     with pytest.raises(config.ConfigError, match="dòng 4"):
         config.load_config(bad)
+
+
+def test_local_config_only_overrides_the_machine_section(tmp_path):
+    (tmp_path / "config.yaml").write_text((ROOT / "config.yaml").read_text(encoding="utf-8"), encoding="utf-8")
+    # bản local chép từ config cũ: thiếu cac_xe, có xe khác; chỉ mục may được dùng
+    (tmp_path / "config.local.yaml").write_text(
+        'may: {host: 127.0.0.1, port: 2010, carla_root: "D:/CARLA"}\nxe: {blueprint: x, mass_kg: 1}\n', encoding="utf-8")
+    cfg = config.load_config(tmp_path / "config.local.yaml")
+    assert cfg["may"]["port"] == 2010 and cfg["may"]["carla_root"] == "D:/CARLA" and cfg["may"]["timeout_s"] == 60
+    assert cfg["xe"]["mass_kg"] == 2100.0 and "model3" in cfg["cac_xe"]
+
+
+def test_dot2_case_list_and_vehicle_scaling():
+    cfg = config.load_config(ROOT / "config.yaml")
+    r = config.expand_cases(config.load_yaml(ROOT / "cases_dot2.yaml"), cfg)
+    by_group = {}
+    for c in r:
+        by_group[c.group] = by_group.get(c.group, 0) + 1
+    assert by_group == {"X1": 80, "X2": 36, "X3": 16, "X4": 8, "B1": 6, "B2": 3, "B3": 4, "B4": 2, "B5": 6}
+    c = {x.run_id: x for x in r}["X1-hgv-t2.5-60"]
+    v = config.vehicle_of(cfg, c)
+    assert v["blueprint"] == "vehicle.carlamotors.european_hgv" and v["max_brake_torque_nm"] == 3750.0 and v["mass_kg"] == 7000.0
+    b4 = {x.run_id: x for x in r}["B4-50-max"]
+    assert config.vehicle_of(cfg, b4)["mass_kg"] == 2100.0 * 1.15

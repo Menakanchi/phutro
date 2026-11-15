@@ -27,6 +27,15 @@ xe:
   width_m: 1.93
   full_brake_decel_mps2: 9.13 # phanh 100% đã đo (ADR-051 của VehicSim) — đổi mức đích ra bàn đạp
 
+# Danh mục xe cho trường "vehicle" của ca (mặc định etron = mục "xe" ở trên). Thông số = physics mặc định CARLA 0.9.16 và phanh 100%
+# đo ngày 26/10/2026 (migration 011 của VehicSim). Mô-men phanh thực dùng = max_brake_torque_nm × torque_scale của ca.
+cac_xe:
+  etron:    {blueprint: vehicle.audi.etron, mass_kg: 2100.0, max_brake_torque_nm: 1800.0, width_m: 1.93, full_brake_decel_mps2: 9.13}
+  model3:   {blueprint: vehicle.tesla.model3, mass_kg: 1845.0, max_brake_torque_nm: 700.0, width_m: 2.163, full_brake_decel_mps2: 3.56}
+  patrol:   {blueprint: vehicle.nissan.patrol_2021, mass_kg: 2355.0, max_brake_torque_nm: 1500.0, width_m: 2.15, full_brake_decel_mps2: 6.01}
+  sprinter: {blueprint: vehicle.mercedes.sprinter, mass_kg: 3000.0, max_brake_torque_nm: 1500.0, width_m: 1.988, full_brake_decel_mps2: 5.69}
+  hgv:      {blueprint: vehicle.carlamotors.european_hgv, mass_kg: 7000.0, max_brake_torque_nm: 1500.0, width_m: 2.891, full_brake_decel_mps2: 1.77}
+
 phanh:
   delay_s: 0.15               # t_d
   jerk_mps3: 20.0             # J

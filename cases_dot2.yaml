@@ -1,0 +1,115 @@
+# Đợt 2 (15/11/2026): 4 xe chưa hiệu chuẩn + ca bổ sung cho e-tron. Chạy:
+#   .venv\Scripts\python bench.py --cases cases_dot2.yaml run
+# Thiết kế từng nhóm: THIET-KE.md mục 13. Không AEB (lệnh phanh cố định) như đợt 1.
+#
+# Lưu ý với 4 xe chưa hiệu chuẩn: phanh 100% đo được chỉ 1,77–6,01 m/s², nên mức đích lớn hơn số đó đều thành bàn đạp 1,0.
+# Vì vậy X2 dùng mức đích 1,5 / 3,0 m/s² và "max", không dùng 4 / 8 như e-tron.
+
+defaults:
+  ego_kmh: 40
+  a: max
+  ped_mps: 1.5
+  trigger_m: 25
+  stop_at_curb: false
+  weather: CLEAR
+  tire_friction_scale: 1.0
+  vehicle: etron
+  torque_scale: 1.0
+  mass_scale: 1.0
+
+cases:
+  # ---------------------------------------------------------------- 4 xe chưa hiệu chuẩn
+  # X1 — Hiệu chuẩn phanh 100%: tìm hệ số mô-men để phanh hết cỡ ≈ 9,5 m/s² (max_brake_decel của xe trong DB). 4 xe × 5 hệ số × 4 tốc độ.
+  - id: "X1-{vehicle}-t{torque_scale}-{ego_kmh}"
+    group: X1
+    kind: brake
+    a: max
+    grid: {vehicle: [model3, patrol, sprinter, hgv], torque_scale: [1.0, 1.5, 2.0, 2.5, 3.0], ego_kmh: [40, 50, 60, 70]}
+
+  # X2 — Độ lệch so với mô hình ở physics mặc định (mô-men như trong DB): 4 xe × 3 tốc độ × 3 mức đích.
+  - id: "X2-{vehicle}-{ego_kmh}-{a}"
+    group: X2
+    kind: brake
+    grid: {vehicle: [model3, patrol, sprinter, hgv], ego_kmh: [20, 40, 60], a: [1.5, 3.0, max]}
+
+  # X3 — Đường ướt, phanh 100%: CARLA có giảm bám theo thời tiết với các xe này không. 4 xe × 2 tốc độ × 2 thời tiết.
+  - id: "X3-{vehicle}-{ego_kmh}-{weather}"
+    group: X3
+    kind: brake
+    a: max
+    grid: {vehicle: [model3, patrol, sprinter, hgv], ego_kmh: [40, 60], weather: [RAIN, HEAVY_RAIN]}
+
+  # X4 — Độ lặp lại: thêm 2 lần cho ca gốc X1-<xe>-t1.0-50 của mỗi xe → mỗi xe 3 mẫu.
+  - id: "X4-model3"
+    group: X4
+    kind: brake
+    vehicle: model3
+    ego_kmh: 50
+    same_as: X1-model3-t1.0-50
+    repeat: 2
+  - id: "X4-patrol"
+    group: X4
+    kind: brake
+    vehicle: patrol
+    ego_kmh: 50
+    same_as: X1-patrol-t1.0-50
+    repeat: 2
+  - id: "X4-sprinter"
+    group: X4
+    kind: brake
+    vehicle: sprinter
+    ego_kmh: 50
+    same_as: X1-sprinter-t1.0-50
+    repeat: 2
+  - id: "X4-hgv"
+    group: X4
+    kind: brake
+    vehicle: hgv
+    ego_kmh: 50
+    same_as: X1-hgv-t1.0-50
+    repeat: 2
+
+  # ---------------------------------------------------------------- e-tron bổ sung
+  # B1 — Ngưỡng vùng tốc độ thấp: cú dừng gấp bắt đầu ở đâu (đợt 1 chỉ có 20 km/h trở lên).
+  - id: "B1-{ego_kmh}-{a}"
+    group: B1
+    kind: brake
+    grid: {ego_kmh: [10, 15, 25], a: [8.0, max]}
+
+  # B2 — Tốc độ cao 80 km/h (ngoài dải đợt 1).
+  - id: "B2-80-{a}"
+    group: B2
+    kind: brake
+    ego_kmh: 80
+    grid: {a: [4.0, 8.0, max]}
+
+  # B3 — Bàn đạp nhẹ (0,22 / 0,33): độ tuyến tính bàn đạp ở mức thấp.
+  - id: "B3-{ego_kmh}-{a}"
+    group: B3
+    kind: brake
+    grid: {ego_kmh: [40, 60], a: [2.0, 3.0]}
+
+  # B4 — Chở thêm tải: khối lượng × 1,15 (~2415 kg) ở 50 km/h.
+  - id: "B4-50-{a}"
+    group: B4
+    kind: brake
+    ego_kmh: 50
+    mass_scale: 1.15
+    grid: {a: [8.0, max]}
+
+  # B5 — Theo ma trận Euro NCAP AEB người đi bộ: người đi 5 km/h (1,39 m/s), xe 20–60 km/h.
+  - id: "B5-xe-{ego_kmh}"
+    group: B5
+    kind: combined
+    a: 8.0
+    ped_mps: 1.39
+    grid: {ego_kmh: [20, 30, 50, 60]}
+  - id: "B5-nguoi-1.39"
+    group: B5
+    kind: walker
+    ped_mps: 1.39
+  - id: "B5-le-1.39"
+    group: B5
+    kind: walker
+    ped_mps: 1.39
+    stop_at_curb: true
