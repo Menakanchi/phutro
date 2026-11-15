@@ -7,7 +7,7 @@ import json
 import statistics
 from pathlib import Path
 
-from bench import model
+from bench import config, model
 
 BAND_LOW_MPS = 6.0          # dưới mức này CARLA "dừng tức thì" (TD-17 của VehicSim)
 BAND_MIN_SAMPLES = 5
@@ -16,6 +16,15 @@ SMOOTH_N = 10               # trung bình trượt 0,1 s cho gia tốc
 SPEED_TOL_KMH = 1.0         # chạy đều của CARLA dao động ~±0,4 km/h
 MASS_TOL = 1e-3
 STOPPED = 0.05
+
+
+class SimpleCase:
+    """Đọc trường xe từ case dạng dict trong run.json (run cũ chưa có trường này thì mặc định etron)."""
+
+    def __init__(self, case: dict) -> None:
+        self.vehicle = case.get("vehicle") or "etron"
+        self.torque_scale = float(case.get("torque_scale") or 1.0)
+        self.mass_scale = float(case.get("mass_scale") or 1.0)
 
 
 def _f(x):
@@ -81,12 +90,13 @@ def validity(record: dict, frames: list[dict], cfg: dict) -> list[str]:
     if bad_steps:
         reasons.append(f"bước mô phỏng khác {step} s ở {len(bad_steps)} khung")
     if case["kind"] in ("brake", "combined"):
+        xe = config.vehicle_of(cfg, SimpleCase(case))
         phys = info.get("physics") or {}
         mass = phys.get("mass")
-        if mass is None or abs(mass - float(cfg["xe"]["mass_kg"])) > MASS_TOL * float(cfg["xe"]["mass_kg"]):
+        if mass is None or abs(mass - float(xe["mass_kg"])) > MASS_TOL * float(xe["mass_kg"]):
             reasons.append(f"khối lượng đọc lại {mass}")
         torques = [w["max_brake_torque"] for w in phys.get("wheels", [])]
-        if not torques or any(abs(t - float(cfg["xe"]["max_brake_torque_nm"])) > 1 for t in torques):
+        if not torques or any(abs(t - float(xe["max_brake_torque_nm"])) > 1 for t in torques):
             reasons.append(f"mô-men phanh đọc lại {torques}")
         t_cmd = info.get("events", {}).get("brake_cmd")
         v = speed_at_cmd(frames, t_cmd) if t_cmd is not None else None
@@ -191,6 +201,8 @@ def analyse_run(run_path: Path, cfg: dict) -> dict:
     case = record["case"]
     row = {**{k: case[k] for k in ("run_id", "case_id", "group", "kind", "ego_kmh", "a", "ped_mps", "trigger_m", "stop_at_curb",
                                    "weather", "tire_friction_scale", "same_as")},
+           "vehicle": case.get("vehicle") or "etron", "torque_scale": case.get("torque_scale") or 1.0,
+           "mass_scale": case.get("mass_scale") or 1.0,
            "end_reason": record["carla"].get("end_reason")}
     reasons = validity(record, frames, cfg)
     row["valid"] = not reasons

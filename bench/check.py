@@ -64,7 +64,8 @@ def run_checks(cfg: dict) -> int:
         print(f"  ...   đang nạp {cfg['canh']['map']} (có thể mất 1–2 phút)")
         world = client.load_world(cfg["canh"]["map"])
     lib = world.get_blueprint_library()
-    for bp in (cfg["xe"]["blueprint"], cfg["nguoi_di_bo"]["blueprint"], "sensor.other.collision"):
+    from bench.config import vehicles
+    for bp in [v["blueprint"] for v in vehicles(cfg).values()] + [cfg["nguoi_di_bo"]["blueprint"], "sensor.other.collision"]:
         if lib.filter(bp):
             _ok(f"blueprint {bp}")
         else:

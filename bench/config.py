@@ -9,7 +9,8 @@ from pathlib import Path
 import yaml
 
 KINDS = ("brake", "walker", "combined")
-CASE_FIELDS = ("ego_kmh", "a", "ped_mps", "trigger_m", "stop_at_curb", "weather", "tire_friction_scale")
+CASE_FIELDS = ("ego_kmh", "a", "ped_mps", "trigger_m", "stop_at_curb", "weather", "tire_friction_scale", "vehicle", "torque_scale",
+               "mass_scale")
 
 
 @dataclass(frozen=True)
@@ -29,6 +30,9 @@ class Case:
     tire_friction_scale: float
     same_as: str | None = None
     repeat_index: int = 1
+    vehicle: str = "etron"
+    torque_scale: float = 1.0
+    mass_scale: float = 1.0
 
     def as_dict(self) -> dict:
         return asdict(self)
@@ -55,7 +59,14 @@ def load_yaml(path: str | Path) -> dict:
 
 
 def load_config(path: str | Path) -> dict:
+    """Đọc config. ``config.local.yaml`` chỉ được dùng cho mục ``may`` (host, cổng, carla_root...) của máy; các mục khác luôn lấy từ
+    ``config.yaml`` cùng thư mục, để bản local chép từ phiên bản cũ không làm lệch cấu hình khi ``config.yaml`` được cập nhật."""
+    path = Path(path)
     cfg = load_yaml(path)
+    if path.name == "config.local.yaml" and (path.parent / "config.yaml").exists():
+        base = load_yaml(path.parent / "config.yaml")
+        base["may"] = {**base.get("may", {}), **cfg.get("may", {})}
+        cfg = base
     for section in ("may", "canh", "xe", "phanh", "nguoi_di_bo", "thoi_tiet", "gioi_han"):
         if section not in cfg:
             raise ConfigError(f"{path}: thiếu mục '{section}'")
@@ -87,6 +98,25 @@ def _validate(entry: dict, cfg: dict) -> None:
         raise ConfigError(f"{entry['id']}: trigger_m phải trong [5, 80]")
     if not 0.1 <= float(entry["tire_friction_scale"]) <= 3:
         raise ConfigError(f"{entry['id']}: tire_friction_scale phải trong [0.1, 3]")
+    if entry["vehicle"] not in vehicles(cfg):
+        raise ConfigError(f"{entry['id']}: xe {entry['vehicle']} không có trong cac_xe của config.yaml")
+    if not 0.2 <= float(entry["torque_scale"]) <= 5:
+        raise ConfigError(f"{entry['id']}: torque_scale phải trong [0.2, 5]")
+    if not 0.5 <= float(entry["mass_scale"]) <= 2:
+        raise ConfigError(f"{entry['id']}: mass_scale phải trong [0.5, 2]")
+
+
+def vehicles(cfg: dict) -> dict:
+    """Danh mục xe; config cũ chỉ có mục "xe" thì coi đó là etron."""
+    return cfg.get("cac_xe") or {"etron": cfg["xe"]}
+
+
+def vehicle_of(cfg: dict, case) -> dict:
+    """Thông số xe thực dùng cho một ca: mô-men phanh × torque_scale, khối lượng × mass_scale."""
+    v = dict(vehicles(cfg)[case.vehicle])
+    v["max_brake_torque_nm"] = float(v["max_brake_torque_nm"]) * case.torque_scale
+    v["mass_kg"] = float(v["mass_kg"]) * case.mass_scale
+    return v
 
 
 def expand_cases(cases_doc: dict, cfg: dict) -> list[Case]:
@@ -99,8 +129,15 @@ def expand_cases(cases_doc: dict, cfg: dict) -> list[Case]:
         keys = list(grid)
         for combo in itertools.product(*(grid[k] for k in keys)) if keys else [()]:
             entry = {k: defaults.get(k) for k in CASE_FIELDS}
+            entry.setdefault("vehicle", None)
+            entry["vehicle"] = entry["vehicle"] or "etron"
+            entry["torque_scale"] = entry["torque_scale"] if entry["torque_scale"] is not None else 1.0
+            entry["mass_scale"] = entry["mass_scale"] if entry["mass_scale"] is not None else 1.0
             entry.update({k: v for k, v in item.items() if k in CASE_FIELDS})
             entry.update(dict(zip(keys, combo)))
+            for k, d in (("vehicle", "etron"), ("torque_scale", 1.0), ("mass_scale", 1.0)):
+                if entry.get(k) is None:
+                    entry[k] = d
             case_id = item["id"].format(**{k: _label(v) for k, v in entry.items()})
             entry.update(id=case_id, kind=item.get("kind"))
             _validate(entry, cfg)
@@ -115,7 +152,8 @@ def expand_cases(cases_doc: dict, cfg: dict) -> list[Case]:
                     ego_kmh=float(entry["ego_kmh"]), a=entry["a"] if entry["a"] == "max" else float(entry["a"]),
                     ped_mps=float(entry["ped_mps"]), trigger_m=float(entry["trigger_m"]),
                     stop_at_curb=bool(entry["stop_at_curb"]), weather=str(entry["weather"]),
-                    tire_friction_scale=float(entry["tire_friction_scale"]), same_as=item.get("same_as"), repeat_index=n))
+                    tire_friction_scale=float(entry["tire_friction_scale"]), same_as=item.get("same_as"), repeat_index=n,
+                    vehicle=str(entry["vehicle"]), torque_scale=float(entry["torque_scale"]), mass_scale=float(entry["mass_scale"])))
     missing = {c.same_as for c in runs if c.same_as} - {c.case_id for c in runs}
     if missing:
         raise ConfigError(f"same_as trỏ tới ca không có: {sorted(missing)}")

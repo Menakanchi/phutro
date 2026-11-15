@@ -9,7 +9,7 @@ from __future__ import annotations
 import math
 import time
 
-from bench import model
+from bench import config, model
 from bench.guard import release_world
 
 LOW_SPEED_STOP = 0.05     # m/s: coi là đã dừng
@@ -64,8 +64,7 @@ def _waypoint(world, cfg: dict, s: float):
     return wp
 
 
-def _spawn_vehicle(world, carla, cfg: dict, wp, tire_scale: float):
-    xe = cfg["xe"]
+def _spawn_vehicle(world, carla, xe: dict, wp, tire_scale: float):
     tf = carla.Transform(wp.transform.location + carla.Location(z=0.3), wp.transform.rotation)
     vehicle = world.try_spawn_actor(world.get_blueprint_library().find(xe["blueprint"]), tf)
     if vehicle is None:
@@ -110,7 +109,7 @@ def run_case(client, carla, cfg: dict, case) -> tuple[dict, list[dict]]:
     dt = float(cfg["canh"]["step_s"])
     weather = cfg["thoi_tiet"][case.weather]
     world.set_weather(getattr(carla.WeatherParameters, weather["preset"]))
-    xe, ph = cfg["xe"], cfg["phanh"]
+    xe, ph = config.vehicle_of(cfg, case), cfg["phanh"]
     full = float(xe["full_brake_decel_mps2"])
     a_e = model.effective_decel(case.a, full, float(weather["mu"]))
     v_target = case.ego_kmh / 3.6
@@ -124,7 +123,7 @@ def run_case(client, carla, cfg: dict, case) -> tuple[dict, list[dict]]:
         vehicle = walker = None
         front_off = 0.0
         if case.kind in ("brake", "combined"):
-            vehicle = _spawn_vehicle(world, carla, cfg, wp0, case.tire_friction_scale)
+            vehicle = _spawn_vehicle(world, carla, xe, wp0, case.tire_friction_scale)
             actors.append(vehicle)
             bb = vehicle.bounding_box
             front_off = bb.location.x + bb.extent.x

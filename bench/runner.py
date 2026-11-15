@@ -11,7 +11,7 @@ import traceback
 from datetime import datetime
 from pathlib import Path
 
-from bench import __version__, guard, model
+from bench import __version__, config, guard, model
 from bench.scene import SceneError, run_case
 
 
@@ -66,7 +66,7 @@ def save_state(run_dir: Path, state: dict) -> None:
 
 def reference_summary(case, cfg: dict) -> dict:
     """Số tham chiếu (không cần CARLA) cho --dry-run và để ghi kèm run."""
-    xe, ph, nd = cfg["xe"], cfg["phanh"], cfg["nguoi_di_bo"]
+    xe, ph, nd = config.vehicle_of(cfg, case), cfg["phanh"], cfg["nguoi_di_bo"]
     mu = float(cfg["thoi_tiet"][case.weather]["mu"])
     full = float(xe["full_brake_decel_mps2"])
     a_e = model.effective_decel(case.a, full, mu)

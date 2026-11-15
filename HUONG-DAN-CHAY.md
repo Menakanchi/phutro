@@ -72,6 +72,23 @@ Gửi file `runs\ket-qua_<tên máy>_2026-11-15_1430.zip` qua Drive / Zalo.
 
 **Đừng `git add` / `git push`** thư mục công cụ: lệnh đó sẽ đẩy cả `.venv` (hàng nghìn file) và cấu hình riêng của máy lên repo. Chỉ gửi file zip.
 
+## Đợt 2: 4 xe còn lại và ca bổ sung (161 run, khoảng 35–50 phút)
+
+Nếu đã chạy đợt 1 trên máy này thì chỉ cần cập nhật công cụ rồi chạy với danh sách ca mới:
+
+```powershell
+cd C:\Users\<tên>\phutro
+git pull
+.venv\Scripts\python bench.py check
+.venv\Scripts\python bench.py --cases cases_dot2.yaml run
+.venv\Scripts\python bench.py pack runs\<thư mục vừa chạy>
+```
+
+- `check` giờ kiểm cả blueprint của 4 xe mới (Tesla Model 3, Nissan Patrol, Mercedes Sprinter, xe tải European HGV).
+- `config.local.yaml` (nếu có) chỉ còn dùng cho mục `may` (host, port, `carla_root`, `carla_args`); không cần sửa gì thêm.
+- Bị dừng giữa chừng: `.venv\Scripts\python bench.py --cases cases_dot2.yaml run --resume runs\<thư mục>`.
+- Gửi lại file zip như đợt 1. **Đừng `git add` / `git push`.**
+
 ## Lỗi hay gặp
 
 | Hiện tượng | Cách xử lý |
