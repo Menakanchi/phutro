@@ -68,7 +68,9 @@ def test_dot2_case_list_and_vehicle_scaling():
     by_group = {}
     for c in r:
         by_group[c.group] = by_group.get(c.group, 0) + 1
-    assert by_group == {"X1": 80, "X2": 36, "X3": 16, "X4": 8, "B1": 6, "B2": 3, "B3": 4, "B4": 2, "B5": 6}
+    assert by_group == {"X1": 80, "X2": 36, "X3": 16, "X4": 8, "B1": 6, "B2": 3, "B3": 4, "B4": 2, "B5": 6,
+                        "E1": 4, "E2": 4, "E3": 4, "E4": 4, "E5": 6, "E6": 5, "R": 17}
+    assert len(r) == 205
     c = {x.run_id: x for x in r}["X1-hgv-t2.5-60"]
     v = config.vehicle_of(cfg, c)
     assert v["blueprint"] == "vehicle.carlamotors.european_hgv" and v["max_brake_torque_nm"] == 3750.0 and v["mass_kg"] == 7000.0
