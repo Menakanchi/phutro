@@ -89,6 +89,21 @@ git pull
 - Bị dừng giữa chừng: `.venv\Scripts\python bench.py --cases cases_dot2.yaml run --resume runs\<thư mục>`.
 - Gửi lại file zip như đợt 1. **Đừng `git add` / `git push`.**
 
+## Đợt 3: 500 run (khoảng 3–4 giờ)
+
+```powershell
+git pull
+.venv\Scripts\python bench.py check
+.venv\Scripts\python bench.py --cases cases_dot3.yaml run
+.venv\Scripts\python bench.py pack runs\<thư mục vừa chạy>
+```
+
+- Không có thời gian chạy một lần thì chia nhỏ theo nhóm, mỗi lệnh tạo một thư mục riêng, gửi lại từng zip:
+  `.venv\Scripts\python bench.py --cases cases_dot3.yaml run --only D1` (170 run, khoảng 1–1,5 giờ), sau đó `--only D2` (118),
+  `--only D3,D4` (126), `--only D5,D6,D7,R3` (86).
+- Bị dừng giữa chừng: `.venv\Scripts\python bench.py --cases cases_dot3.yaml run --resume runs\<thư mục>` (thêm đúng `--only` đã dùng nếu có).
+- Nên điền `carla_root` (bước 3) để CARLA tự bật lại nếu bị tắt trong lúc chạy dài.
+
 ## Lỗi hay gặp
 
 | Hiện tượng | Cách xử lý |

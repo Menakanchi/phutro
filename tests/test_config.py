@@ -76,3 +76,10 @@ def test_dot2_case_list_and_vehicle_scaling():
     assert v["blueprint"] == "vehicle.carlamotors.european_hgv" and v["max_brake_torque_nm"] == 3750.0 and v["mass_kg"] == 7000.0
     b4 = {x.run_id: x for x in r}["B4-50-max"]
     assert config.vehicle_of(cfg, b4)["mass_kg"] == 2100.0 * 1.15
+
+
+def test_dot3_has_exactly_500_runs():
+    cfg = config.load_config(ROOT / "config.yaml")
+    r = config.expand_cases(config.load_yaml(ROOT / "cases_dot3.yaml"), cfg)
+    assert len(r) == 500
+    assert {c.group for c in r} == {"D1", "D2", "D3", "D4", "D5", "D6", "D7", "R3"}
