@@ -1,0 +1,516 @@
+# Đợt 3 (16/11/2026): 500 run quét dày các chỗ còn lệch (bản đồ bàn đạp theo tốc độ, 4 xe, ma sát lốp, xe + người,
+# người đi bộ, tải, thời tiết) + ca lặp. Chạy:
+#   .venv\Scripts\python bench.py --cases cases_dot3.yaml run
+# File sinh bằng script (mỗi ca ghi tường minh; đã bỏ ca vượt đoạn đường 228 m hoặc quá 22 s mô phỏng). Thiết kế: THIET-KE.md mục 14.
+
+defaults:
+  ego_kmh: 40
+  a: max
+  ped_mps: 1.5
+  trigger_m: 25
+  stop_at_curb: false
+  weather: CLEAR
+  tire_friction_scale: 1.0
+  vehicle: etron
+  torque_scale: 1.0
+  mass_scale: 1.0
+
+cases:
+  # ---- D1
+  - {id: "D1-15-1.0", group: D1, kind: brake, ego_kmh: 15, a: 1.0}
+  - {id: "D1-15-2.0", group: D1, kind: brake, ego_kmh: 15, a: 2.0}
+  - {id: "D1-15-3.0", group: D1, kind: brake, ego_kmh: 15, a: 3.0}
+  - {id: "D1-15-4.0", group: D1, kind: brake, ego_kmh: 15, a: 4.0}
+  - {id: "D1-15-5.0", group: D1, kind: brake, ego_kmh: 15, a: 5.0}
+  - {id: "D1-15-6.0", group: D1, kind: brake, ego_kmh: 15, a: 6.0}
+  - {id: "D1-15-7.0", group: D1, kind: brake, ego_kmh: 15, a: 7.0}
+  - {id: "D1-15-8.0", group: D1, kind: brake, ego_kmh: 15, a: 8.0}
+  - {id: "D1-15-9.0", group: D1, kind: brake, ego_kmh: 15, a: 9.0}
+  - {id: "D1-15-max", group: D1, kind: brake, ego_kmh: 15, a: max}
+  - {id: "D1-20-1.0", group: D1, kind: brake, ego_kmh: 20, a: 1.0}
+  - {id: "D1-20-2.0", group: D1, kind: brake, ego_kmh: 20, a: 2.0}
+  - {id: "D1-20-3.0", group: D1, kind: brake, ego_kmh: 20, a: 3.0}
+  - {id: "D1-20-4.0", group: D1, kind: brake, ego_kmh: 20, a: 4.0}
+  - {id: "D1-20-5.0", group: D1, kind: brake, ego_kmh: 20, a: 5.0}
+  - {id: "D1-20-6.0", group: D1, kind: brake, ego_kmh: 20, a: 6.0}
+  - {id: "D1-20-7.0", group: D1, kind: brake, ego_kmh: 20, a: 7.0}
+  - {id: "D1-20-8.0", group: D1, kind: brake, ego_kmh: 20, a: 8.0}
+  - {id: "D1-20-9.0", group: D1, kind: brake, ego_kmh: 20, a: 9.0}
+  - {id: "D1-20-max", group: D1, kind: brake, ego_kmh: 20, a: max}
+  - {id: "D1-25-1.0", group: D1, kind: brake, ego_kmh: 25, a: 1.0}
+  - {id: "D1-25-2.0", group: D1, kind: brake, ego_kmh: 25, a: 2.0}
+  - {id: "D1-25-3.0", group: D1, kind: brake, ego_kmh: 25, a: 3.0}
+  - {id: "D1-25-4.0", group: D1, kind: brake, ego_kmh: 25, a: 4.0}
+  - {id: "D1-25-5.0", group: D1, kind: brake, ego_kmh: 25, a: 5.0}
+  - {id: "D1-25-6.0", group: D1, kind: brake, ego_kmh: 25, a: 6.0}
+  - {id: "D1-25-7.0", group: D1, kind: brake, ego_kmh: 25, a: 7.0}
+  - {id: "D1-25-8.0", group: D1, kind: brake, ego_kmh: 25, a: 8.0}
+  - {id: "D1-25-9.0", group: D1, kind: brake, ego_kmh: 25, a: 9.0}
+  - {id: "D1-25-max", group: D1, kind: brake, ego_kmh: 25, a: max}
+  - {id: "D1-30-1.0", group: D1, kind: brake, ego_kmh: 30, a: 1.0}
+  - {id: "D1-30-2.0", group: D1, kind: brake, ego_kmh: 30, a: 2.0}
+  - {id: "D1-30-3.0", group: D1, kind: brake, ego_kmh: 30, a: 3.0}
+  - {id: "D1-30-4.0", group: D1, kind: brake, ego_kmh: 30, a: 4.0}
+  - {id: "D1-30-5.0", group: D1, kind: brake, ego_kmh: 30, a: 5.0}
+  - {id: "D1-30-6.0", group: D1, kind: brake, ego_kmh: 30, a: 6.0}
+  - {id: "D1-30-7.0", group: D1, kind: brake, ego_kmh: 30, a: 7.0}
+  - {id: "D1-30-8.0", group: D1, kind: brake, ego_kmh: 30, a: 8.0}
+  - {id: "D1-30-9.0", group: D1, kind: brake, ego_kmh: 30, a: 9.0}
+  - {id: "D1-30-max", group: D1, kind: brake, ego_kmh: 30, a: max}
+  - {id: "D1-35-1.0", group: D1, kind: brake, ego_kmh: 35, a: 1.0}
+  - {id: "D1-35-2.0", group: D1, kind: brake, ego_kmh: 35, a: 2.0}
+  - {id: "D1-35-3.0", group: D1, kind: brake, ego_kmh: 35, a: 3.0}
+  - {id: "D1-35-4.0", group: D1, kind: brake, ego_kmh: 35, a: 4.0}
+  - {id: "D1-35-5.0", group: D1, kind: brake, ego_kmh: 35, a: 5.0}
+  - {id: "D1-35-6.0", group: D1, kind: brake, ego_kmh: 35, a: 6.0}
+  - {id: "D1-35-7.0", group: D1, kind: brake, ego_kmh: 35, a: 7.0}
+  - {id: "D1-35-8.0", group: D1, kind: brake, ego_kmh: 35, a: 8.0}
+  - {id: "D1-35-9.0", group: D1, kind: brake, ego_kmh: 35, a: 9.0}
+  - {id: "D1-35-max", group: D1, kind: brake, ego_kmh: 35, a: max}
+  - {id: "D1-40-1.0", group: D1, kind: brake, ego_kmh: 40, a: 1.0}
+  - {id: "D1-40-2.0", group: D1, kind: brake, ego_kmh: 40, a: 2.0}
+  - {id: "D1-40-3.0", group: D1, kind: brake, ego_kmh: 40, a: 3.0}
+  - {id: "D1-40-4.0", group: D1, kind: brake, ego_kmh: 40, a: 4.0}
+  - {id: "D1-40-5.0", group: D1, kind: brake, ego_kmh: 40, a: 5.0}
+  - {id: "D1-40-6.0", group: D1, kind: brake, ego_kmh: 40, a: 6.0}
+  - {id: "D1-40-7.0", group: D1, kind: brake, ego_kmh: 40, a: 7.0}
+  - {id: "D1-40-8.0", group: D1, kind: brake, ego_kmh: 40, a: 8.0}
+  - {id: "D1-40-9.0", group: D1, kind: brake, ego_kmh: 40, a: 9.0}
+  - {id: "D1-40-max", group: D1, kind: brake, ego_kmh: 40, a: max}
+  - {id: "D1-45-1.0", group: D1, kind: brake, ego_kmh: 45, a: 1.0}
+  - {id: "D1-45-2.0", group: D1, kind: brake, ego_kmh: 45, a: 2.0}
+  - {id: "D1-45-3.0", group: D1, kind: brake, ego_kmh: 45, a: 3.0}
+  - {id: "D1-45-4.0", group: D1, kind: brake, ego_kmh: 45, a: 4.0}
+  - {id: "D1-45-5.0", group: D1, kind: brake, ego_kmh: 45, a: 5.0}
+  - {id: "D1-45-6.0", group: D1, kind: brake, ego_kmh: 45, a: 6.0}
+  - {id: "D1-45-7.0", group: D1, kind: brake, ego_kmh: 45, a: 7.0}
+  - {id: "D1-45-8.0", group: D1, kind: brake, ego_kmh: 45, a: 8.0}
+  - {id: "D1-45-9.0", group: D1, kind: brake, ego_kmh: 45, a: 9.0}
+  - {id: "D1-45-max", group: D1, kind: brake, ego_kmh: 45, a: max}
+  - {id: "D1-50-1.0", group: D1, kind: brake, ego_kmh: 50, a: 1.0}
+  - {id: "D1-50-2.0", group: D1, kind: brake, ego_kmh: 50, a: 2.0}
+  - {id: "D1-50-3.0", group: D1, kind: brake, ego_kmh: 50, a: 3.0}
+  - {id: "D1-50-4.0", group: D1, kind: brake, ego_kmh: 50, a: 4.0}
+  - {id: "D1-50-5.0", group: D1, kind: brake, ego_kmh: 50, a: 5.0}
+  - {id: "D1-50-6.0", group: D1, kind: brake, ego_kmh: 50, a: 6.0}
+  - {id: "D1-50-7.0", group: D1, kind: brake, ego_kmh: 50, a: 7.0}
+  - {id: "D1-50-8.0", group: D1, kind: brake, ego_kmh: 50, a: 8.0}
+  - {id: "D1-50-9.0", group: D1, kind: brake, ego_kmh: 50, a: 9.0}
+  - {id: "D1-50-max", group: D1, kind: brake, ego_kmh: 50, a: max}
+  - {id: "D1-55-1.0", group: D1, kind: brake, ego_kmh: 55, a: 1.0}
+  - {id: "D1-55-2.0", group: D1, kind: brake, ego_kmh: 55, a: 2.0}
+  - {id: "D1-55-3.0", group: D1, kind: brake, ego_kmh: 55, a: 3.0}
+  - {id: "D1-55-4.0", group: D1, kind: brake, ego_kmh: 55, a: 4.0}
+  - {id: "D1-55-5.0", group: D1, kind: brake, ego_kmh: 55, a: 5.0}
+  - {id: "D1-55-6.0", group: D1, kind: brake, ego_kmh: 55, a: 6.0}
+  - {id: "D1-55-7.0", group: D1, kind: brake, ego_kmh: 55, a: 7.0}
+  - {id: "D1-55-8.0", group: D1, kind: brake, ego_kmh: 55, a: 8.0}
+  - {id: "D1-55-9.0", group: D1, kind: brake, ego_kmh: 55, a: 9.0}
+  - {id: "D1-55-max", group: D1, kind: brake, ego_kmh: 55, a: max}
+  - {id: "D1-60-1.0", group: D1, kind: brake, ego_kmh: 60, a: 1.0}
+  - {id: "D1-60-2.0", group: D1, kind: brake, ego_kmh: 60, a: 2.0}
+  - {id: "D1-60-3.0", group: D1, kind: brake, ego_kmh: 60, a: 3.0}
+  - {id: "D1-60-4.0", group: D1, kind: brake, ego_kmh: 60, a: 4.0}
+  - {id: "D1-60-5.0", group: D1, kind: brake, ego_kmh: 60, a: 5.0}
+  - {id: "D1-60-6.0", group: D1, kind: brake, ego_kmh: 60, a: 6.0}
+  - {id: "D1-60-7.0", group: D1, kind: brake, ego_kmh: 60, a: 7.0}
+  - {id: "D1-60-8.0", group: D1, kind: brake, ego_kmh: 60, a: 8.0}
+  - {id: "D1-60-9.0", group: D1, kind: brake, ego_kmh: 60, a: 9.0}
+  - {id: "D1-60-max", group: D1, kind: brake, ego_kmh: 60, a: max}
+  - {id: "D1-65-1.0", group: D1, kind: brake, ego_kmh: 65, a: 1.0}
+  - {id: "D1-65-2.0", group: D1, kind: brake, ego_kmh: 65, a: 2.0}
+  - {id: "D1-65-3.0", group: D1, kind: brake, ego_kmh: 65, a: 3.0}
+  - {id: "D1-65-4.0", group: D1, kind: brake, ego_kmh: 65, a: 4.0}
+  - {id: "D1-65-5.0", group: D1, kind: brake, ego_kmh: 65, a: 5.0}
+  - {id: "D1-65-6.0", group: D1, kind: brake, ego_kmh: 65, a: 6.0}
+  - {id: "D1-65-7.0", group: D1, kind: brake, ego_kmh: 65, a: 7.0}
+  - {id: "D1-65-8.0", group: D1, kind: brake, ego_kmh: 65, a: 8.0}
+  - {id: "D1-65-9.0", group: D1, kind: brake, ego_kmh: 65, a: 9.0}
+  - {id: "D1-65-max", group: D1, kind: brake, ego_kmh: 65, a: max}
+  - {id: "D1-70-2.0", group: D1, kind: brake, ego_kmh: 70, a: 2.0}
+  - {id: "D1-70-3.0", group: D1, kind: brake, ego_kmh: 70, a: 3.0}
+  - {id: "D1-70-4.0", group: D1, kind: brake, ego_kmh: 70, a: 4.0}
+  - {id: "D1-70-5.0", group: D1, kind: brake, ego_kmh: 70, a: 5.0}
+  - {id: "D1-70-6.0", group: D1, kind: brake, ego_kmh: 70, a: 6.0}
+  - {id: "D1-70-7.0", group: D1, kind: brake, ego_kmh: 70, a: 7.0}
+  - {id: "D1-70-8.0", group: D1, kind: brake, ego_kmh: 70, a: 8.0}
+  - {id: "D1-70-9.0", group: D1, kind: brake, ego_kmh: 70, a: 9.0}
+  - {id: "D1-70-max", group: D1, kind: brake, ego_kmh: 70, a: max}
+  - {id: "D1-75-2.0", group: D1, kind: brake, ego_kmh: 75, a: 2.0}
+  - {id: "D1-75-3.0", group: D1, kind: brake, ego_kmh: 75, a: 3.0}
+  - {id: "D1-75-4.0", group: D1, kind: brake, ego_kmh: 75, a: 4.0}
+  - {id: "D1-75-5.0", group: D1, kind: brake, ego_kmh: 75, a: 5.0}
+  - {id: "D1-75-6.0", group: D1, kind: brake, ego_kmh: 75, a: 6.0}
+  - {id: "D1-75-7.0", group: D1, kind: brake, ego_kmh: 75, a: 7.0}
+  - {id: "D1-75-8.0", group: D1, kind: brake, ego_kmh: 75, a: 8.0}
+  - {id: "D1-75-9.0", group: D1, kind: brake, ego_kmh: 75, a: 9.0}
+  - {id: "D1-75-max", group: D1, kind: brake, ego_kmh: 75, a: max}
+  - {id: "D1-80-2.0", group: D1, kind: brake, ego_kmh: 80, a: 2.0}
+  - {id: "D1-80-3.0", group: D1, kind: brake, ego_kmh: 80, a: 3.0}
+  - {id: "D1-80-4.0", group: D1, kind: brake, ego_kmh: 80, a: 4.0}
+  - {id: "D1-80-5.0", group: D1, kind: brake, ego_kmh: 80, a: 5.0}
+  - {id: "D1-80-6.0", group: D1, kind: brake, ego_kmh: 80, a: 6.0}
+  - {id: "D1-80-7.0", group: D1, kind: brake, ego_kmh: 80, a: 7.0}
+  - {id: "D1-80-8.0", group: D1, kind: brake, ego_kmh: 80, a: 8.0}
+  - {id: "D1-80-9.0", group: D1, kind: brake, ego_kmh: 80, a: 9.0}
+  - {id: "D1-80-max", group: D1, kind: brake, ego_kmh: 80, a: max}
+  - {id: "D1-85-2.0", group: D1, kind: brake, ego_kmh: 85, a: 2.0}
+  - {id: "D1-85-3.0", group: D1, kind: brake, ego_kmh: 85, a: 3.0}
+  - {id: "D1-85-4.0", group: D1, kind: brake, ego_kmh: 85, a: 4.0}
+  - {id: "D1-85-5.0", group: D1, kind: brake, ego_kmh: 85, a: 5.0}
+  - {id: "D1-85-6.0", group: D1, kind: brake, ego_kmh: 85, a: 6.0}
+  - {id: "D1-85-7.0", group: D1, kind: brake, ego_kmh: 85, a: 7.0}
+  - {id: "D1-85-8.0", group: D1, kind: brake, ego_kmh: 85, a: 8.0}
+  - {id: "D1-85-9.0", group: D1, kind: brake, ego_kmh: 85, a: 9.0}
+  - {id: "D1-85-max", group: D1, kind: brake, ego_kmh: 85, a: max}
+  - {id: "D1-90-3.0", group: D1, kind: brake, ego_kmh: 90, a: 3.0}
+  - {id: "D1-90-4.0", group: D1, kind: brake, ego_kmh: 90, a: 4.0}
+  - {id: "D1-90-5.0", group: D1, kind: brake, ego_kmh: 90, a: 5.0}
+  - {id: "D1-90-6.0", group: D1, kind: brake, ego_kmh: 90, a: 6.0}
+  - {id: "D1-90-7.0", group: D1, kind: brake, ego_kmh: 90, a: 7.0}
+  - {id: "D1-90-8.0", group: D1, kind: brake, ego_kmh: 90, a: 8.0}
+  - {id: "D1-90-9.0", group: D1, kind: brake, ego_kmh: 90, a: 9.0}
+  - {id: "D1-90-max", group: D1, kind: brake, ego_kmh: 90, a: max}
+  - {id: "D1-95-3.0", group: D1, kind: brake, ego_kmh: 95, a: 3.0}
+  - {id: "D1-95-4.0", group: D1, kind: brake, ego_kmh: 95, a: 4.0}
+  - {id: "D1-95-5.0", group: D1, kind: brake, ego_kmh: 95, a: 5.0}
+  - {id: "D1-95-6.0", group: D1, kind: brake, ego_kmh: 95, a: 6.0}
+  - {id: "D1-95-7.0", group: D1, kind: brake, ego_kmh: 95, a: 7.0}
+  - {id: "D1-95-8.0", group: D1, kind: brake, ego_kmh: 95, a: 8.0}
+  - {id: "D1-95-9.0", group: D1, kind: brake, ego_kmh: 95, a: 9.0}
+  - {id: "D1-95-max", group: D1, kind: brake, ego_kmh: 95, a: max}
+  - {id: "D1-100-3.0", group: D1, kind: brake, ego_kmh: 100, a: 3.0}
+  - {id: "D1-100-4.0", group: D1, kind: brake, ego_kmh: 100, a: 4.0}
+  - {id: "D1-100-5.0", group: D1, kind: brake, ego_kmh: 100, a: 5.0}
+  - {id: "D1-100-6.0", group: D1, kind: brake, ego_kmh: 100, a: 6.0}
+  - {id: "D1-100-7.0", group: D1, kind: brake, ego_kmh: 100, a: 7.0}
+  - {id: "D1-100-8.0", group: D1, kind: brake, ego_kmh: 100, a: 8.0}
+  - {id: "D1-100-9.0", group: D1, kind: brake, ego_kmh: 100, a: 9.0}
+  - {id: "D1-100-max", group: D1, kind: brake, ego_kmh: 100, a: max}
+  # ---- D2
+  - {id: "D2-model3-20-0.5", group: D2, kind: brake, vehicle: model3, ego_kmh: 20, a: 0.5}
+  - {id: "D2-model3-20-1.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 20, a: 1.0}
+  - {id: "D2-model3-20-1.5", group: D2, kind: brake, vehicle: model3, ego_kmh: 20, a: 1.5}
+  - {id: "D2-model3-20-2.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 20, a: 2.0}
+  - {id: "D2-model3-20-3.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 20, a: 3.0}
+  - {id: "D2-model3-20-max", group: D2, kind: brake, vehicle: model3, ego_kmh: 20, a: max}
+  - {id: "D2-model3-30-0.5", group: D2, kind: brake, vehicle: model3, ego_kmh: 30, a: 0.5}
+  - {id: "D2-model3-30-1.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 30, a: 1.0}
+  - {id: "D2-model3-30-1.5", group: D2, kind: brake, vehicle: model3, ego_kmh: 30, a: 1.5}
+  - {id: "D2-model3-30-2.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 30, a: 2.0}
+  - {id: "D2-model3-30-3.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 30, a: 3.0}
+  - {id: "D2-model3-30-max", group: D2, kind: brake, vehicle: model3, ego_kmh: 30, a: max}
+  - {id: "D2-model3-40-1.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 40, a: 1.0}
+  - {id: "D2-model3-40-1.5", group: D2, kind: brake, vehicle: model3, ego_kmh: 40, a: 1.5}
+  - {id: "D2-model3-40-2.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 40, a: 2.0}
+  - {id: "D2-model3-40-3.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 40, a: 3.0}
+  - {id: "D2-model3-40-max", group: D2, kind: brake, vehicle: model3, ego_kmh: 40, a: max}
+  - {id: "D2-model3-50-1.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 50, a: 1.0}
+  - {id: "D2-model3-50-1.5", group: D2, kind: brake, vehicle: model3, ego_kmh: 50, a: 1.5}
+  - {id: "D2-model3-50-2.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 50, a: 2.0}
+  - {id: "D2-model3-50-3.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 50, a: 3.0}
+  - {id: "D2-model3-50-max", group: D2, kind: brake, vehicle: model3, ego_kmh: 50, a: max}
+  - {id: "D2-model3-60-1.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 60, a: 1.0}
+  - {id: "D2-model3-60-1.5", group: D2, kind: brake, vehicle: model3, ego_kmh: 60, a: 1.5}
+  - {id: "D2-model3-60-2.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 60, a: 2.0}
+  - {id: "D2-model3-60-3.0", group: D2, kind: brake, vehicle: model3, ego_kmh: 60, a: 3.0}
+  - {id: "D2-model3-60-max", group: D2, kind: brake, vehicle: model3, ego_kmh: 60, a: max}
+  - {id: "D2-patrol-20-0.5", group: D2, kind: brake, vehicle: patrol, ego_kmh: 20, a: 0.5}
+  - {id: "D2-patrol-20-1.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 20, a: 1.0}
+  - {id: "D2-patrol-20-1.5", group: D2, kind: brake, vehicle: patrol, ego_kmh: 20, a: 1.5}
+  - {id: "D2-patrol-20-2.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 20, a: 2.0}
+  - {id: "D2-patrol-20-3.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 20, a: 3.0}
+  - {id: "D2-patrol-20-4.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 20, a: 4.0}
+  - {id: "D2-patrol-20-5.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 20, a: 5.0}
+  - {id: "D2-patrol-20-max", group: D2, kind: brake, vehicle: patrol, ego_kmh: 20, a: max}
+  - {id: "D2-patrol-30-0.5", group: D2, kind: brake, vehicle: patrol, ego_kmh: 30, a: 0.5}
+  - {id: "D2-patrol-30-1.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 30, a: 1.0}
+  - {id: "D2-patrol-30-1.5", group: D2, kind: brake, vehicle: patrol, ego_kmh: 30, a: 1.5}
+  - {id: "D2-patrol-30-2.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 30, a: 2.0}
+  - {id: "D2-patrol-30-3.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 30, a: 3.0}
+  - {id: "D2-patrol-30-4.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 30, a: 4.0}
+  - {id: "D2-patrol-30-5.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 30, a: 5.0}
+  - {id: "D2-patrol-30-max", group: D2, kind: brake, vehicle: patrol, ego_kmh: 30, a: max}
+  - {id: "D2-patrol-40-1.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 40, a: 1.0}
+  - {id: "D2-patrol-40-1.5", group: D2, kind: brake, vehicle: patrol, ego_kmh: 40, a: 1.5}
+  - {id: "D2-patrol-40-2.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 40, a: 2.0}
+  - {id: "D2-patrol-40-3.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 40, a: 3.0}
+  - {id: "D2-patrol-40-4.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 40, a: 4.0}
+  - {id: "D2-patrol-40-5.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 40, a: 5.0}
+  - {id: "D2-patrol-40-max", group: D2, kind: brake, vehicle: patrol, ego_kmh: 40, a: max}
+  - {id: "D2-patrol-50-1.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 50, a: 1.0}
+  - {id: "D2-patrol-50-1.5", group: D2, kind: brake, vehicle: patrol, ego_kmh: 50, a: 1.5}
+  - {id: "D2-patrol-50-2.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 50, a: 2.0}
+  - {id: "D2-patrol-50-3.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 50, a: 3.0}
+  - {id: "D2-patrol-50-4.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 50, a: 4.0}
+  - {id: "D2-patrol-50-5.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 50, a: 5.0}
+  - {id: "D2-patrol-50-max", group: D2, kind: brake, vehicle: patrol, ego_kmh: 50, a: max}
+  - {id: "D2-patrol-60-1.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 60, a: 1.0}
+  - {id: "D2-patrol-60-1.5", group: D2, kind: brake, vehicle: patrol, ego_kmh: 60, a: 1.5}
+  - {id: "D2-patrol-60-2.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 60, a: 2.0}
+  - {id: "D2-patrol-60-3.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 60, a: 3.0}
+  - {id: "D2-patrol-60-4.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 60, a: 4.0}
+  - {id: "D2-patrol-60-5.0", group: D2, kind: brake, vehicle: patrol, ego_kmh: 60, a: 5.0}
+  - {id: "D2-patrol-60-max", group: D2, kind: brake, vehicle: patrol, ego_kmh: 60, a: max}
+  - {id: "D2-sprinter-20-0.5", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 20, a: 0.5}
+  - {id: "D2-sprinter-20-1.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 20, a: 1.0}
+  - {id: "D2-sprinter-20-1.5", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 20, a: 1.5}
+  - {id: "D2-sprinter-20-2.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 20, a: 2.0}
+  - {id: "D2-sprinter-20-3.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 20, a: 3.0}
+  - {id: "D2-sprinter-20-4.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 20, a: 4.0}
+  - {id: "D2-sprinter-20-5.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 20, a: 5.0}
+  - {id: "D2-sprinter-20-max", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 20, a: max}
+  - {id: "D2-sprinter-30-0.5", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 30, a: 0.5}
+  - {id: "D2-sprinter-30-1.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 30, a: 1.0}
+  - {id: "D2-sprinter-30-1.5", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 30, a: 1.5}
+  - {id: "D2-sprinter-30-2.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 30, a: 2.0}
+  - {id: "D2-sprinter-30-3.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 30, a: 3.0}
+  - {id: "D2-sprinter-30-4.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 30, a: 4.0}
+  - {id: "D2-sprinter-30-5.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 30, a: 5.0}
+  - {id: "D2-sprinter-30-max", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 30, a: max}
+  - {id: "D2-sprinter-40-1.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 40, a: 1.0}
+  - {id: "D2-sprinter-40-1.5", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 40, a: 1.5}
+  - {id: "D2-sprinter-40-2.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 40, a: 2.0}
+  - {id: "D2-sprinter-40-3.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 40, a: 3.0}
+  - {id: "D2-sprinter-40-4.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 40, a: 4.0}
+  - {id: "D2-sprinter-40-5.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 40, a: 5.0}
+  - {id: "D2-sprinter-40-max", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 40, a: max}
+  - {id: "D2-sprinter-50-1.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 50, a: 1.0}
+  - {id: "D2-sprinter-50-1.5", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 50, a: 1.5}
+  - {id: "D2-sprinter-50-2.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 50, a: 2.0}
+  - {id: "D2-sprinter-50-3.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 50, a: 3.0}
+  - {id: "D2-sprinter-50-4.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 50, a: 4.0}
+  - {id: "D2-sprinter-50-5.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 50, a: 5.0}
+  - {id: "D2-sprinter-50-max", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 50, a: max}
+  - {id: "D2-sprinter-60-1.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 60, a: 1.0}
+  - {id: "D2-sprinter-60-1.5", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 60, a: 1.5}
+  - {id: "D2-sprinter-60-2.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 60, a: 2.0}
+  - {id: "D2-sprinter-60-3.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 60, a: 3.0}
+  - {id: "D2-sprinter-60-4.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 60, a: 4.0}
+  - {id: "D2-sprinter-60-5.0", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 60, a: 5.0}
+  - {id: "D2-sprinter-60-max", group: D2, kind: brake, vehicle: sprinter, ego_kmh: 60, a: max}
+  - {id: "D2-hgv-20-0.5", group: D2, kind: brake, vehicle: hgv, ego_kmh: 20, a: 0.5}
+  - {id: "D2-hgv-20-1.0", group: D2, kind: brake, vehicle: hgv, ego_kmh: 20, a: 1.0}
+  - {id: "D2-hgv-20-1.5", group: D2, kind: brake, vehicle: hgv, ego_kmh: 20, a: 1.5}
+  - {id: "D2-hgv-20-max", group: D2, kind: brake, vehicle: hgv, ego_kmh: 20, a: max}
+  - {id: "D2-hgv-30-0.5", group: D2, kind: brake, vehicle: hgv, ego_kmh: 30, a: 0.5}
+  - {id: "D2-hgv-30-1.0", group: D2, kind: brake, vehicle: hgv, ego_kmh: 30, a: 1.0}
+  - {id: "D2-hgv-30-1.5", group: D2, kind: brake, vehicle: hgv, ego_kmh: 30, a: 1.5}
+  - {id: "D2-hgv-30-max", group: D2, kind: brake, vehicle: hgv, ego_kmh: 30, a: max}
+  - {id: "D2-hgv-40-1.0", group: D2, kind: brake, vehicle: hgv, ego_kmh: 40, a: 1.0}
+  - {id: "D2-hgv-40-1.5", group: D2, kind: brake, vehicle: hgv, ego_kmh: 40, a: 1.5}
+  - {id: "D2-hgv-40-max", group: D2, kind: brake, vehicle: hgv, ego_kmh: 40, a: max}
+  - {id: "D2-hgv-50-1.0", group: D2, kind: brake, vehicle: hgv, ego_kmh: 50, a: 1.0}
+  - {id: "D2-hgv-50-1.5", group: D2, kind: brake, vehicle: hgv, ego_kmh: 50, a: 1.5}
+  - {id: "D2-hgv-50-max", group: D2, kind: brake, vehicle: hgv, ego_kmh: 50, a: max}
+  - {id: "D2-hgv-60-1.0", group: D2, kind: brake, vehicle: hgv, ego_kmh: 60, a: 1.0}
+  - {id: "D2-hgv-60-1.5", group: D2, kind: brake, vehicle: hgv, ego_kmh: 60, a: 1.5}
+  - {id: "D2-hgv-60-max", group: D2, kind: brake, vehicle: hgv, ego_kmh: 60, a: max}
+  # ---- D3
+  - {id: "D3-tf0.3-30-6.0", group: D3, kind: brake, ego_kmh: 30, a: 6.0, tire_friction_scale: 0.3}
+  - {id: "D3-tf0.3-30-max", group: D3, kind: brake, ego_kmh: 30, a: max, tire_friction_scale: 0.3}
+  - {id: "D3-tf0.3-50-6.0", group: D3, kind: brake, ego_kmh: 50, a: 6.0, tire_friction_scale: 0.3}
+  - {id: "D3-tf0.3-50-max", group: D3, kind: brake, ego_kmh: 50, a: max, tire_friction_scale: 0.3}
+  - {id: "D3-tf0.3-70-6.0", group: D3, kind: brake, ego_kmh: 70, a: 6.0, tire_friction_scale: 0.3}
+  - {id: "D3-tf0.3-70-max", group: D3, kind: brake, ego_kmh: 70, a: max, tire_friction_scale: 0.3}
+  - {id: "D3-tf0.5-30-6.0", group: D3, kind: brake, ego_kmh: 30, a: 6.0, tire_friction_scale: 0.5}
+  - {id: "D3-tf0.5-30-max", group: D3, kind: brake, ego_kmh: 30, a: max, tire_friction_scale: 0.5}
+  - {id: "D3-tf0.5-50-6.0", group: D3, kind: brake, ego_kmh: 50, a: 6.0, tire_friction_scale: 0.5}
+  - {id: "D3-tf0.5-50-max", group: D3, kind: brake, ego_kmh: 50, a: max, tire_friction_scale: 0.5}
+  - {id: "D3-tf0.5-70-6.0", group: D3, kind: brake, ego_kmh: 70, a: 6.0, tire_friction_scale: 0.5}
+  - {id: "D3-tf0.5-70-max", group: D3, kind: brake, ego_kmh: 70, a: max, tire_friction_scale: 0.5}
+  - {id: "D3-tf0.7-30-6.0", group: D3, kind: brake, ego_kmh: 30, a: 6.0, tire_friction_scale: 0.7}
+  - {id: "D3-tf0.7-30-max", group: D3, kind: brake, ego_kmh: 30, a: max, tire_friction_scale: 0.7}
+  - {id: "D3-tf0.7-50-6.0", group: D3, kind: brake, ego_kmh: 50, a: 6.0, tire_friction_scale: 0.7}
+  - {id: "D3-tf0.7-50-max", group: D3, kind: brake, ego_kmh: 50, a: max, tire_friction_scale: 0.7}
+  - {id: "D3-tf0.7-70-6.0", group: D3, kind: brake, ego_kmh: 70, a: 6.0, tire_friction_scale: 0.7}
+  - {id: "D3-tf0.7-70-max", group: D3, kind: brake, ego_kmh: 70, a: max, tire_friction_scale: 0.7}
+  - {id: "D3-tf0.9-30-6.0", group: D3, kind: brake, ego_kmh: 30, a: 6.0, tire_friction_scale: 0.9}
+  - {id: "D3-tf0.9-30-max", group: D3, kind: brake, ego_kmh: 30, a: max, tire_friction_scale: 0.9}
+  - {id: "D3-tf0.9-50-6.0", group: D3, kind: brake, ego_kmh: 50, a: 6.0, tire_friction_scale: 0.9}
+  - {id: "D3-tf0.9-50-max", group: D3, kind: brake, ego_kmh: 50, a: max, tire_friction_scale: 0.9}
+  - {id: "D3-tf0.9-70-6.0", group: D3, kind: brake, ego_kmh: 70, a: 6.0, tire_friction_scale: 0.9}
+  - {id: "D3-tf0.9-70-max", group: D3, kind: brake, ego_kmh: 70, a: max, tire_friction_scale: 0.9}
+  - {id: "D3-tf1.2-30-6.0", group: D3, kind: brake, ego_kmh: 30, a: 6.0, tire_friction_scale: 1.2}
+  - {id: "D3-tf1.2-30-max", group: D3, kind: brake, ego_kmh: 30, a: max, tire_friction_scale: 1.2}
+  - {id: "D3-tf1.2-50-6.0", group: D3, kind: brake, ego_kmh: 50, a: 6.0, tire_friction_scale: 1.2}
+  - {id: "D3-tf1.2-50-max", group: D3, kind: brake, ego_kmh: 50, a: max, tire_friction_scale: 1.2}
+  - {id: "D3-tf1.2-70-6.0", group: D3, kind: brake, ego_kmh: 70, a: 6.0, tire_friction_scale: 1.2}
+  - {id: "D3-tf1.2-70-max", group: D3, kind: brake, ego_kmh: 70, a: max, tire_friction_scale: 1.2}
+  - {id: "D3-tf1.5-30-6.0", group: D3, kind: brake, ego_kmh: 30, a: 6.0, tire_friction_scale: 1.5}
+  - {id: "D3-tf1.5-30-max", group: D3, kind: brake, ego_kmh: 30, a: max, tire_friction_scale: 1.5}
+  - {id: "D3-tf1.5-50-6.0", group: D3, kind: brake, ego_kmh: 50, a: 6.0, tire_friction_scale: 1.5}
+  - {id: "D3-tf1.5-50-max", group: D3, kind: brake, ego_kmh: 50, a: max, tire_friction_scale: 1.5}
+  - {id: "D3-tf1.5-70-6.0", group: D3, kind: brake, ego_kmh: 70, a: 6.0, tire_friction_scale: 1.5}
+  - {id: "D3-tf1.5-70-max", group: D3, kind: brake, ego_kmh: 70, a: max, tire_friction_scale: 1.5}
+  # ---- D4
+  - {id: "D4-20-p0.8-k15", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 0.8, trigger_m: 15}
+  - {id: "D4-20-p0.8-k25", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 0.8, trigger_m: 25}
+  - {id: "D4-20-p0.8-k40", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 0.8, trigger_m: 40}
+  - {id: "D4-20-p1.0-k15", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 1.0, trigger_m: 15}
+  - {id: "D4-20-p1.0-k25", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 1.0, trigger_m: 25}
+  - {id: "D4-20-p1.0-k40", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 1.0, trigger_m: 40}
+  - {id: "D4-20-p1.39-k15", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 1.39, trigger_m: 15}
+  - {id: "D4-20-p1.39-k25", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 1.39, trigger_m: 25}
+  - {id: "D4-20-p1.39-k40", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 1.39, trigger_m: 40}
+  - {id: "D4-20-p1.8-k15", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 1.8, trigger_m: 15}
+  - {id: "D4-20-p1.8-k25", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 1.8, trigger_m: 25}
+  - {id: "D4-20-p1.8-k40", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 1.8, trigger_m: 40}
+  - {id: "D4-20-p2.5-k15", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 2.5, trigger_m: 15}
+  - {id: "D4-20-p2.5-k25", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 2.5, trigger_m: 25}
+  - {id: "D4-20-p2.5-k40", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 2.5, trigger_m: 40}
+  - {id: "D4-20-p3.5-k15", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 3.5, trigger_m: 15}
+  - {id: "D4-20-p3.5-k25", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 3.5, trigger_m: 25}
+  - {id: "D4-20-p3.5-k40", group: D4, kind: combined, ego_kmh: 20, a: 8.0, ped_mps: 3.5, trigger_m: 40}
+  - {id: "D4-30-p0.8-k15", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 0.8, trigger_m: 15}
+  - {id: "D4-30-p0.8-k25", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 0.8, trigger_m: 25}
+  - {id: "D4-30-p0.8-k40", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 0.8, trigger_m: 40}
+  - {id: "D4-30-p1.0-k15", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 1.0, trigger_m: 15}
+  - {id: "D4-30-p1.0-k25", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 1.0, trigger_m: 25}
+  - {id: "D4-30-p1.0-k40", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 1.0, trigger_m: 40}
+  - {id: "D4-30-p1.39-k15", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 1.39, trigger_m: 15}
+  - {id: "D4-30-p1.39-k25", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 1.39, trigger_m: 25}
+  - {id: "D4-30-p1.39-k40", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 1.39, trigger_m: 40}
+  - {id: "D4-30-p1.8-k15", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 1.8, trigger_m: 15}
+  - {id: "D4-30-p1.8-k25", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 1.8, trigger_m: 25}
+  - {id: "D4-30-p1.8-k40", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 1.8, trigger_m: 40}
+  - {id: "D4-30-p2.5-k15", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 2.5, trigger_m: 15}
+  - {id: "D4-30-p2.5-k25", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 2.5, trigger_m: 25}
+  - {id: "D4-30-p2.5-k40", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 2.5, trigger_m: 40}
+  - {id: "D4-30-p3.5-k15", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 3.5, trigger_m: 15}
+  - {id: "D4-30-p3.5-k25", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 3.5, trigger_m: 25}
+  - {id: "D4-30-p3.5-k40", group: D4, kind: combined, ego_kmh: 30, a: 8.0, ped_mps: 3.5, trigger_m: 40}
+  - {id: "D4-40-p0.8-k15", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 0.8, trigger_m: 15}
+  - {id: "D4-40-p0.8-k25", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 0.8, trigger_m: 25}
+  - {id: "D4-40-p0.8-k40", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 0.8, trigger_m: 40}
+  - {id: "D4-40-p1.0-k15", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 1.0, trigger_m: 15}
+  - {id: "D4-40-p1.0-k25", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 1.0, trigger_m: 25}
+  - {id: "D4-40-p1.0-k40", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 1.0, trigger_m: 40}
+  - {id: "D4-40-p1.39-k15", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 1.39, trigger_m: 15}
+  - {id: "D4-40-p1.39-k25", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 1.39, trigger_m: 25}
+  - {id: "D4-40-p1.39-k40", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 1.39, trigger_m: 40}
+  - {id: "D4-40-p1.8-k15", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 1.8, trigger_m: 15}
+  - {id: "D4-40-p1.8-k25", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 1.8, trigger_m: 25}
+  - {id: "D4-40-p1.8-k40", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 1.8, trigger_m: 40}
+  - {id: "D4-40-p2.5-k15", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 2.5, trigger_m: 15}
+  - {id: "D4-40-p2.5-k25", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 2.5, trigger_m: 25}
+  - {id: "D4-40-p2.5-k40", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 2.5, trigger_m: 40}
+  - {id: "D4-40-p3.5-k15", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 3.5, trigger_m: 15}
+  - {id: "D4-40-p3.5-k25", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 3.5, trigger_m: 25}
+  - {id: "D4-40-p3.5-k40", group: D4, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 3.5, trigger_m: 40}
+  - {id: "D4-50-p0.8-k15", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 0.8, trigger_m: 15}
+  - {id: "D4-50-p0.8-k25", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 0.8, trigger_m: 25}
+  - {id: "D4-50-p0.8-k40", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 0.8, trigger_m: 40}
+  - {id: "D4-50-p1.0-k15", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 1.0, trigger_m: 15}
+  - {id: "D4-50-p1.0-k25", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 1.0, trigger_m: 25}
+  - {id: "D4-50-p1.0-k40", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 1.0, trigger_m: 40}
+  - {id: "D4-50-p1.39-k15", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 1.39, trigger_m: 15}
+  - {id: "D4-50-p1.39-k25", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 1.39, trigger_m: 25}
+  - {id: "D4-50-p1.39-k40", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 1.39, trigger_m: 40}
+  - {id: "D4-50-p1.8-k15", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 1.8, trigger_m: 15}
+  - {id: "D4-50-p1.8-k25", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 1.8, trigger_m: 25}
+  - {id: "D4-50-p1.8-k40", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 1.8, trigger_m: 40}
+  - {id: "D4-50-p2.5-k15", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 2.5, trigger_m: 15}
+  - {id: "D4-50-p2.5-k25", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 2.5, trigger_m: 25}
+  - {id: "D4-50-p2.5-k40", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 2.5, trigger_m: 40}
+  - {id: "D4-50-p3.5-k15", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 3.5, trigger_m: 15}
+  - {id: "D4-50-p3.5-k25", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 3.5, trigger_m: 25}
+  - {id: "D4-50-p3.5-k40", group: D4, kind: combined, ego_kmh: 50, a: 8.0, ped_mps: 3.5, trigger_m: 40}
+  - {id: "D4-60-p0.8-k15", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 0.8, trigger_m: 15}
+  - {id: "D4-60-p0.8-k25", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 0.8, trigger_m: 25}
+  - {id: "D4-60-p0.8-k40", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 0.8, trigger_m: 40}
+  - {id: "D4-60-p1.0-k15", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 1.0, trigger_m: 15}
+  - {id: "D4-60-p1.0-k25", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 1.0, trigger_m: 25}
+  - {id: "D4-60-p1.0-k40", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 1.0, trigger_m: 40}
+  - {id: "D4-60-p1.39-k15", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 1.39, trigger_m: 15}
+  - {id: "D4-60-p1.39-k25", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 1.39, trigger_m: 25}
+  - {id: "D4-60-p1.39-k40", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 1.39, trigger_m: 40}
+  - {id: "D4-60-p1.8-k15", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 1.8, trigger_m: 15}
+  - {id: "D4-60-p1.8-k25", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 1.8, trigger_m: 25}
+  - {id: "D4-60-p1.8-k40", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 1.8, trigger_m: 40}
+  - {id: "D4-60-p2.5-k15", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 2.5, trigger_m: 15}
+  - {id: "D4-60-p2.5-k25", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 2.5, trigger_m: 25}
+  - {id: "D4-60-p2.5-k40", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 2.5, trigger_m: 40}
+  - {id: "D4-60-p3.5-k15", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 3.5, trigger_m: 15}
+  - {id: "D4-60-p3.5-k25", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 3.5, trigger_m: 25}
+  - {id: "D4-60-p3.5-k40", group: D4, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 3.5, trigger_m: 40}
+  # ---- D5
+  - {id: "D5-0.5", group: D5, kind: walker, ped_mps: 0.5}
+  - {id: "D5-le-0.5", group: D5, kind: walker, ped_mps: 0.5, stop_at_curb: true}
+  - {id: "D5-0.8", group: D5, kind: walker, ped_mps: 0.8}
+  - {id: "D5-le-0.8", group: D5, kind: walker, ped_mps: 0.8, stop_at_curb: true}
+  - {id: "D5-1.0", group: D5, kind: walker, ped_mps: 1.0}
+  - {id: "D5-le-1.0", group: D5, kind: walker, ped_mps: 1.0, stop_at_curb: true}
+  - {id: "D5-1.2", group: D5, kind: walker, ped_mps: 1.2}
+  - {id: "D5-le-1.2", group: D5, kind: walker, ped_mps: 1.2, stop_at_curb: true}
+  - {id: "D5-1.39", group: D5, kind: walker, ped_mps: 1.39}
+  - {id: "D5-le-1.39", group: D5, kind: walker, ped_mps: 1.39, stop_at_curb: true}
+  - {id: "D5-1.6", group: D5, kind: walker, ped_mps: 1.6}
+  - {id: "D5-le-1.6", group: D5, kind: walker, ped_mps: 1.6, stop_at_curb: true}
+  - {id: "D5-1.8", group: D5, kind: walker, ped_mps: 1.8}
+  - {id: "D5-le-1.8", group: D5, kind: walker, ped_mps: 1.8, stop_at_curb: true}
+  - {id: "D5-2.2", group: D5, kind: walker, ped_mps: 2.2}
+  - {id: "D5-le-2.2", group: D5, kind: walker, ped_mps: 2.2, stop_at_curb: true}
+  - {id: "D5-2.6", group: D5, kind: walker, ped_mps: 2.6}
+  - {id: "D5-le-2.6", group: D5, kind: walker, ped_mps: 2.6, stop_at_curb: true}
+  - {id: "D5-3.0", group: D5, kind: walker, ped_mps: 3.0}
+  - {id: "D5-le-3.0", group: D5, kind: walker, ped_mps: 3.0, stop_at_curb: true}
+  - {id: "D5-4.0", group: D5, kind: walker, ped_mps: 4.0}
+  - {id: "D5-le-4.0", group: D5, kind: walker, ped_mps: 4.0, stop_at_curb: true}
+  - {id: "D5-6.0", group: D5, kind: walker, ped_mps: 6.0}
+  - {id: "D5-le-6.0", group: D5, kind: walker, ped_mps: 6.0, stop_at_curb: true}
+  # ---- D6
+  - {id: "D6-m0.7-40-8.0", group: D6, kind: brake, ego_kmh: 40, a: 8.0, mass_scale: 0.7}
+  - {id: "D6-m0.7-40-max", group: D6, kind: brake, ego_kmh: 40, a: max, mass_scale: 0.7}
+  - {id: "D6-m0.7-60-8.0", group: D6, kind: brake, ego_kmh: 60, a: 8.0, mass_scale: 0.7}
+  - {id: "D6-m0.7-60-max", group: D6, kind: brake, ego_kmh: 60, a: max, mass_scale: 0.7}
+  - {id: "D6-m0.85-40-8.0", group: D6, kind: brake, ego_kmh: 40, a: 8.0, mass_scale: 0.85}
+  - {id: "D6-m0.85-40-max", group: D6, kind: brake, ego_kmh: 40, a: max, mass_scale: 0.85}
+  - {id: "D6-m0.85-60-8.0", group: D6, kind: brake, ego_kmh: 60, a: 8.0, mass_scale: 0.85}
+  - {id: "D6-m0.85-60-max", group: D6, kind: brake, ego_kmh: 60, a: max, mass_scale: 0.85}
+  - {id: "D6-m1.15-40-8.0", group: D6, kind: brake, ego_kmh: 40, a: 8.0, mass_scale: 1.15}
+  - {id: "D6-m1.15-40-max", group: D6, kind: brake, ego_kmh: 40, a: max, mass_scale: 1.15}
+  - {id: "D6-m1.15-60-8.0", group: D6, kind: brake, ego_kmh: 60, a: 8.0, mass_scale: 1.15}
+  - {id: "D6-m1.15-60-max", group: D6, kind: brake, ego_kmh: 60, a: max, mass_scale: 1.15}
+  - {id: "D6-m1.3-40-8.0", group: D6, kind: brake, ego_kmh: 40, a: 8.0, mass_scale: 1.3}
+  - {id: "D6-m1.3-40-max", group: D6, kind: brake, ego_kmh: 40, a: max, mass_scale: 1.3}
+  - {id: "D6-m1.3-60-8.0", group: D6, kind: brake, ego_kmh: 60, a: 8.0, mass_scale: 1.3}
+  - {id: "D6-m1.3-60-max", group: D6, kind: brake, ego_kmh: 60, a: max, mass_scale: 1.3}
+  - {id: "D6-m1.5-40-8.0", group: D6, kind: brake, ego_kmh: 40, a: 8.0, mass_scale: 1.5}
+  - {id: "D6-m1.5-40-max", group: D6, kind: brake, ego_kmh: 40, a: max, mass_scale: 1.5}
+  - {id: "D6-m1.5-60-8.0", group: D6, kind: brake, ego_kmh: 60, a: 8.0, mass_scale: 1.5}
+  - {id: "D6-m1.5-60-max", group: D6, kind: brake, ego_kmh: 60, a: max, mass_scale: 1.5}
+  # ---- D7
+  - {id: "D7-RAIN-30-4.0", group: D7, kind: brake, ego_kmh: 30, a: 4.0, weather: RAIN}
+  - {id: "D7-RAIN-30-8.0", group: D7, kind: brake, ego_kmh: 30, a: 8.0, weather: RAIN}
+  - {id: "D7-RAIN-30-max", group: D7, kind: brake, ego_kmh: 30, a: max, weather: RAIN}
+  - {id: "D7-RAIN-50-4.0", group: D7, kind: brake, ego_kmh: 50, a: 4.0, weather: RAIN}
+  - {id: "D7-RAIN-50-8.0", group: D7, kind: brake, ego_kmh: 50, a: 8.0, weather: RAIN}
+  - {id: "D7-RAIN-50-max", group: D7, kind: brake, ego_kmh: 50, a: max, weather: RAIN}
+  - {id: "D7-RAIN-70-4.0", group: D7, kind: brake, ego_kmh: 70, a: 4.0, weather: RAIN}
+  - {id: "D7-RAIN-70-8.0", group: D7, kind: brake, ego_kmh: 70, a: 8.0, weather: RAIN}
+  - {id: "D7-RAIN-70-max", group: D7, kind: brake, ego_kmh: 70, a: max, weather: RAIN}
+  - {id: "D7-HEAVY_RAIN-30-4.0", group: D7, kind: brake, ego_kmh: 30, a: 4.0, weather: HEAVY_RAIN}
+  - {id: "D7-HEAVY_RAIN-30-8.0", group: D7, kind: brake, ego_kmh: 30, a: 8.0, weather: HEAVY_RAIN}
+  - {id: "D7-HEAVY_RAIN-30-max", group: D7, kind: brake, ego_kmh: 30, a: max, weather: HEAVY_RAIN}
+  - {id: "D7-HEAVY_RAIN-50-4.0", group: D7, kind: brake, ego_kmh: 50, a: 4.0, weather: HEAVY_RAIN}
+  - {id: "D7-HEAVY_RAIN-50-8.0", group: D7, kind: brake, ego_kmh: 50, a: 8.0, weather: HEAVY_RAIN}
+  - {id: "D7-HEAVY_RAIN-50-max", group: D7, kind: brake, ego_kmh: 50, a: max, weather: HEAVY_RAIN}
+  - {id: "D7-HEAVY_RAIN-70-4.0", group: D7, kind: brake, ego_kmh: 70, a: 4.0, weather: HEAVY_RAIN}
+  - {id: "D7-HEAVY_RAIN-70-8.0", group: D7, kind: brake, ego_kmh: 70, a: 8.0, weather: HEAVY_RAIN}
+  - {id: "D7-HEAVY_RAIN-70-max", group: D7, kind: brake, ego_kmh: 70, a: max, weather: HEAVY_RAIN}
+  # ---- R3 (lặp lại)
+  - {id: "R3-D1-20-8.0", group: R3, kind: brake, ego_kmh: 20, a: 8.0, same_as: "D1-20-8.0", repeat: 2}
+  - {id: "R3-D1-40-8.0", group: R3, kind: brake, ego_kmh: 40, a: 8.0, same_as: "D1-40-8.0", repeat: 2}
+  - {id: "R3-D1-60-8.0", group: R3, kind: brake, ego_kmh: 60, a: 8.0, same_as: "D1-60-8.0", repeat: 2}
+  - {id: "R3-D1-90-max", group: R3, kind: brake, ego_kmh: 90, a: max, same_as: "D1-90-max", repeat: 2}
+  - {id: "R3-D2-model3-40-max", group: R3, kind: brake, vehicle: model3, ego_kmh: 40, a: max, same_as: "D2-model3-40-max", repeat: 2}
+  - {id: "R3-D2-patrol-40-max", group: R3, kind: brake, vehicle: patrol, ego_kmh: 40, a: max, same_as: "D2-patrol-40-max", repeat: 2}
+  - {id: "R3-D2-sprinter-40-max", group: R3, kind: brake, vehicle: sprinter, ego_kmh: 40, a: max, same_as: "D2-sprinter-40-max", repeat: 2}
+  - {id: "R3-D2-hgv-40-max", group: R3, kind: brake, vehicle: hgv, ego_kmh: 40, a: max, same_as: "D2-hgv-40-max", repeat: 2}
+  - {id: "R3-D3-tf0.5-50-max", group: R3, kind: brake, ego_kmh: 50, a: max, tire_friction_scale: 0.5, same_as: "D3-tf0.5-50-max", repeat: 2}
+  - {id: "R3-D4-40-p1.39-k25", group: R3, kind: combined, ego_kmh: 40, a: 8.0, ped_mps: 1.39, trigger_m: 25, same_as: "D4-40-p1.39-k25", repeat: 2}
+  - {id: "R3-D4-60-p2.5-k40", group: R3, kind: combined, ego_kmh: 60, a: 8.0, ped_mps: 2.5, trigger_m: 40, same_as: "D4-60-p2.5-k40", repeat: 1}
+  - {id: "R3-D6-m1.3-60-max", group: R3, kind: brake, ego_kmh: 60, a: max, mass_scale: 1.3, same_as: "D6-m1.3-60-max", repeat: 1}
+  - {id: "R3-D7-RAIN-50-8.0", group: R3, kind: brake, ego_kmh: 50, a: 8.0, weather: RAIN, same_as: "D7-RAIN-50-8.0", repeat: 1}
+  - {id: "R3-D5-1.39", group: R3, kind: walker, ped_mps: 1.39, same_as: "D5-1.39", repeat: 1}

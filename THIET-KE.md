@@ -275,3 +275,21 @@ với từng xe; đồng thời bổ sung các vùng đợt 1 chưa có cho e-tr
 
 **Tổng:** 205 run (180 ca khác nhau + 25 lần chạy lặp ở X4 và R), ước lượng 45–65 phút (xe tải phanh chậm, mỗi run tới ~15 s mô phỏng). Đã thử trên CARLA máy người làm 15/11/2026:
 `X1-hgv-t1.0-40` (6 bánh đều 1500 N·m, a_dải 1,80 m/s²), `X1-model3-t2.0-50` (1400 N·m, a_dải 7,85 m/s²), `B5-xe-20` — đều hợp lệ.
+
+## 14. Đợt 3: 500 run quét dày các chỗ còn lệch (16/11/2026)
+
+Danh sách ca: [cases_dot3.yaml](cases_dot3.yaml), sinh bằng script, mỗi ca ghi tường minh. Ca nào theo mô hình tham chiếu vượt đoạn road 40
+(228 m) hoặc quá 22 s mô phỏng thì đã bị bỏ. Lệnh: `bench.py --cases cases_dot3.yaml run`.
+
+| Nhóm | Ca | Số run | Lệch cần đo |
+|---|---|---|---|
+| D1 | e-tron, 15–100 km/h (bước 5) × mức đích 1–9 m/s² và 100% | 170 | Mức phanh đổi theo tốc độ (η = 1,28 ở 40 km/h): đủ số để dựng bảng bàn đạp theo tốc độ |
+| D2 | 4 xe chưa hiệu chuẩn, 20–60 km/h × các mức nhỏ hơn phanh 100% của xe và 100% | 118 | Đường đặc tính bàn đạp của từng xe ở physics mặc định |
+| D3 | e-tron, lốp × 0,3 / 0,5 / 0,7 / 0,9 / 1,2 / 1,5 × 30 / 50 / 70 km/h × 6 m/s² và 100% | 36 | Quan hệ hệ số ma sát lốp → giảm tốc thật |
+| D4 | Xe + người: 20–60 km/h × người 0,8–3,5 m/s × kích hoạt 15 / 25 / 40 m (8 m/s²) | 90 | Ma trận xe + người: khoảng cách nhỏ nhất, va chạm, thời điểm vào hành lang |
+| D5 | Người đi bộ 0,5–6 m/s (12 mức), đi thẳng và dừng ở lề | 24 | Độ trễ khởi động của người, độ nhô vào làn khi dừng ở lề |
+| D6 | e-tron, khối lượng × 0,7 / 0,85 / 1,15 / 1,3 / 1,5 × 40 / 60 km/h × 8 m/s² và 100% | 20 | Ảnh hưởng của tải lên giảm tốc |
+| D7 | e-tron, RAIN / HEAVY_RAIN × 30 / 50 / 70 km/h × 4 / 8 m/s² và 100% | 18 | Thời tiết CARLA có ảnh hưởng gì ngoài hình ảnh |
+| R3 | Lặp 14 ca đại diện của D1–D7 (1–2 lần mỗi ca) | 24 | Độ tất định khi chạy rất dài |
+
+**Tổng:** 500 run (476 ca khác nhau + 24 lần chạy lặp), ước lượng 3–4 giờ. Có thể chạy từng phần bằng `--only D1`, `--only D2,D3`…
