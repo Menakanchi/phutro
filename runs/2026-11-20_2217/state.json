@@ -1,0 +1,825 @@
+{
+ "done": {
+  "X1-model3-t1.0-40": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "X1-model3-t1.0-50": {
+   "end": "STOPPED",
+   "wall_s": 2.0
+  },
+  "X1-model3-t1.0-60": {
+   "end": "STOPPED",
+   "wall_s": 2.5
+  },
+  "X1-model3-t1.0-70": {
+   "end": "STOPPED",
+   "wall_s": 3.0
+  },
+  "X1-model3-t1.5-40": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X1-model3-t1.5-50": {
+   "end": "STOPPED",
+   "wall_s": 1.7
+  },
+  "X1-model3-t1.5-60": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "X1-model3-t1.5-70": {
+   "end": "STOPPED",
+   "wall_s": 2.1
+  },
+  "X1-model3-t2.0-40": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-model3-t2.0-50": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X1-model3-t2.0-60": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-model3-t2.0-70": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "X1-model3-t2.5-40": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-model3-t2.5-50": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-model3-t2.5-60": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-model3-t2.5-70": {
+   "end": "STOPPED",
+   "wall_s": 1.7
+  },
+  "X1-model3-t3.0-40": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-model3-t3.0-50": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-model3-t3.0-60": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X1-model3-t3.0-70": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-patrol-t1.0-40": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-patrol-t1.0-50": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-patrol-t1.0-60": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "X1-patrol-t1.0-70": {
+   "end": "STOPPED",
+   "wall_s": 2.0
+  },
+  "X1-patrol-t1.5-40": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-patrol-t1.5-50": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-patrol-t1.5-60": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-patrol-t1.5-70": {
+   "end": "STOPPED",
+   "wall_s": 1.7
+  },
+  "X1-patrol-t2.0-40": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-patrol-t2.0-50": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-patrol-t2.0-60": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X1-patrol-t2.0-70": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-patrol-t2.5-40": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-patrol-t2.5-50": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-patrol-t2.5-60": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X1-patrol-t2.5-70": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-patrol-t3.0-40": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "X1-patrol-t3.0-50": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-patrol-t3.0-60": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-patrol-t3.0-70": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X1-sprinter-t1.0-40": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-sprinter-t1.0-50": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-sprinter-t1.0-60": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "X1-sprinter-t1.0-70": {
+   "end": "STOPPED",
+   "wall_s": 2.0
+  },
+  "X1-sprinter-t1.5-40": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-sprinter-t1.5-50": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-sprinter-t1.5-60": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-sprinter-t1.5-70": {
+   "end": "STOPPED",
+   "wall_s": 1.7
+  },
+  "X1-sprinter-t2.0-40": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-sprinter-t2.0-50": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-sprinter-t2.0-60": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-sprinter-t2.0-70": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-sprinter-t2.5-40": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-sprinter-t2.5-50": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-sprinter-t2.5-60": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X1-sprinter-t2.5-70": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-sprinter-t3.0-40": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-sprinter-t3.0-50": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X1-sprinter-t3.0-60": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-sprinter-t3.0-70": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X1-hgv-t1.0-40": {
+   "end": "STOPPED",
+   "wall_s": 2.2
+  },
+  "X1-hgv-t1.0-50": {
+   "end": "STOPPED",
+   "wall_s": 2.8
+  },
+  "X1-hgv-t1.0-60": {
+   "end": "STOPPED",
+   "wall_s": 3.4
+  },
+  "X1-hgv-t1.0-70": {
+   "end": "STOPPED",
+   "wall_s": 3.9
+  },
+  "X1-hgv-t1.5-40": {
+   "end": "STOPPED",
+   "wall_s": 1.7
+  },
+  "X1-hgv-t1.5-50": {
+   "end": "STOPPED",
+   "wall_s": 2.0
+  },
+  "X1-hgv-t1.5-60": {
+   "end": "STOPPED",
+   "wall_s": 2.4
+  },
+  "X1-hgv-t1.5-70": {
+   "end": "STOPPED",
+   "wall_s": 2.7
+  },
+  "X1-hgv-t2.0-40": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-hgv-t2.0-50": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X1-hgv-t2.0-60": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "X1-hgv-t2.0-70": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "X1-hgv-t2.5-40": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "X1-hgv-t2.5-50": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-hgv-t2.5-60": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X1-hgv-t2.5-70": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "X1-hgv-t3.0-40": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X1-hgv-t3.0-50": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X1-hgv-t3.0-60": {
+   "end": "STOPPED",
+   "wall_s": 1.7
+  },
+  "X1-hgv-t3.0-70": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "X2-model3-20-1.5": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X2-model3-20-3.0": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "X2-model3-20-max": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "X2-model3-40-1.5": {
+   "end": "STOPPED",
+   "wall_s": 3.1
+  },
+  "X2-model3-40-3.0": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "X2-model3-40-max": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "X2-model3-60-1.5": {
+   "end": "STOPPED",
+   "wall_s": 4.6
+  },
+  "X2-model3-60-3.0": {
+   "end": "STOPPED",
+   "wall_s": 2.6
+  },
+  "X2-model3-60-max": {
+   "end": "STOPPED",
+   "wall_s": 2.3
+  },
+  "X2-patrol-20-1.5": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "X2-patrol-20-3.0": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "X2-patrol-20-max": {
+   "end": "STOPPED",
+   "wall_s": 1.1
+  },
+  "X2-patrol-40-1.5": {
+   "end": "STOPPED",
+   "wall_s": 3.3
+  },
+  "X2-patrol-40-3.0": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "X2-patrol-40-max": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X2-patrol-60-1.5": {
+   "end": "STOPPED",
+   "wall_s": 5.2
+  },
+  "X2-patrol-60-3.0": {
+   "end": "STOPPED",
+   "wall_s": 2.7
+  },
+  "X2-patrol-60-max": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "X2-sprinter-20-1.5": {
+   "end": "STOPPED",
+   "wall_s": 1.1
+  },
+  "X2-sprinter-20-3.0": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "X2-sprinter-20-max": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "X2-sprinter-40-1.5": {
+   "end": "STOPPED",
+   "wall_s": 3.3
+  },
+  "X2-sprinter-40-3.0": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "X2-sprinter-40-max": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X2-sprinter-60-1.5": {
+   "end": "STOPPED",
+   "wall_s": 5.3
+  },
+  "X2-sprinter-60-3.0": {
+   "end": "STOPPED",
+   "wall_s": 2.7
+  },
+  "X2-sprinter-60-max": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "X2-hgv-20-1.5": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X2-hgv-20-3.0": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "X2-hgv-20-max": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "X2-hgv-40-1.5": {
+   "end": "STOPPED",
+   "wall_s": 2.5
+  },
+  "X2-hgv-40-3.0": {
+   "end": "STOPPED",
+   "wall_s": 2.2
+  },
+  "X2-hgv-40-max": {
+   "end": "STOPPED",
+   "wall_s": 2.2
+  },
+  "X2-hgv-60-1.5": {
+   "end": "STOPPED",
+   "wall_s": 4.0
+  },
+  "X2-hgv-60-3.0": {
+   "end": "STOPPED",
+   "wall_s": 3.5
+  },
+  "X2-hgv-60-max": {
+   "end": "STOPPED",
+   "wall_s": 3.5
+  },
+  "X3-model3-40-RAIN": {
+   "end": "STOPPED",
+   "wall_s": 1.7
+  },
+  "X3-model3-40-HEAVY_RAIN": {
+   "end": "STOPPED",
+   "wall_s": 1.7
+  },
+  "X3-model3-60-RAIN": {
+   "end": "STOPPED",
+   "wall_s": 2.3
+  },
+  "X3-model3-60-HEAVY_RAIN": {
+   "end": "STOPPED",
+   "wall_s": 2.3
+  },
+  "X3-patrol-40-RAIN": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X3-patrol-40-HEAVY_RAIN": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "X3-patrol-60-RAIN": {
+   "end": "STOPPED",
+   "wall_s": 2.0
+  },
+  "X3-patrol-60-HEAVY_RAIN": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "X3-sprinter-40-RAIN": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X3-sprinter-40-HEAVY_RAIN": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "X3-sprinter-60-RAIN": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "X3-sprinter-60-HEAVY_RAIN": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "X3-hgv-40-RAIN": {
+   "end": "STOPPED",
+   "wall_s": 2.2
+  },
+  "X3-hgv-40-HEAVY_RAIN": {
+   "end": "STOPPED",
+   "wall_s": 2.2
+  },
+  "X3-hgv-60-RAIN": {
+   "end": "STOPPED",
+   "wall_s": 3.4
+  },
+  "X3-hgv-60-HEAVY_RAIN": {
+   "end": "STOPPED",
+   "wall_s": 3.4
+  },
+  "X4-model3-r1": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "X4-model3-r2": {
+   "end": "STOPPED",
+   "wall_s": 2.0
+  },
+  "X4-patrol-r1": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X4-patrol-r2": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X4-sprinter-r1": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X4-sprinter-r2": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "X4-hgv-r1": {
+   "end": "STOPPED",
+   "wall_s": 2.8
+  },
+  "X4-hgv-r2": {
+   "end": "STOPPED",
+   "wall_s": 2.8
+  },
+  "B1-10-8.0": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "B1-10-max": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "B1-15-8.0": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "B1-15-max": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "B1-25-8.0": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "B1-25-max": {
+   "end": "STOPPED",
+   "wall_s": 1.2
+  },
+  "B2-80-4.0": {
+   "end": "STOPPED",
+   "wall_s": 2.8
+  },
+  "B2-80-8.0": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "B2-80-max": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "B3-40-2.0": {
+   "end": "STOPPED",
+   "wall_s": 2.6
+  },
+  "B3-40-3.0": {
+   "end": "STOPPED",
+   "wall_s": 1.9
+  },
+  "B3-60-2.0": {
+   "end": "STOPPED",
+   "wall_s": 4.0
+  },
+  "B3-60-3.0": {
+   "end": "STOPPED",
+   "wall_s": 2.8
+  },
+  "B4-50-8.0": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "B4-50-max": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "B5-xe-20": {
+   "end": "STOPPED",
+   "wall_s": 3.6
+  },
+  "B5-xe-30": {
+   "end": "STOPPED",
+   "wall_s": 2.9
+  },
+  "B5-xe-50": {
+   "end": "STOPPED",
+   "wall_s": 2.7
+  },
+  "B5-xe-60": {
+   "end": "STOPPED",
+   "wall_s": 2.6
+  },
+  "B5-nguoi-1.39": {
+   "end": "CROSSED",
+   "wall_s": 2.6
+  },
+  "B5-le-1.39": {
+   "end": "STOPPED_AT_CURB",
+   "wall_s": 2.0
+  },
+  "E1-10-2.0": {
+   "end": "STOPPED",
+   "wall_s": 1.3
+  },
+  "E1-90-max": {
+   "end": "STOPPED",
+   "wall_s": 2.0
+  },
+  "E1-100-max": {
+   "end": "STOPPED",
+   "wall_s": 2.2
+  },
+  "E1-100-8.0": {
+   "end": "STOPPED",
+   "wall_s": 2.2
+  },
+  "E2-20-0.5": {
+   "end": "STOPPED",
+   "wall_s": 5.2
+  },
+  "E2-20-1.0": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "E2-40-9.0": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "E2-40-12": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "E3-40-tf0.3": {
+   "end": "STOPPED",
+   "wall_s": 1.7
+  },
+  "E3-60-tf0.3": {
+   "end": "STOPPED",
+   "wall_s": 2.0
+  },
+  "E3-60-tf1.5": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "E3-40-heavy-tf0.65": {
+   "end": "STOPPED",
+   "wall_s": 1.5
+  },
+  "E4-0.5": {
+   "end": "CROSSED",
+   "wall_s": 5.8
+  },
+  "E4-8.0": {
+   "end": "CROSSED",
+   "wall_s": 0.9
+  },
+  "E4-le-0.5": {
+   "end": "STOPPED_AT_CURB",
+   "wall_s": 2.7
+  },
+  "E4-le-8.0": {
+   "end": "STOPPED_AT_CURB",
+   "wall_s": 1.6
+  },
+  "E5-trig-5": {
+   "end": "STOPPED",
+   "wall_s": 2.4
+  },
+  "E5-trig-80": {
+   "end": "STOPPED",
+   "wall_s": 3.8
+  },
+  "E5-60-ped3.0": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "E5-20-ped0.5": {
+   "end": "STOPPED",
+   "wall_s": 4.1
+  },
+  "E5-hgv-40": {
+   "end": "STOPPED",
+   "wall_s": 3.3
+  },
+  "E5-tf0.3-40": {
+   "end": "STOPPED",
+   "wall_s": 2.6
+  },
+  "E6-etron-m0.5": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "E6-etron-m2.0": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "E6-etron-t0.2": {
+   "end": "STOPPED",
+   "wall_s": 3.6
+  },
+  "E6-hgv-t5.0": {
+   "end": "STOPPED",
+   "wall_s": 1.4
+  },
+  "E6-hgv-m2.0": {
+   "end": "STOPPED",
+   "wall_s": 3.6
+  },
+  "R-B1-10-max-r1": {
+   "end": "STOPPED",
+   "wall_s": 1.1
+  },
+  "R-B1-10-max-r2": {
+   "end": "STOPPED",
+   "wall_s": 1.1
+  },
+  "R-B1-10-max-r3": {
+   "end": "STOPPED",
+   "wall_s": 1.1
+  },
+  "R-B5-xe-50-r1": {
+   "end": "STOPPED",
+   "wall_s": 2.6
+  },
+  "R-B5-xe-50-r2": {
+   "end": "STOPPED",
+   "wall_s": 2.4
+  },
+  "R-B5-xe-50-r3": {
+   "end": "STOPPED",
+   "wall_s": 2.6
+  },
+  "R-E5-tf0.3-40-r1": {
+   "end": "STOPPED",
+   "wall_s": 2.6
+  },
+  "R-E5-tf0.3-40-r2": {
+   "end": "STOPPED",
+   "wall_s": 2.5
+  },
+  "R-E5-tf0.3-40-r3": {
+   "end": "STOPPED",
+   "wall_s": 2.5
+  },
+  "R-X2-model3-40-1.5-r1": {
+   "end": "STOPPED",
+   "wall_s": 2.6
+  },
+  "R-X2-model3-40-1.5-r2": {
+   "end": "STOPPED",
+   "wall_s": 2.5
+  },
+  "R-X3-hgv-60-HEAVY_RAIN-r1": {
+   "end": "STOPPED",
+   "wall_s": 3.1
+  },
+  "R-X3-hgv-60-HEAVY_RAIN-r2": {
+   "end": "STOPPED",
+   "wall_s": 3.0
+  },
+  "R-B2-80-max-r1": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "R-B2-80-max-r2": {
+   "end": "STOPPED",
+   "wall_s": 1.6
+  },
+  "R-E3-40-tf0.3-r1": {
+   "end": "STOPPED",
+   "wall_s": 1.8
+  },
+  "R-E3-40-tf0.3-r2": {
+   "end": "STOPPED",
+   "wall_s": 1.7
+  }
+ },
+ "failed": {}
+}

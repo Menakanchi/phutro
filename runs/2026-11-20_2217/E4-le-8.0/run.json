@@ -1,0 +1,40 @@
+{
+ "case": {
+  "run_id": "E4-le-8.0",
+  "case_id": "E4-le-8.0",
+  "group": "E4",
+  "kind": "walker",
+  "ego_kmh": 40.0,
+  "a": "max",
+  "ped_mps": 8.0,
+  "trigger_m": 25.0,
+  "stop_at_curb": true,
+  "weather": "CLEAR",
+  "tire_friction_scale": 1.0,
+  "same_as": null,
+  "repeat_index": 1,
+  "vehicle": "etron",
+  "torque_scale": 1.0,
+  "mass_scale": 1.0
+ },
+ "reference": {
+  "a_e": 9.13,
+  "pedal_target": 1.0,
+  "walker_enter_s": 0.292
+ },
+ "carla": {
+  "events": {
+   "walker_start": 1.0099999774247408
+  },
+  "s_cross": 60.0,
+  "front_offset_m": 0.0,
+  "d_brake_m": 12.884552830431376,
+  "a_e": 9.13,
+  "corridor_half_m": 1.265,
+  "walker_start_lat": -3.599988707307478,
+  "end_reason": "STOPPED_AT_CURB",
+  "collisions": [],
+  "sim_duration_s": 3.82,
+  "wall_s": 1.6
+ }
+}

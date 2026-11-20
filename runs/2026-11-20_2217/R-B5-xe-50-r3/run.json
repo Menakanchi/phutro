@@ -1,0 +1,70 @@
+{
+ "case": {
+  "run_id": "R-B5-xe-50-r3",
+  "case_id": "R-B5-xe-50",
+  "group": "R",
+  "kind": "combined",
+  "ego_kmh": 50.0,
+  "a": 8.0,
+  "ped_mps": 1.39,
+  "trigger_m": 25.0,
+  "stop_at_curb": false,
+  "weather": "CLEAR",
+  "tire_friction_scale": 1.0,
+  "same_as": "B5-xe-50",
+  "repeat_index": 3,
+  "vehicle": "etron",
+  "torque_scale": 1.0,
+  "mass_scale": 1.0
+ },
+ "reference": {
+  "a_e": 8.0,
+  "pedal_target": 0.876,
+  "stop_dist_m": 16.864,
+  "stop_time_s": 2.086,
+  "walker_enter_s": 1.68,
+  "d_brake_m": 18.864,
+  "ref_collision": false,
+  "ref_min_gap_m": 2.0
+ },
+ "carla": {
+  "events": {
+   "walker_start": 2.579999942332506,
+   "brake_cmd": 3.0299999322742224,
+   "stopped": 4.539999898523092
+  },
+  "s_cross": 73.2575883922012,
+  "front_offset_m": 2.424255058867857,
+  "d_brake_m": 18.86410493827161,
+  "a_e": 8.0,
+  "corridor_half_m": 1.265,
+  "physics": {
+   "mass": 2100.0,
+   "wheels": [
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    }
+   ]
+  },
+  "walker_start_lat": -3.59998465235201,
+  "v_at_cmd": 13.86561815297729,
+  "s_front_at_cmd": 54.509733350493065,
+  "end_reason": "STOPPED",
+  "collisions": [],
+  "sim_duration_s": 6.42,
+  "wall_s": 2.6
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "case": {
+  "run_id": "E5-60-ped3.0",
+  "case_id": "E5-60-ped3.0",
+  "group": "E5",
+  "kind": "combined",
+  "ego_kmh": 60.0,
+  "a": 8.0,
+  "ped_mps": 3.0,
+  "trigger_m": 25.0,
+  "stop_at_curb": false,
+  "weather": "CLEAR",
+  "tire_friction_scale": 1.0,
+  "same_as": null,
+  "repeat_index": 1,
+  "vehicle": "etron",
+  "torque_scale": 1.0,
+  "mass_scale": 1.0
+ },
+ "reference": {
+  "a_e": 8.0,
+  "pedal_target": 0.876,
+  "stop_dist_m": 23.141,
+  "stop_time_s": 2.433,
+  "walker_enter_s": 0.778,
+  "d_brake_m": 25.141,
+  "ref_collision": false,
+  "ref_min_gap_m": 4.505
+ },
+ "carla": {
+  "events": {
+   "brake_cmd": 2.4099999461323023,
+   "walker_start": 2.4099999461323023,
+   "stopped": 4.289999904111028
+  },
+  "s_cross": 77.56536616997897,
+  "front_offset_m": 2.424255058867857,
+  "d_brake_m": 25.141111111111115,
+  "a_e": 8.0,
+  "corridor_half_m": 1.265,
+  "physics": {
+   "mass": 2100.0,
+   "wheels": [
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    }
+   ]
+  },
+  "v_at_cmd": 16.670530821335497,
+  "s_front_at_cmd": 52.58939015392498,
+  "walker_start_lat": -3.599983266584875,
+  "end_reason": "STOPPED",
+  "collisions": [],
+  "sim_duration_s": 4.8,
+  "wall_s": 1.8
+ }
+}
