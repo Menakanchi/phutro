@@ -1,0 +1,78 @@
+{
+ "case": {
+  "run_id": "E5-hgv-40",
+  "case_id": "E5-hgv-40",
+  "group": "E5",
+  "kind": "combined",
+  "ego_kmh": 40.0,
+  "a": "max",
+  "ped_mps": 1.5,
+  "trigger_m": 25.0,
+  "stop_at_curb": false,
+  "weather": "CLEAR",
+  "tire_friction_scale": 1.0,
+  "same_as": null,
+  "repeat_index": 1,
+  "vehicle": "hgv",
+  "torque_scale": 1.0,
+  "mass_scale": 1.0
+ },
+ "reference": {
+  "a_e": 1.77,
+  "pedal_target": 1.0,
+  "stop_dist_m": 37.033,
+  "stop_time_s": 6.472,
+  "walker_enter_s": 1.236,
+  "d_brake_m": 39.033,
+  "ref_collision": true,
+  "ref_min_gap_m": -4.53
+ },
+ "carla": {
+  "events": {
+   "brake_cmd": 2.849999936297536,
+   "walker_start": 4.21999990567565,
+   "stopped": 6.029999865218997
+  },
+  "s_cross": 84.67979997716458,
+  "front_offset_m": 3.9805781356990337,
+  "d_brake_m": 39.03255517479887,
+  "a_e": 1.77,
+  "corridor_half_m": 1.7455,
+  "physics": {
+   "mass": 7000.0,
+   "wheels": [
+    {
+     "max_brake_torque": 1500.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1500.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1500.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1500.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1500.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1500.0,
+     "tire_friction": 3.5
+    }
+   ]
+  },
+  "v_at_cmd": 11.050441571892565,
+  "s_front_at_cmd": 45.65066544025459,
+  "walker_start_lat": -3.599983272543181,
+  "end_reason": "STOPPED",
+  "collisions": [],
+  "sim_duration_s": 8.04,
+  "wall_s": 3.3
+ }
+}

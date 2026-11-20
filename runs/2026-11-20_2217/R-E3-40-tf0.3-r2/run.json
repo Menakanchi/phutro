@@ -1,0 +1,64 @@
+{
+ "case": {
+  "run_id": "R-E3-40-tf0.3-r2",
+  "case_id": "R-E3-40-tf0.3",
+  "group": "R",
+  "kind": "brake",
+  "ego_kmh": 40.0,
+  "a": "max",
+  "ped_mps": 1.5,
+  "trigger_m": 25.0,
+  "stop_at_curb": false,
+  "weather": "CLEAR",
+  "tire_friction_scale": 0.3,
+  "same_as": "E3-40-tf0.3",
+  "repeat_index": 2,
+  "vehicle": "etron",
+  "torque_scale": 1.0,
+  "mass_scale": 1.0
+ },
+ "reference": {
+  "a_e": 9.13,
+  "pedal_target": 1.0,
+  "stop_dist_m": 10.885,
+  "stop_time_s": 1.595
+ },
+ "carla": {
+  "events": {
+   "brake_cmd": 1.50999996624887,
+   "stopped": 3.3599999248981476
+  },
+  "s_cross": 60.0,
+  "front_offset_m": 2.424255058867857,
+  "d_brake_m": 12.884552830431376,
+  "a_e": 9.13,
+  "corridor_half_m": 1.265,
+  "physics": {
+   "mass": 2100.0,
+   "wheels": [
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 1.0499999523162842
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 1.0499999523162842
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 1.0499999523162842
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 1.0499999523162842
+    }
+   ]
+  },
+  "v_at_cmd": 11.11973199975942,
+  "s_front_at_cmd": 29.199024090128646,
+  "end_reason": "STOPPED",
+  "collisions": [],
+  "sim_duration_s": 3.87,
+  "wall_s": 1.7
+ }
+}

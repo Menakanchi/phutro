@@ -1,0 +1,64 @@
+{
+ "case": {
+  "run_id": "X1-patrol-t2.0-50",
+  "case_id": "X1-patrol-t2.0-50",
+  "group": "X1",
+  "kind": "brake",
+  "ego_kmh": 50.0,
+  "a": "max",
+  "ped_mps": 1.5,
+  "trigger_m": 25.0,
+  "stop_at_curb": false,
+  "weather": "CLEAR",
+  "tire_friction_scale": 1.0,
+  "same_as": null,
+  "repeat_index": 1,
+  "vehicle": "patrol",
+  "torque_scale": 2.0,
+  "mass_scale": 1.0
+ },
+ "reference": {
+  "a_e": 6.01,
+  "pedal_target": 1.0,
+  "stop_dist_m": 20.196,
+  "stop_time_s": 2.611
+ },
+ "carla": {
+  "events": {
+   "brake_cmd": 1.50999996624887,
+   "stopped": 2.5899999421089888
+  },
+  "s_cross": 60.0,
+  "front_offset_m": 2.811296686530113,
+  "d_brake_m": 22.195881822574343,
+  "a_e": 6.01,
+  "corridor_half_m": 1.375,
+  "physics": {
+   "mass": 2355.0,
+   "wheels": [
+    {
+     "max_brake_torque": 3000.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 3000.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 3000.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 3000.0,
+     "tire_friction": 3.5
+    }
+   ]
+  },
+  "v_at_cmd": 13.752210780870021,
+  "s_front_at_cmd": 33.77854510560534,
+  "end_reason": "STOPPED",
+  "collisions": [],
+  "sim_duration_s": 3.1,
+  "wall_s": 1.4
+ }
+}

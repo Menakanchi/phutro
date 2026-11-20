@@ -1,0 +1,64 @@
+{
+ "case": {
+  "run_id": "E1-10-2.0",
+  "case_id": "E1-10-2.0",
+  "group": "E1",
+  "kind": "brake",
+  "ego_kmh": 10.0,
+  "a": 2.0,
+  "ped_mps": 1.5,
+  "trigger_m": 25.0,
+  "stop_at_curb": false,
+  "weather": "CLEAR",
+  "tire_friction_scale": 1.0,
+  "same_as": null,
+  "repeat_index": 1,
+  "vehicle": "etron",
+  "torque_scale": 1.0,
+  "mass_scale": 1.0
+ },
+ "reference": {
+  "a_e": 2.0,
+  "pedal_target": 0.219,
+  "stop_dist_m": 2.484,
+  "stop_time_s": 1.589
+ },
+ "carla": {
+  "events": {
+   "brake_cmd": 1.50999996624887,
+   "stopped": 2.489999944344163
+  },
+  "s_cross": 60.0,
+  "front_offset_m": 2.424255058867857,
+  "d_brake_m": 4.483734567901234,
+  "a_e": 2.0,
+  "corridor_half_m": 1.265,
+  "physics": {
+   "mass": 2100.0,
+   "wheels": [
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1800.0,
+     "tire_friction": 3.5
+    }
+   ]
+  },
+  "v_at_cmd": 2.7332071269045644,
+  "s_front_at_cmd": 16.617444431839424,
+  "end_reason": "STOPPED",
+  "collisions": [],
+  "sim_duration_s": 3.0,
+  "wall_s": 1.3
+ }
+}

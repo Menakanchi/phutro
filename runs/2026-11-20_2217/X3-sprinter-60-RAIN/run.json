@@ -1,0 +1,64 @@
+{
+ "case": {
+  "run_id": "X3-sprinter-60-RAIN",
+  "case_id": "X3-sprinter-60-RAIN",
+  "group": "X3",
+  "kind": "brake",
+  "ego_kmh": 60.0,
+  "a": "max",
+  "ped_mps": 1.5,
+  "trigger_m": 25.0,
+  "stop_at_curb": false,
+  "weather": "RAIN",
+  "tire_friction_scale": 1.0,
+  "same_as": null,
+  "repeat_index": 1,
+  "vehicle": "sprinter",
+  "torque_scale": 1.0,
+  "mass_scale": 1.0
+ },
+ "reference": {
+  "a_e": 5.69,
+  "pedal_target": 1.0,
+  "stop_dist_m": 29.261,
+  "stop_time_s": 3.221
+ },
+ "carla": {
+  "events": {
+   "brake_cmd": 1.50999996624887,
+   "stopped": 3.8099999148398638
+  },
+  "s_cross": 60.0,
+  "front_offset_m": 2.947051544673741,
+  "d_brake_m": 31.26093880862118,
+  "a_e": 5.69,
+  "corridor_half_m": 1.294,
+  "physics": {
+   "mass": 3000.0,
+   "wheels": [
+    {
+     "max_brake_torque": 1500.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1500.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1500.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 1500.0,
+     "tire_friction": 3.5
+    }
+   ]
+  },
+  "v_at_cmd": 16.670546241947974,
+  "s_front_at_cmd": 38.10860957096556,
+  "end_reason": "STOPPED",
+  "collisions": [],
+  "sim_duration_s": 4.32,
+  "wall_s": 1.9
+ }
+}

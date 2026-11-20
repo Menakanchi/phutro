@@ -1,0 +1,64 @@
+{
+ "case": {
+  "run_id": "X2-model3-40-1.5",
+  "case_id": "X2-model3-40-1.5",
+  "group": "X2",
+  "kind": "brake",
+  "ego_kmh": 40.0,
+  "a": 1.5,
+  "ped_mps": 1.5,
+  "trigger_m": 25.0,
+  "stop_at_curb": false,
+  "weather": "CLEAR",
+  "tire_friction_scale": 1.0,
+  "same_as": null,
+  "repeat_index": 1,
+  "vehicle": "model3",
+  "torque_scale": 1.0,
+  "mass_scale": 1.0
+ },
+ "reference": {
+  "a_e": 1.5,
+  "pedal_target": 0.421,
+  "stop_dist_m": 43.235,
+  "stop_time_s": 7.595
+ },
+ "carla": {
+  "events": {
+   "brake_cmd": 1.50999996624887,
+   "stopped": 6.839999847114086
+  },
+  "s_cross": 60.0,
+  "front_offset_m": 2.4251046795397997,
+  "d_brake_m": 45.23524514531892,
+  "a_e": 1.5,
+  "corridor_half_m": 1.3815,
+  "physics": {
+   "mass": 1845.0,
+   "wheels": [
+    {
+     "max_brake_torque": 700.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 700.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 700.0,
+     "tire_friction": 3.5
+    },
+    {
+     "max_brake_torque": 700.0,
+     "tire_friction": 3.5
+    }
+   ]
+  },
+  "v_at_cmd": 11.002459866114124,
+  "s_front_at_cmd": 29.202254847354475,
+  "end_reason": "STOPPED",
+  "collisions": [],
+  "sim_duration_s": 7.35,
+  "wall_s": 3.1
+ }
+}
