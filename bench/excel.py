@@ -128,17 +128,21 @@ def export(run_dir: Path) -> Path:
     _table(ws, [r for r in valid if r["kind"] in ("brake", "combined")], BRAKE_COLS)
 
     ws = wb.create_sheet("Theo tốc độ")
-    g1 = [r for r in brake_rows if r["group"] == "G1" and r.get("vehicle", "etron") == "etron"]
+    g1 = [r for r in brake_rows if r.get("group") == "G1" and r.get("vehicle", "etron") == "etron"]
+    if not g1:
+        # Đợt 2: ca phanh etron bổ sung (B1, B2, B3, E1...)
+        g1 = [r for r in brake_rows if r.get("vehicle", "etron") == "etron" and r.get("torque_scale", 1) == 1 and r.get("mass_scale", 1) == 1]
     if g1:
-        end1, nlv = _pivot(ws, g1, "eta", "η = a_dải / a_e (G1)", 1)
-        _chart(ws, "η theo tốc độ", "η", 1, end1 - 3, nlv, "I2")
+        end1, nlv = _pivot(ws, g1, "eta", "η = a_dải / a_e", 1)
+        if any(r.get("eta") is not None for r in g1):
+            _chart(ws, "η theo tốc độ", "η", 1, end1 - 3, nlv, "L2")
         top2 = end1 + 2
-        end2, _ = _pivot(ws, g1, "stop_dist_delta_m", "Δ quãng dừng CARLA − mô hình (m) (G1)", top2)
-        _chart(ws, "Δ quãng dừng theo tốc độ", "m", top2, end2 - top2 - 2, nlv, f"I{top2 + 1}")
+        end2, _ = _pivot(ws, g1, "stop_dist_delta_m", "Δ quãng dừng CARLA − mô hình (m)", top2)
+        _chart(ws, "Δ quãng dừng theo tốc độ", "m", top2, end2 - top2 - 2, nlv, f"L{top2 + 1}")
         top3 = end2 + 2
-        _pivot(ws, g1, "dttc_s", "ΔTTC cần bù (s) (G1)", top3)
-        top4 = top3 + 10
-        _pivot(ws, g1, "low_speed_decel", "Giảm tốc dưới 6 m/s (m/s²) (G1)", top4)
+        _pivot(ws, g1, "dttc_s", "ΔTTC cần bù (s)", top3)
+        top4 = top3 + 12
+        _pivot(ws, g1, "low_speed_decel", "Giảm tốc dưới 6 m/s (m/s²)", top4)
     _widths(ws, 12, 12)
 
     calib = [r for r in brake_rows if str(r["a"]) == "max"]
