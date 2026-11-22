@@ -83,3 +83,13 @@ def test_dot3_has_exactly_500_runs():
     r = config.expand_cases(config.load_yaml(ROOT / "cases_dot3.yaml"), cfg)
     assert len(r) == 500
     assert {c.group for c in r} == {"D1", "D2", "D3", "D4", "D5", "D6", "D7", "R3"}
+
+
+def test_dot4_uses_the_calibrated_vehicles_only():
+    cfg = config.load_config(ROOT / "config.yaml")
+    r = config.expand_cases(config.load_yaml(ROOT / "cases_dot4.yaml"), cfg)
+    assert len(r) == 331
+    assert {c.group for c in r} == {"P1", "P2", "R4"}
+    assert {c.vehicle for c in r} == {"model3_hc", "patrol_hc", "sprinter_hc"}
+    v = config.vehicle_of(cfg, next(c for c in r if c.vehicle == "patrol_hc"))
+    assert v["max_brake_torque_nm"] == 2250.0 and v["full_brake_decel_mps2"] == 9.90

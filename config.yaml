@@ -35,6 +35,10 @@ cac_xe:
   patrol:   {blueprint: vehicle.nissan.patrol_2021, mass_kg: 2355.0, max_brake_torque_nm: 1500.0, width_m: 2.15, full_brake_decel_mps2: 6.01}
   sprinter: {blueprint: vehicle.mercedes.sprinter, mass_kg: 3000.0, max_brake_torque_nm: 1500.0, width_m: 1.988, full_brake_decel_mps2: 5.69}
   hgv:      {blueprint: vehicle.carlamotors.european_hgv, mass_kg: 7000.0, max_brake_torque_nm: 1500.0, width_m: 2.891, full_brake_decel_mps2: 1.77}
+  # Đã hiệu chuẩn theo đợt 2 (VehicSim migration 016, 22/11/2026): mô-men mới, phanh 100% = trung bình 50–70 km/h đo ở X1. Dùng cho đợt 4.
+  model3_hc:   {blueprint: vehicle.tesla.model3, mass_kg: 1845.0, max_brake_torque_nm: 1750.0, width_m: 2.163, full_brake_decel_mps2: 9.87}
+  patrol_hc:   {blueprint: vehicle.nissan.patrol_2021, mass_kg: 2355.0, max_brake_torque_nm: 2250.0, width_m: 2.15, full_brake_decel_mps2: 9.90}
+  sprinter_hc: {blueprint: vehicle.mercedes.sprinter, mass_kg: 3000.0, max_brake_torque_nm: 2250.0, width_m: 1.988, full_brake_decel_mps2: 8.91}
 
 phanh:
   delay_s: 0.15               # t_d
