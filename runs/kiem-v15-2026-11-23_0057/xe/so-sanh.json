@@ -1,0 +1,585 @@
+{
+ "formats": {
+  "model3-c1": "vehicsim.xosc/v15",
+  "model3-c3": "vehicsim.xosc/v15",
+  "model3-c7": "vehicsim.xosc/v15",
+  "patrol-c1": "vehicsim.xosc/v15",
+  "patrol-c3": "vehicsim.xosc/v15",
+  "patrol-c7": "vehicsim.xosc/v15",
+  "sprinter-c1": "vehicsim.xosc/v15",
+  "sprinter-c3": "vehicsim.xosc/v15",
+  "sprinter-c7": "vehicsim.xosc/v15"
+ },
+ "runs": 3,
+ "skip_carla": false,
+ "failures": [],
+ "rows": [
+  {
+   "case": "model3-c1",
+   "metric": "end_reason",
+   "carla": "EGO_STOPPED ×3",
+   "kinematic": "EGO_STOPPED",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c1",
+   "metric": "aeb_decision_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "2.250",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c1",
+   "metric": "brake_onset_t",
+   "carla": "2.500 ± 0.000",
+   "kinematic": "2.500",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c1",
+   "metric": "min_distance_m",
+   "carla": "4.221 ± 0.011",
+   "kinematic": "4.257",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c1",
+   "metric": "stopping_distance_m",
+   "carla": "9.398 ± 0.011",
+   "kinematic": "9.332",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c1",
+   "metric": "impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c1",
+   "metric": "ego_impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c1",
+   "metric": "radar_first_detection_t",
+   "carla": "2.217 ± 0.029",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c1",
+   "metric": "ground_truth_aeb_decision_t",
+   "carla": "2.300 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c3",
+   "metric": "end_reason",
+   "carla": "EGO_STOPPED ×3",
+   "kinematic": "TARGET_CLEARED",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c3",
+   "metric": "aeb_decision_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c3",
+   "metric": "brake_onset_t",
+   "carla": "2.500 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c3",
+   "metric": "min_distance_m",
+   "carla": "0.860 ± 0.000",
+   "kinematic": "0.888",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c3",
+   "metric": "stopping_distance_m",
+   "carla": "14.392 ± 0.046",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c3",
+   "metric": "impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c3",
+   "metric": "ego_impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c3",
+   "metric": "radar_first_detection_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c3",
+   "metric": "ground_truth_aeb_decision_t",
+   "carla": "2.550 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c7",
+   "metric": "end_reason",
+   "carla": "EGO_STOPPED ×3",
+   "kinematic": "EGO_STOPPED",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c7",
+   "metric": "aeb_decision_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "2.250",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c7",
+   "metric": "brake_onset_t",
+   "carla": "2.500 ± 0.000",
+   "kinematic": "2.500",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c7",
+   "metric": "min_distance_m",
+   "carla": "3.249 ± 0.000",
+   "kinematic": "3.275",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c7",
+   "metric": "stopping_distance_m",
+   "carla": "10.370 ± 0.000",
+   "kinematic": "10.314",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c7",
+   "metric": "impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c7",
+   "metric": "ego_impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c7",
+   "metric": "radar_first_detection_t",
+   "carla": "2.217 ± 0.029",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "model3-c7",
+   "metric": "ground_truth_aeb_decision_t",
+   "carla": "2.300 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c1",
+   "metric": "end_reason",
+   "carla": "EGO_STOPPED ×3",
+   "kinematic": "EGO_STOPPED",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c1",
+   "metric": "aeb_decision_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "2.250",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c1",
+   "metric": "brake_onset_t",
+   "carla": "2.500 ± 0.000",
+   "kinematic": "2.500",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c1",
+   "metric": "min_distance_m",
+   "carla": "4.204 ± 0.029",
+   "kinematic": "4.257",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c1",
+   "metric": "stopping_distance_m",
+   "carla": "9.415 ± 0.029",
+   "kinematic": "9.332",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c1",
+   "metric": "impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c1",
+   "metric": "ego_impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c1",
+   "metric": "radar_first_detection_t",
+   "carla": "2.217 ± 0.029",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c1",
+   "metric": "ground_truth_aeb_decision_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c3",
+   "metric": "end_reason",
+   "carla": "EGO_STOPPED ×3",
+   "kinematic": "TARGET_CLEARED",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c3",
+   "metric": "aeb_decision_t",
+   "carla": "2.300 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c3",
+   "metric": "brake_onset_t",
+   "carla": "2.550 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c3",
+   "metric": "min_distance_m",
+   "carla": "0.866 ± 0.000",
+   "kinematic": "0.881",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c3",
+   "metric": "stopping_distance_m",
+   "carla": "15.627 ± 0.016",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c3",
+   "metric": "impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c3",
+   "metric": "ego_impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c3",
+   "metric": "radar_first_detection_t",
+   "carla": "2.200 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c3",
+   "metric": "ground_truth_aeb_decision_t",
+   "carla": "2.550 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c7",
+   "metric": "end_reason",
+   "carla": "EGO_STOPPED ×3",
+   "kinematic": "EGO_STOPPED",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c7",
+   "metric": "aeb_decision_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "2.250",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c7",
+   "metric": "brake_onset_t",
+   "carla": "2.500 ± 0.000",
+   "kinematic": "2.500",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c7",
+   "metric": "min_distance_m",
+   "carla": "3.136 ± 0.026",
+   "kinematic": "3.275",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c7",
+   "metric": "stopping_distance_m",
+   "carla": "10.483 ± 0.027",
+   "kinematic": "10.314",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c7",
+   "metric": "impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c7",
+   "metric": "ego_impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c7",
+   "metric": "radar_first_detection_t",
+   "carla": "2.200 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "patrol-c7",
+   "metric": "ground_truth_aeb_decision_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c1",
+   "metric": "end_reason",
+   "carla": "EGO_STOPPED ×3",
+   "kinematic": "EGO_STOPPED",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c1",
+   "metric": "aeb_decision_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "2.250",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c1",
+   "metric": "brake_onset_t",
+   "carla": "2.500 ± 0.000",
+   "kinematic": "2.500",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c1",
+   "metric": "min_distance_m",
+   "carla": "4.292 ± 0.001",
+   "kinematic": "4.257",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c1",
+   "metric": "stopping_distance_m",
+   "carla": "9.365 ± 0.001",
+   "kinematic": "9.332",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c1",
+   "metric": "impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c1",
+   "metric": "ego_impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c1",
+   "metric": "radar_first_detection_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c1",
+   "metric": "ground_truth_aeb_decision_t",
+   "carla": "2.300 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c3",
+   "metric": "end_reason",
+   "carla": "EGO_STOPPED ×3",
+   "kinematic": "TARGET_CLEARED",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c3",
+   "metric": "aeb_decision_t",
+   "carla": "2.150 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c3",
+   "metric": "brake_onset_t",
+   "carla": "2.400 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c3",
+   "metric": "min_distance_m",
+   "carla": "0.947 ± 0.000",
+   "kinematic": "0.962",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c3",
+   "metric": "stopping_distance_m",
+   "carla": "14.922 ± 0.001",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c3",
+   "metric": "impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c3",
+   "metric": "ego_impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c3",
+   "metric": "radar_first_detection_t",
+   "carla": "2.150 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c3",
+   "metric": "ground_truth_aeb_decision_t",
+   "carla": "2.750 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c7",
+   "metric": "end_reason",
+   "carla": "EGO_STOPPED ×3",
+   "kinematic": "EGO_STOPPED",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c7",
+   "metric": "aeb_decision_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "2.250",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c7",
+   "metric": "brake_onset_t",
+   "carla": "2.500 ± 0.000",
+   "kinematic": "2.500",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c7",
+   "metric": "min_distance_m",
+   "carla": "3.072 ± 0.000",
+   "kinematic": "3.275",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c7",
+   "metric": "stopping_distance_m",
+   "carla": "10.585 ± 0.000",
+   "kinematic": "10.314",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c7",
+   "metric": "impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c7",
+   "metric": "ego_impact_speed_mps",
+   "carla": "—",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c7",
+   "metric": "radar_first_detection_t",
+   "carla": "2.250 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  },
+  {
+   "case": "sprinter-c7",
+   "metric": "ground_truth_aeb_decision_t",
+   "carla": "2.300 ± 0.000",
+   "kinematic": "—",
+   "ref_2026_11_13": ""
+  }
+ ]
+}

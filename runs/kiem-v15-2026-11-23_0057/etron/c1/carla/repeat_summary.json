@@ -1,0 +1,169 @@
+{
+ "xosc": "C:\\Users\\dat\\Desktop\\sep\\SEP490-FA26-G15\\data\\kiem-v15\\etron\\c1\\scenario.xosc",
+ "runs": 3,
+ "succeeded": 3,
+ "failures": [],
+ "rows": [
+  {
+   "fcw_t": 2.2,
+   "aeb_decision_t": 2.25,
+   "brake_onset_t": 2.5,
+   "min_distance_m": 4.25,
+   "min_ttc_s": 1.155,
+   "stopping_distance_m": 9.348,
+   "rms_jerk_mps3": 12.201,
+   "impact_speed_mps": null,
+   "ego_impact_speed_mps": null,
+   "rms_jerk_raw_mps3": 114.26,
+   "t_aeb_s": 2.52,
+   "radar_first_detection_t": 2.2,
+   "radar_aeb_decision_t": 2.25,
+   "ground_truth_aeb_decision_t": 2.25,
+   "end_reason": "EGO_STOPPED",
+   "run": 1
+  },
+  {
+   "fcw_t": 2.2,
+   "aeb_decision_t": 2.25,
+   "brake_onset_t": 2.5,
+   "min_distance_m": 4.251,
+   "min_ttc_s": 1.155,
+   "stopping_distance_m": 9.347,
+   "rms_jerk_mps3": 12.128,
+   "impact_speed_mps": null,
+   "ego_impact_speed_mps": null,
+   "rms_jerk_raw_mps3": 113.457,
+   "t_aeb_s": 2.52,
+   "radar_first_detection_t": 2.2,
+   "radar_aeb_decision_t": 2.25,
+   "ground_truth_aeb_decision_t": 2.25,
+   "end_reason": "EGO_STOPPED",
+   "run": 2
+  },
+  {
+   "fcw_t": 2.2,
+   "aeb_decision_t": 2.25,
+   "brake_onset_t": 2.5,
+   "min_distance_m": 4.164,
+   "min_ttc_s": 1.133,
+   "stopping_distance_m": 9.434,
+   "rms_jerk_mps3": 12.866,
+   "impact_speed_mps": null,
+   "ego_impact_speed_mps": null,
+   "rms_jerk_raw_mps3": 113.448,
+   "t_aeb_s": 2.51,
+   "radar_first_detection_t": 2.2,
+   "radar_aeb_decision_t": 2.25,
+   "ground_truth_aeb_decision_t": 2.25,
+   "end_reason": "EGO_STOPPED",
+   "run": 3
+  }
+ ],
+ "summary": {
+  "fcw_t": {
+   "n": 3,
+   "mean": 2.2,
+   "sd": 0.0,
+   "min": 2.2,
+   "max": 2.2,
+   "range": 0.0
+  },
+  "aeb_decision_t": {
+   "n": 3,
+   "mean": 2.25,
+   "sd": 0.0,
+   "min": 2.25,
+   "max": 2.25,
+   "range": 0.0
+  },
+  "brake_onset_t": {
+   "n": 3,
+   "mean": 2.5,
+   "sd": 0.0,
+   "min": 2.5,
+   "max": 2.5,
+   "range": 0.0
+  },
+  "min_distance_m": {
+   "n": 3,
+   "mean": 4.2217,
+   "sd": 0.0499,
+   "min": 4.164,
+   "max": 4.251,
+   "range": 0.087
+  },
+  "min_ttc_s": {
+   "n": 3,
+   "mean": 1.1477,
+   "sd": 0.0127,
+   "min": 1.133,
+   "max": 1.155,
+   "range": 0.022
+  },
+  "stopping_distance_m": {
+   "n": 3,
+   "mean": 9.3763,
+   "sd": 0.0499,
+   "min": 9.347,
+   "max": 9.434,
+   "range": 0.087
+  },
+  "rms_jerk_mps3": {
+   "n": 3,
+   "mean": 12.3983,
+   "sd": 0.4067,
+   "min": 12.128,
+   "max": 12.866,
+   "range": 0.738
+  },
+  "impact_speed_mps": {
+   "n": 0
+  },
+  "ego_impact_speed_mps": {
+   "n": 0
+  },
+  "rms_jerk_raw_mps3": {
+   "n": 3,
+   "mean": 113.7217,
+   "sd": 0.4662,
+   "min": 113.448,
+   "max": 114.26,
+   "range": 0.812
+  },
+  "t_aeb_s": {
+   "n": 3,
+   "mean": 2.5167,
+   "sd": 0.0058,
+   "min": 2.51,
+   "max": 2.52,
+   "range": 0.01
+  },
+  "radar_first_detection_t": {
+   "n": 3,
+   "mean": 2.2,
+   "sd": 0.0,
+   "min": 2.2,
+   "max": 2.2,
+   "range": 0.0
+  },
+  "radar_aeb_decision_t": {
+   "n": 3,
+   "mean": 2.25,
+   "sd": 0.0,
+   "min": 2.25,
+   "max": 2.25,
+   "range": 0.0
+  },
+  "ground_truth_aeb_decision_t": {
+   "n": 3,
+   "mean": 2.25,
+   "sd": 0.0,
+   "min": 2.25,
+   "max": 2.25,
+   "range": 0.0
+  },
+  "end_reason": {
+   "EGO_STOPPED": 3
+  }
+ }
+}
