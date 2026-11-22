@@ -1,0 +1,124 @@
+{
+ "xosc": "C:\\Users\\dat\\Desktop\\sep\\SEP490-FA26-G15\\data\\kiem-carla\\c6\\scenario.xosc",
+ "runs": 3,
+ "succeeded": 3,
+ "failures": [],
+ "rows": [
+  {
+   "fcw_t": null,
+   "aeb_decision_t": null,
+   "brake_onset_t": null,
+   "min_distance_m": 14.135,
+   "min_ttc_s": 7.118,
+   "stopping_distance_m": null,
+   "rms_jerk_mps3": null,
+   "impact_speed_mps": null,
+   "ego_impact_speed_mps": null,
+   "rms_jerk_raw_mps3": null,
+   "t_aeb_s": null,
+   "radar_first_detection_t": 1.95,
+   "radar_aeb_decision_t": null,
+   "ground_truth_aeb_decision_t": null,
+   "end_reason": "TARGET_CLEARED",
+   "run": 1
+  },
+  {
+   "fcw_t": null,
+   "aeb_decision_t": null,
+   "brake_onset_t": null,
+   "min_distance_m": 14.135,
+   "min_ttc_s": 7.118,
+   "stopping_distance_m": null,
+   "rms_jerk_mps3": null,
+   "impact_speed_mps": null,
+   "ego_impact_speed_mps": null,
+   "rms_jerk_raw_mps3": null,
+   "t_aeb_s": null,
+   "radar_first_detection_t": 1.95,
+   "radar_aeb_decision_t": null,
+   "ground_truth_aeb_decision_t": null,
+   "end_reason": "TARGET_CLEARED",
+   "run": 2
+  },
+  {
+   "fcw_t": null,
+   "aeb_decision_t": null,
+   "brake_onset_t": null,
+   "min_distance_m": 14.135,
+   "min_ttc_s": 7.118,
+   "stopping_distance_m": null,
+   "rms_jerk_mps3": null,
+   "impact_speed_mps": null,
+   "ego_impact_speed_mps": null,
+   "rms_jerk_raw_mps3": null,
+   "t_aeb_s": null,
+   "radar_first_detection_t": 1.95,
+   "radar_aeb_decision_t": null,
+   "ground_truth_aeb_decision_t": null,
+   "end_reason": "TARGET_CLEARED",
+   "run": 3
+  }
+ ],
+ "summary": {
+  "fcw_t": {
+   "n": 0
+  },
+  "aeb_decision_t": {
+   "n": 0
+  },
+  "brake_onset_t": {
+   "n": 0
+  },
+  "min_distance_m": {
+   "n": 3,
+   "mean": 14.135,
+   "sd": 0.0,
+   "min": 14.135,
+   "max": 14.135,
+   "range": 0.0
+  },
+  "min_ttc_s": {
+   "n": 3,
+   "mean": 7.118,
+   "sd": 0.0,
+   "min": 7.118,
+   "max": 7.118,
+   "range": 0.0
+  },
+  "stopping_distance_m": {
+   "n": 0
+  },
+  "rms_jerk_mps3": {
+   "n": 0
+  },
+  "impact_speed_mps": {
+   "n": 0
+  },
+  "ego_impact_speed_mps": {
+   "n": 0
+  },
+  "rms_jerk_raw_mps3": {
+   "n": 0
+  },
+  "t_aeb_s": {
+   "n": 0
+  },
+  "radar_first_detection_t": {
+   "n": 3,
+   "mean": 1.95,
+   "sd": 0.0,
+   "min": 1.95,
+   "max": 1.95,
+   "range": 0.0
+  },
+  "radar_aeb_decision_t": {
+   "n": 0
+  },
+  "ground_truth_aeb_decision_t": {
+   "n": 0
+  },
+  "end_reason": {
+   "TARGET_CLEARED": 3
+  }
+ }
+}
