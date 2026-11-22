@@ -104,6 +104,20 @@ git pull
 - Bị dừng giữa chừng: `.venv\Scripts\python bench.py --cases cases_dot3.yaml run --resume runs\<thư mục>` (thêm đúng `--only` đã dùng nếu có).
 - Nên điền `carla_root` (bước 3) để CARLA tự bật lại nếu bị tắt trong lúc chạy dài.
 
+## Đợt 4: bảng bàn đạp cho 3 xe (331 run, khoảng 2–3 giờ)
+
+```powershell
+git checkout main
+git pull
+.venv\Scripts\python bench.py check
+.venv\Scripts\python bench.py --cases cases_dot4.yaml run
+.venv\Scripts\python bench.py pack runs\<thư mục vừa chạy>
+```
+
+- Chia nhỏ nếu cần: `--only P1` (310 run) rồi `--only P2,R4` (21 run), mỗi lệnh một thư mục, gửi lại từng zip.
+- Bị dừng giữa chừng: thêm `--resume runs\<thư mục>` (kèm đúng `--only` đã dùng).
+- Đẩy kết quả như các đợt trước: chỉ `runs\<thư mục>\ket-qua.xlsx` lên nhánh `phutro`. Không thêm file `result.xlsx` / `result.xlxs` hay `.venv`.
+
 ## Lỗi hay gặp
 
 | Hiện tượng | Cách xử lý |

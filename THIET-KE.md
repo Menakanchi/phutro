@@ -293,3 +293,19 @@ Danh sách ca: [cases_dot3.yaml](cases_dot3.yaml), sinh bằng script, mỗi ca 
 | R3 | Lặp 14 ca đại diện của D1–D7 (1–2 lần mỗi ca) | 24 | Độ tất định khi chạy rất dài |
 
 **Tổng:** 500 run (476 ca khác nhau + 24 lần chạy lặp), ước lượng 3–4 giờ. Có thể chạy từng phần bằng `--only D1`, `--only D2,D3`…
+
+## 15. Đợt 4: bảng bàn đạp cho 3 xe đã hiệu chuẩn (22/11/2026)
+
+VehicSim migration 016 đổi mô-men phanh của Model 3 (1750 N·m), Patrol (2250 N·m), Sprinter (2250 N·m) theo đợt 2. Adapter VehicSim vẫn đổi lệnh
+giảm tốc ra bàn đạp theo giả định tuyến tính cho 3 xe này; đợt 4 đo bảng bàn đạp theo tốc độ như nhóm D1 đã làm cho e-tron (đợt 3). Danh mục xe
+thêm `model3_hc`, `patrol_hc`, `sprinter_hc` (cùng blueprint, mô-men và phanh 100% mới); xe cũ giữ nguyên để các đợt trước chạy lại ra đúng số.
+Danh sách ca: [cases_dot4.yaml](cases_dot4.yaml) (sinh bằng script, đã bỏ ca không chạy được).
+
+| Nhóm | Ca | Số run | Dùng vào đâu |
+|---|---|---|---|
+| P1 | 3 xe × 30–80 km/h (bước 5) × mức 1–9 m/s² nhỏ hơn phanh 100% của xe và 100% | 310 | Bảng bàn đạp theo tốc độ cho từng xe (`CarlaPedalMap` của VehicSim) |
+| P2 | 3 xe × 20 / 40 / 60 km/h, xe + người, 8 m/s² | 9 | Quãng dừng và khoảng cách tới người so với mô hình ở mô-men mới |
+| R4 | Lặp 6 ca (100% ở 50 km/h và 4 m/s² ở 60 km/h của mỗi xe), 2 lần mỗi ca | 12 | Độ tất định |
+
+**Tổng:** 331 run, ước lượng 2–3 giờ. Có thể chạy từng xe bằng `--only P1` rồi `--only P2,R4`.
+

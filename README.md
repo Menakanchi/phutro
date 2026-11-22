@@ -28,6 +28,9 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1     # venv + thư viện + 
 Đợt 3 (500 run quét dày các chỗ còn lệch): `.venv\Scripts\python bench.py --cases cases_dot3.yaml run` — xem
 [THIET-KE.md](THIET-KE.md) mục 14.
 
+Đợt 4 (bảng bàn đạp cho 3 xe đã hiệu chuẩn, 331 run): `.venv\Scripts\python bench.py --cases cases_dot4.yaml run` — xem
+[THIET-KE.md](THIET-KE.md) mục 15.
+
 Các lệnh khác (`dry-run`, `run --only/--resume`, `excel`, `import`): `python bench.py -h` và mục 9 của [THIET-KE.md](THIET-KE.md).
 `config.local.yaml` (không commit, chép từ `config.yaml`) dùng cho thiết lập riêng của máy, ví dụ `carla_root`.
 
