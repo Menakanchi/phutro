@@ -1,0 +1,1036 @@
+{
+ "note": "Ca combined của 4 đợt bench → họ CP_CROSSING (CLEAR, DAY, không dừng ở lề). Sinh bởi aeb/sinh_bien_the.py.",
+ "dropped_bench_cases": [
+  "dot2:E5-hgv-40",
+  "dot2:E5-tf0.3-40",
+  "dot2:R-E5-tf0.3-40-r1",
+  "dot2:R-E5-tf0.3-40-r2",
+  "dot2:R-E5-tf0.3-40-r3"
+ ],
+ "families": [
+  {
+   "key": "etron-D4",
+   "vehicle": "etron",
+   "name": "AEB đối chiếu · e-tron · lưới D4",
+   "ego_speeds_kmh": [
+    20,
+    30,
+    40,
+    50,
+    60
+   ],
+   "trigger_distances_m": [
+    15,
+    25,
+    40
+   ],
+   "pedestrian_speeds_mps": [
+    0.8,
+    1.0,
+    1.39,
+    1.8,
+    2.5,
+    3.5
+   ],
+   "vehicle_match": "e-tron",
+   "variants": [
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-20-p0.8-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-20-p1.0-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-20-p1.39-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-20-p1.8-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-20-p2.5-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-20-p3.5-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-20-p0.8-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-20-p1.0-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot2:B5-xe-20",
+      "dot3:D4-20-p1.39-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-20-p1.8-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-20-p2.5-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-20-p3.5-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-20-p0.8-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-20-p1.0-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-20-p1.39-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-20-p1.8-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-20-p2.5-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-20-p3.5-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-30-p0.8-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-30-p1.0-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-30-p1.39-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-30-p1.8-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-30-p2.5-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-30-p3.5-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-30-p0.8-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-30-p1.0-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot2:B5-xe-30",
+      "dot3:D4-30-p1.39-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-30-p1.8-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-30-p2.5-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-30-p3.5-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-30-p0.8-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-30-p1.0-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-30-p1.39-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-30-p1.8-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-30-p2.5-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-30-p3.5-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-40-p0.8-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-40-p1.0-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-40-p1.39-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-40-p1.8-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-40-p2.5-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-40-p3.5-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-40-p0.8-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-40-p1.0-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-40-p1.39-k25",
+      "dot3:R3-D4-40-p1.39-k25-r1",
+      "dot3:R3-D4-40-p1.39-k25-r2"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-40-p1.8-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-40-p2.5-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-40-p3.5-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-40-p0.8-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-40-p1.0-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-40-p1.39-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-40-p1.8-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-40-p2.5-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-40-p3.5-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-50-p0.8-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-50-p1.0-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-50-p1.39-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-50-p1.8-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-50-p2.5-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-50-p3.5-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-50-p0.8-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-50-p1.0-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot2:B5-xe-50",
+      "dot2:R-B5-xe-50-r1",
+      "dot2:R-B5-xe-50-r2",
+      "dot2:R-B5-xe-50-r3",
+      "dot3:D4-50-p1.39-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-50-p1.8-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-50-p2.5-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-50-p3.5-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-50-p0.8-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-50-p1.0-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-50-p1.39-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-50-p1.8-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-50-p2.5-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-50-p3.5-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-60-p0.8-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-60-p1.0-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-60-p1.39-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-60-p1.8-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-60-p2.5-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-60-p3.5-k15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-60-p0.8-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-60-p1.0-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot2:B5-xe-60",
+      "dot3:D4-60-p1.39-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-60-p1.8-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-60-p2.5-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-60-p3.5-k25"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-60-p0.8-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-60-p1.0-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-60-p1.39-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-60-p1.8-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-60-p2.5-k40",
+      "dot3:R3-D4-60-p2.5-k40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-60-p3.5-k40"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "etron-trigger",
+   "vehicle": "etron",
+   "name": "AEB đối chiếu · e-tron · khoảng kích hoạt",
+   "ego_speeds_kmh": [
+    40
+   ],
+   "trigger_distances_m": [
+    5,
+    15,
+    20,
+    25,
+    30,
+    40,
+    60,
+    80
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "vehicle_match": "e-tron",
+   "variants": [
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 5,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:E5-trig-5"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 15,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G3-15"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 20,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G3-20"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G3-25",
+      "dot1:G6-c-r1",
+      "dot1:G6-c-r2"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 30,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G3-30"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 40,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G3-40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 60,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G3-60"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 80,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:E5-trig-80"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "etron-le",
+   "vehicle": "etron",
+   "name": "AEB đối chiếu · e-tron · ca lẻ",
+   "ego_speeds_kmh": [
+    20,
+    60
+   ],
+   "trigger_distances_m": [
+    25
+   ],
+   "pedestrian_speeds_mps": [
+    0.5,
+    3.0
+   ],
+   "vehicle_match": "e-tron",
+   "variants": [
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 0.5,
+     "bench_cases": [
+      "dot2:E5-20-ped0.5"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 3.0,
+     "bench_cases": []
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 0.5,
+     "bench_cases": []
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 3.0,
+     "bench_cases": [
+      "dot2:E5-60-ped3.0"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "model3-P2",
+   "vehicle": "model3_hc",
+   "name": "AEB đối chiếu · Model 3 · P2",
+   "ego_speeds_kmh": [
+    20,
+    40,
+    60
+   ],
+   "trigger_distances_m": [
+    25
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "vehicle_match": "model 3",
+   "variants": [
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P2-model3_hc-20"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P2-model3_hc-40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P2-model3_hc-60"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "patrol-P2",
+   "vehicle": "patrol_hc",
+   "name": "AEB đối chiếu · Patrol · P2",
+   "ego_speeds_kmh": [
+    20,
+    40,
+    60
+   ],
+   "trigger_distances_m": [
+    25
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "vehicle_match": "patrol",
+   "variants": [
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P2-patrol_hc-20"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P2-patrol_hc-40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P2-patrol_hc-60"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "sprinter-P2",
+   "vehicle": "sprinter_hc",
+   "name": "AEB đối chiếu · Sprinter · P2",
+   "ego_speeds_kmh": [
+    20,
+    40,
+    60
+   ],
+   "trigger_distances_m": [
+    25
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "vehicle_match": "sprinter",
+   "variants": [
+    {
+     "ego_speed_kmh": 20,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P2-sprinter_hc-20"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P2-sprinter_hc-40"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60,
+     "trigger_distance_m": 25,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P2-sprinter_hc-60"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -4,3 +4,4 @@ __pycache__/
 runs/
 .pytest_cache/
 config.local.yaml
+aeb/state.json
