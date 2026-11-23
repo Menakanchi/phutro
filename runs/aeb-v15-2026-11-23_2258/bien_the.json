@@ -1,0 +1,2928 @@
+{
+ "note": "Mọi ca của 4 đợt bench → họ CP_CROSSING (DAY), AEB VehicSim thay lệnh phanh cố định. Sinh bởi aeb/sinh_bien_the.py.",
+ "bench_runs_total": 1092,
+ "dropped_bench_runs": {
+  "hệ số ma sát / mô-men / khối lượng ≠ 1": [
+   "dot1:G5-40-TF",
+   "dot1:G5-60-TF",
+   "dot2:X1-model3-t1.5-40",
+   "dot2:X1-model3-t1.5-50",
+   "dot2:X1-model3-t1.5-60",
+   "dot2:X1-model3-t1.5-70",
+   "dot2:X1-model3-t2.0-40",
+   "dot2:X1-model3-t2.0-50",
+   "dot2:X1-model3-t2.0-60",
+   "dot2:X1-model3-t2.0-70",
+   "dot2:X1-model3-t2.5-40",
+   "dot2:X1-model3-t2.5-50",
+   "dot2:X1-model3-t2.5-60",
+   "dot2:X1-model3-t2.5-70",
+   "dot2:X1-model3-t3.0-40",
+   "dot2:X1-model3-t3.0-50",
+   "dot2:X1-model3-t3.0-60",
+   "dot2:X1-model3-t3.0-70",
+   "dot2:X1-patrol-t1.5-40",
+   "dot2:X1-patrol-t1.5-50",
+   "dot2:X1-patrol-t1.5-60",
+   "dot2:X1-patrol-t1.5-70",
+   "dot2:X1-patrol-t2.0-40",
+   "dot2:X1-patrol-t2.0-50",
+   "dot2:X1-patrol-t2.0-60",
+   "dot2:X1-patrol-t2.0-70",
+   "dot2:X1-patrol-t2.5-40",
+   "dot2:X1-patrol-t2.5-50",
+   "dot2:X1-patrol-t2.5-60",
+   "dot2:X1-patrol-t2.5-70",
+   "dot2:X1-patrol-t3.0-40",
+   "dot2:X1-patrol-t3.0-50",
+   "dot2:X1-patrol-t3.0-60",
+   "dot2:X1-patrol-t3.0-70",
+   "dot2:X1-sprinter-t1.5-40",
+   "dot2:X1-sprinter-t1.5-50",
+   "dot2:X1-sprinter-t1.5-60",
+   "dot2:X1-sprinter-t1.5-70",
+   "dot2:X1-sprinter-t2.0-40",
+   "dot2:X1-sprinter-t2.0-50",
+   "dot2:X1-sprinter-t2.0-60",
+   "dot2:X1-sprinter-t2.0-70",
+   "dot2:X1-sprinter-t2.5-40",
+   "dot2:X1-sprinter-t2.5-50",
+   "dot2:X1-sprinter-t2.5-60",
+   "dot2:X1-sprinter-t2.5-70",
+   "dot2:X1-sprinter-t3.0-40",
+   "dot2:X1-sprinter-t3.0-50",
+   "dot2:X1-sprinter-t3.0-60",
+   "dot2:X1-sprinter-t3.0-70",
+   "dot2:B4-50-8.0",
+   "dot2:B4-50-max",
+   "dot2:E3-40-tf0.3",
+   "dot2:E3-60-tf0.3",
+   "dot2:E3-60-tf1.5",
+   "dot2:E3-40-heavy-tf0.65",
+   "dot2:E5-tf0.3-40",
+   "dot2:E6-etron-m0.5",
+   "dot2:E6-etron-m2.0",
+   "dot2:E6-etron-t0.2",
+   "dot2:R-E5-tf0.3-40-r1",
+   "dot2:R-E5-tf0.3-40-r2",
+   "dot2:R-E5-tf0.3-40-r3",
+   "dot2:R-E3-40-tf0.3-r1",
+   "dot2:R-E3-40-tf0.3-r2",
+   "dot3:D3-tf0.3-30-6.0",
+   "dot3:D3-tf0.3-30-max",
+   "dot3:D3-tf0.3-50-6.0",
+   "dot3:D3-tf0.3-50-max",
+   "dot3:D3-tf0.3-70-6.0",
+   "dot3:D3-tf0.3-70-max",
+   "dot3:D3-tf0.5-30-6.0",
+   "dot3:D3-tf0.5-30-max",
+   "dot3:D3-tf0.5-50-6.0",
+   "dot3:D3-tf0.5-50-max",
+   "dot3:D3-tf0.5-70-6.0",
+   "dot3:D3-tf0.5-70-max",
+   "dot3:D3-tf0.7-30-6.0",
+   "dot3:D3-tf0.7-30-max",
+   "dot3:D3-tf0.7-50-6.0",
+   "dot3:D3-tf0.7-50-max",
+   "dot3:D3-tf0.7-70-6.0",
+   "dot3:D3-tf0.7-70-max",
+   "dot3:D3-tf0.9-30-6.0",
+   "dot3:D3-tf0.9-30-max",
+   "dot3:D3-tf0.9-50-6.0",
+   "dot3:D3-tf0.9-50-max",
+   "dot3:D3-tf0.9-70-6.0",
+   "dot3:D3-tf0.9-70-max",
+   "dot3:D3-tf1.2-30-6.0",
+   "dot3:D3-tf1.2-30-max",
+   "dot3:D3-tf1.2-50-6.0",
+   "dot3:D3-tf1.2-50-max",
+   "dot3:D3-tf1.2-70-6.0",
+   "dot3:D3-tf1.2-70-max",
+   "dot3:D3-tf1.5-30-6.0",
+   "dot3:D3-tf1.5-30-max",
+   "dot3:D3-tf1.5-50-6.0",
+   "dot3:D3-tf1.5-50-max",
+   "dot3:D3-tf1.5-70-6.0",
+   "dot3:D3-tf1.5-70-max",
+   "dot3:D6-m0.7-40-8.0",
+   "dot3:D6-m0.7-40-max",
+   "dot3:D6-m0.7-60-8.0",
+   "dot3:D6-m0.7-60-max",
+   "dot3:D6-m0.85-40-8.0",
+   "dot3:D6-m0.85-40-max",
+   "dot3:D6-m0.85-60-8.0",
+   "dot3:D6-m0.85-60-max",
+   "dot3:D6-m1.15-40-8.0",
+   "dot3:D6-m1.15-40-max",
+   "dot3:D6-m1.15-60-8.0",
+   "dot3:D6-m1.15-60-max",
+   "dot3:D6-m1.3-40-8.0",
+   "dot3:D6-m1.3-40-max",
+   "dot3:D6-m1.3-60-8.0",
+   "dot3:D6-m1.3-60-max",
+   "dot3:D6-m1.5-40-8.0",
+   "dot3:D6-m1.5-40-max",
+   "dot3:D6-m1.5-60-8.0",
+   "dot3:D6-m1.5-60-max",
+   "dot3:R3-D3-tf0.5-50-max-r1",
+   "dot3:R3-D3-tf0.5-50-max-r2",
+   "dot3:R3-D6-m1.3-60-max"
+  ],
+  "xe hgv không có trong VehicSim": [
+   "dot2:X1-hgv-t1.0-40",
+   "dot2:X1-hgv-t1.0-50",
+   "dot2:X1-hgv-t1.0-60",
+   "dot2:X1-hgv-t1.0-70",
+   "dot2:X1-hgv-t1.5-40",
+   "dot2:X1-hgv-t1.5-50",
+   "dot2:X1-hgv-t1.5-60",
+   "dot2:X1-hgv-t1.5-70",
+   "dot2:X1-hgv-t2.0-40",
+   "dot2:X1-hgv-t2.0-50",
+   "dot2:X1-hgv-t2.0-60",
+   "dot2:X1-hgv-t2.0-70",
+   "dot2:X1-hgv-t2.5-40",
+   "dot2:X1-hgv-t2.5-50",
+   "dot2:X1-hgv-t2.5-60",
+   "dot2:X1-hgv-t2.5-70",
+   "dot2:X1-hgv-t3.0-40",
+   "dot2:X1-hgv-t3.0-50",
+   "dot2:X1-hgv-t3.0-60",
+   "dot2:X1-hgv-t3.0-70",
+   "dot2:X2-hgv-20-1.5",
+   "dot2:X2-hgv-20-3.0",
+   "dot2:X2-hgv-20-max",
+   "dot2:X2-hgv-40-1.5",
+   "dot2:X2-hgv-40-3.0",
+   "dot2:X2-hgv-40-max",
+   "dot2:X2-hgv-60-1.5",
+   "dot2:X2-hgv-60-3.0",
+   "dot2:X2-hgv-60-max",
+   "dot2:X3-hgv-40-RAIN",
+   "dot2:X3-hgv-40-HEAVY_RAIN",
+   "dot2:X3-hgv-60-RAIN",
+   "dot2:X3-hgv-60-HEAVY_RAIN",
+   "dot2:X4-hgv-r1",
+   "dot2:X4-hgv-r2",
+   "dot2:E5-hgv-40",
+   "dot2:E6-hgv-t5.0",
+   "dot2:E6-hgv-m2.0",
+   "dot2:R-X3-hgv-60-HEAVY_RAIN-r1",
+   "dot2:R-X3-hgv-60-HEAVY_RAIN-r2",
+   "dot3:D2-hgv-20-0.5",
+   "dot3:D2-hgv-20-1.0",
+   "dot3:D2-hgv-20-1.5",
+   "dot3:D2-hgv-20-max",
+   "dot3:D2-hgv-30-0.5",
+   "dot3:D2-hgv-30-1.0",
+   "dot3:D2-hgv-30-1.5",
+   "dot3:D2-hgv-30-max",
+   "dot3:D2-hgv-40-1.0",
+   "dot3:D2-hgv-40-1.5",
+   "dot3:D2-hgv-40-max",
+   "dot3:D2-hgv-50-1.0",
+   "dot3:D2-hgv-50-1.5",
+   "dot3:D2-hgv-50-max",
+   "dot3:D2-hgv-60-1.0",
+   "dot3:D2-hgv-60-1.5",
+   "dot3:D2-hgv-60-max",
+   "dot3:R3-D2-hgv-40-max-r1",
+   "dot3:R3-D2-hgv-40-max-r2"
+  ],
+  "người > 6 m/s": [
+   "dot2:E4-8.0",
+   "dot2:E4-le-8.0"
+  ]
+ },
+ "families": [
+  {
+   "key": "etron-01",
+   "vehicle": "etron",
+   "vehicle_match": "e-tron",
+   "name": "AEB bench 01 · e-tron · CLEAR",
+   "weather": "CLEAR",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    20.0,
+    30.0,
+    40.0,
+    50.0,
+    60.0
+   ],
+   "trigger_distances_m": [
+    15.0,
+    25.0,
+    40.0
+   ],
+   "pedestrian_speeds_mps": [
+    0.8,
+    1.0,
+    1.39,
+    1.8,
+    2.5,
+    3.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-20-p0.8-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-20-p1.0-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-20-p1.39-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-20-p1.8-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-20-p2.5-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-20-p3.5-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-20-p0.8-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-20-p1.0-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot2:B5-xe-20 [combined]",
+      "dot3:D4-20-p1.39-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-20-p1.8-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-20-p2.5-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-20-p3.5-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-20-p0.8-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-20-p1.0-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-20-p1.39-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-20-p1.8-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-20-p2.5-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-20-p3.5-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-30-p0.8-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-30-p1.0-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-30-p1.39-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-30-p1.8-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-30-p2.5-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-30-p3.5-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-30-p0.8-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-30-p1.0-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot2:B5-xe-30 [combined]",
+      "dot3:D4-30-p1.39-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-30-p1.8-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-30-p2.5-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-30-p3.5-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-30-p0.8-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-30-p1.0-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-30-p1.39-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-30-p1.8-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-30-p2.5-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-30-p3.5-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-40-p0.8-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-40-p1.0-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-40-p1.39-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-40-p1.8-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-40-p2.5-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-40-p3.5-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-40-p0.8-k25 [combined]",
+      "dot3:D5-0.8 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot1:G2-1.0 [walker]",
+      "dot3:D4-40-p1.0-k25 [combined]",
+      "dot3:D5-1.0 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot2:B5-nguoi-1.39 [walker]",
+      "dot3:D4-40-p1.39-k25 [combined]",
+      "dot3:D5-1.39 [walker]",
+      "dot3:R3-D4-40-p1.39-k25-r1 [combined]",
+      "dot3:R3-D4-40-p1.39-k25-r2 [combined]",
+      "dot3:R3-D5-1.39 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-40-p1.8-k25 [combined]",
+      "dot3:D5-1.8 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-40-p2.5-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-40-p3.5-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-40-p0.8-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-40-p1.0-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-40-p1.39-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-40-p1.8-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-40-p2.5-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-40-p3.5-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-50-p0.8-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-50-p1.0-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-50-p1.39-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-50-p1.8-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-50-p2.5-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-50-p3.5-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-50-p0.8-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-50-p1.0-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot2:B5-xe-50 [combined]",
+      "dot2:R-B5-xe-50-r1 [combined]",
+      "dot2:R-B5-xe-50-r2 [combined]",
+      "dot2:R-B5-xe-50-r3 [combined]",
+      "dot3:D4-50-p1.39-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-50-p1.8-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-50-p2.5-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-50-p3.5-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-50-p0.8-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-50-p1.0-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-50-p1.39-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-50-p1.8-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-50-p2.5-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-50-p3.5-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-60-p0.8-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-60-p1.0-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-60-p1.39-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-60-p1.8-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-60-p2.5-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-60-p3.5-k15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-60-p0.8-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-60-p1.0-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot2:B5-xe-60 [combined]",
+      "dot3:D4-60-p1.39-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-60-p1.8-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-60-p2.5-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-60-p3.5-k25 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D4-60-p0.8-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot3:D4-60-p1.0-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot3:D4-60-p1.39-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D4-60-p1.8-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 2.5,
+     "bench_cases": [
+      "dot3:D4-60-p2.5-k40 [combined]",
+      "dot3:R3-D4-60-p2.5-k40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 3.5,
+     "bench_cases": [
+      "dot3:D4-60-p3.5-k40 [combined]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "etron-02",
+   "vehicle": "etron",
+   "vehicle_match": "e-tron",
+   "name": "AEB bench 02 · e-tron · CLEAR",
+   "weather": "CLEAR",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    10.0,
+    15.0,
+    20.0,
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0,
+    65.0,
+    70.0,
+    75.0,
+    80.0,
+    85.0,
+    90.0,
+    95.0,
+    100.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 10.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:B1-10-8.0 [brake]",
+      "dot2:B1-10-max [brake]",
+      "dot2:E1-10-2.0 [brake]",
+      "dot2:R-B1-10-max-r1 [brake]",
+      "dot2:R-B1-10-max-r2 [brake]",
+      "dot2:R-B1-10-max-r3 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 15.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:B1-15-8.0 [brake]",
+      "dot2:B1-15-max [brake]",
+      "dot3:D1-15-1.0 [brake]",
+      "dot3:D1-15-2.0 [brake]",
+      "dot3:D1-15-3.0 [brake]",
+      "dot3:D1-15-4.0 [brake]",
+      "dot3:D1-15-5.0 [brake]",
+      "dot3:D1-15-6.0 [brake]",
+      "dot3:D1-15-7.0 [brake]",
+      "dot3:D1-15-8.0 [brake]",
+      "dot3:D1-15-9.0 [brake]",
+      "dot3:D1-15-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G1-20-4.0 [brake]",
+      "dot1:G1-20-5.6 [brake]",
+      "dot1:G1-20-6.8 [brake]",
+      "dot1:G1-20-8.0 [brake]",
+      "dot1:G1-20-max [brake]",
+      "dot2:E2-20-0.5 [brake]",
+      "dot2:E2-20-1.0 [brake]",
+      "dot3:D1-20-1.0 [brake]",
+      "dot3:D1-20-2.0 [brake]",
+      "dot3:D1-20-3.0 [brake]",
+      "dot3:D1-20-4.0 [brake]",
+      "dot3:D1-20-5.0 [brake]",
+      "dot3:D1-20-6.0 [brake]",
+      "dot3:D1-20-7.0 [brake]",
+      "dot3:D1-20-8.0 [brake]",
+      "dot3:D1-20-9.0 [brake]",
+      "dot3:D1-20-max [brake]",
+      "dot3:R3-D1-20-8.0-r1 [brake]",
+      "dot3:R3-D1-20-8.0-r2 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 25.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:B1-25-8.0 [brake]",
+      "dot2:B1-25-max [brake]",
+      "dot3:D1-25-1.0 [brake]",
+      "dot3:D1-25-2.0 [brake]",
+      "dot3:D1-25-3.0 [brake]",
+      "dot3:D1-25-4.0 [brake]",
+      "dot3:D1-25-5.0 [brake]",
+      "dot3:D1-25-6.0 [brake]",
+      "dot3:D1-25-7.0 [brake]",
+      "dot3:D1-25-8.0 [brake]",
+      "dot3:D1-25-9.0 [brake]",
+      "dot3:D1-25-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G1-30-4.0 [brake]",
+      "dot1:G1-30-5.6 [brake]",
+      "dot1:G1-30-6.8 [brake]",
+      "dot1:G1-30-8.0 [brake]",
+      "dot1:G1-30-max [brake]",
+      "dot3:D1-30-1.0 [brake]",
+      "dot3:D1-30-2.0 [brake]",
+      "dot3:D1-30-3.0 [brake]",
+      "dot3:D1-30-4.0 [brake]",
+      "dot3:D1-30-5.0 [brake]",
+      "dot3:D1-30-6.0 [brake]",
+      "dot3:D1-30-7.0 [brake]",
+      "dot3:D1-30-8.0 [brake]",
+      "dot3:D1-30-9.0 [brake]",
+      "dot3:D1-30-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 35.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D1-35-1.0 [brake]",
+      "dot3:D1-35-2.0 [brake]",
+      "dot3:D1-35-3.0 [brake]",
+      "dot3:D1-35-4.0 [brake]",
+      "dot3:D1-35-5.0 [brake]",
+      "dot3:D1-35-6.0 [brake]",
+      "dot3:D1-35-7.0 [brake]",
+      "dot3:D1-35-8.0 [brake]",
+      "dot3:D1-35-9.0 [brake]",
+      "dot3:D1-35-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G1-40-4.0 [brake]",
+      "dot1:G1-40-5.6 [brake]",
+      "dot1:G1-40-6.8 [brake]",
+      "dot1:G1-40-8.0 [brake]",
+      "dot1:G1-40-max [brake]",
+      "dot1:G2-1.5 [walker]",
+      "dot1:G3-25 [combined]",
+      "dot1:G6-b-r1 [walker]",
+      "dot1:G6-b-r2 [walker]",
+      "dot1:G6-c-r1 [combined]",
+      "dot1:G6-c-r2 [combined]",
+      "dot2:B3-40-2.0 [brake]",
+      "dot2:B3-40-3.0 [brake]",
+      "dot2:E2-40-9.0 [brake]",
+      "dot2:E2-40-12 [brake]",
+      "dot3:D1-40-1.0 [brake]",
+      "dot3:D1-40-2.0 [brake]",
+      "dot3:D1-40-3.0 [brake]",
+      "dot3:D1-40-4.0 [brake]",
+      "dot3:D1-40-5.0 [brake]",
+      "dot3:D1-40-6.0 [brake]",
+      "dot3:D1-40-7.0 [brake]",
+      "dot3:D1-40-8.0 [brake]",
+      "dot3:D1-40-9.0 [brake]",
+      "dot3:D1-40-max [brake]",
+      "dot3:R3-D1-40-8.0-r1 [brake]",
+      "dot3:R3-D1-40-8.0-r2 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 45.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D1-45-1.0 [brake]",
+      "dot3:D1-45-2.0 [brake]",
+      "dot3:D1-45-3.0 [brake]",
+      "dot3:D1-45-4.0 [brake]",
+      "dot3:D1-45-5.0 [brake]",
+      "dot3:D1-45-6.0 [brake]",
+      "dot3:D1-45-7.0 [brake]",
+      "dot3:D1-45-8.0 [brake]",
+      "dot3:D1-45-9.0 [brake]",
+      "dot3:D1-45-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G1-50-4.0 [brake]",
+      "dot1:G1-50-5.6 [brake]",
+      "dot1:G1-50-6.8 [brake]",
+      "dot1:G1-50-8.0 [brake]",
+      "dot1:G1-50-max [brake]",
+      "dot1:G6-a-r1 [brake]",
+      "dot1:G6-a-r2 [brake]",
+      "dot3:D1-50-1.0 [brake]",
+      "dot3:D1-50-2.0 [brake]",
+      "dot3:D1-50-3.0 [brake]",
+      "dot3:D1-50-4.0 [brake]",
+      "dot3:D1-50-5.0 [brake]",
+      "dot3:D1-50-6.0 [brake]",
+      "dot3:D1-50-7.0 [brake]",
+      "dot3:D1-50-8.0 [brake]",
+      "dot3:D1-50-9.0 [brake]",
+      "dot3:D1-50-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 55.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D1-55-1.0 [brake]",
+      "dot3:D1-55-2.0 [brake]",
+      "dot3:D1-55-3.0 [brake]",
+      "dot3:D1-55-4.0 [brake]",
+      "dot3:D1-55-5.0 [brake]",
+      "dot3:D1-55-6.0 [brake]",
+      "dot3:D1-55-7.0 [brake]",
+      "dot3:D1-55-8.0 [brake]",
+      "dot3:D1-55-9.0 [brake]",
+      "dot3:D1-55-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G1-60-4.0 [brake]",
+      "dot1:G1-60-5.6 [brake]",
+      "dot1:G1-60-6.8 [brake]",
+      "dot1:G1-60-8.0 [brake]",
+      "dot1:G1-60-max [brake]",
+      "dot2:B3-60-2.0 [brake]",
+      "dot2:B3-60-3.0 [brake]",
+      "dot3:D1-60-1.0 [brake]",
+      "dot3:D1-60-2.0 [brake]",
+      "dot3:D1-60-3.0 [brake]",
+      "dot3:D1-60-4.0 [brake]",
+      "dot3:D1-60-5.0 [brake]",
+      "dot3:D1-60-6.0 [brake]",
+      "dot3:D1-60-7.0 [brake]",
+      "dot3:D1-60-8.0 [brake]",
+      "dot3:D1-60-9.0 [brake]",
+      "dot3:D1-60-max [brake]",
+      "dot3:R3-D1-60-8.0-r1 [brake]",
+      "dot3:R3-D1-60-8.0-r2 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 65.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D1-65-1.0 [brake]",
+      "dot3:D1-65-2.0 [brake]",
+      "dot3:D1-65-3.0 [brake]",
+      "dot3:D1-65-4.0 [brake]",
+      "dot3:D1-65-5.0 [brake]",
+      "dot3:D1-65-6.0 [brake]",
+      "dot3:D1-65-7.0 [brake]",
+      "dot3:D1-65-8.0 [brake]",
+      "dot3:D1-65-9.0 [brake]",
+      "dot3:D1-65-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 70.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G1-70-4.0 [brake]",
+      "dot1:G1-70-5.6 [brake]",
+      "dot1:G1-70-6.8 [brake]",
+      "dot1:G1-70-8.0 [brake]",
+      "dot1:G1-70-max [brake]",
+      "dot3:D1-70-2.0 [brake]",
+      "dot3:D1-70-3.0 [brake]",
+      "dot3:D1-70-4.0 [brake]",
+      "dot3:D1-70-5.0 [brake]",
+      "dot3:D1-70-6.0 [brake]",
+      "dot3:D1-70-7.0 [brake]",
+      "dot3:D1-70-8.0 [brake]",
+      "dot3:D1-70-9.0 [brake]",
+      "dot3:D1-70-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 75.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D1-75-2.0 [brake]",
+      "dot3:D1-75-3.0 [brake]",
+      "dot3:D1-75-4.0 [brake]",
+      "dot3:D1-75-5.0 [brake]",
+      "dot3:D1-75-6.0 [brake]",
+      "dot3:D1-75-7.0 [brake]",
+      "dot3:D1-75-8.0 [brake]",
+      "dot3:D1-75-9.0 [brake]",
+      "dot3:D1-75-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 80.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:B2-80-4.0 [brake]",
+      "dot2:B2-80-8.0 [brake]",
+      "dot2:B2-80-max [brake]",
+      "dot2:R-B2-80-max-r1 [brake]",
+      "dot2:R-B2-80-max-r2 [brake]",
+      "dot3:D1-80-2.0 [brake]",
+      "dot3:D1-80-3.0 [brake]",
+      "dot3:D1-80-4.0 [brake]",
+      "dot3:D1-80-5.0 [brake]",
+      "dot3:D1-80-6.0 [brake]",
+      "dot3:D1-80-7.0 [brake]",
+      "dot3:D1-80-8.0 [brake]",
+      "dot3:D1-80-9.0 [brake]",
+      "dot3:D1-80-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 85.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D1-85-2.0 [brake]",
+      "dot3:D1-85-3.0 [brake]",
+      "dot3:D1-85-4.0 [brake]",
+      "dot3:D1-85-5.0 [brake]",
+      "dot3:D1-85-6.0 [brake]",
+      "dot3:D1-85-7.0 [brake]",
+      "dot3:D1-85-8.0 [brake]",
+      "dot3:D1-85-9.0 [brake]",
+      "dot3:D1-85-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 90.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:E1-90-max [brake]",
+      "dot3:D1-90-3.0 [brake]",
+      "dot3:D1-90-4.0 [brake]",
+      "dot3:D1-90-5.0 [brake]",
+      "dot3:D1-90-6.0 [brake]",
+      "dot3:D1-90-7.0 [brake]",
+      "dot3:D1-90-8.0 [brake]",
+      "dot3:D1-90-9.0 [brake]",
+      "dot3:D1-90-max [brake]",
+      "dot3:R3-D1-90-max-r1 [brake]",
+      "dot3:R3-D1-90-max-r2 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 95.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D1-95-3.0 [brake]",
+      "dot3:D1-95-4.0 [brake]",
+      "dot3:D1-95-5.0 [brake]",
+      "dot3:D1-95-6.0 [brake]",
+      "dot3:D1-95-7.0 [brake]",
+      "dot3:D1-95-8.0 [brake]",
+      "dot3:D1-95-9.0 [brake]",
+      "dot3:D1-95-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 100.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:E1-100-max [brake]",
+      "dot2:E1-100-8.0 [brake]",
+      "dot3:D1-100-3.0 [brake]",
+      "dot3:D1-100-4.0 [brake]",
+      "dot3:D1-100-5.0 [brake]",
+      "dot3:D1-100-6.0 [brake]",
+      "dot3:D1-100-7.0 [brake]",
+      "dot3:D1-100-8.0 [brake]",
+      "dot3:D1-100-9.0 [brake]",
+      "dot3:D1-100-max [brake]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "etron-03",
+   "vehicle": "etron",
+   "vehicle_match": "e-tron",
+   "name": "AEB bench 03 · e-tron · CLEAR",
+   "weather": "CLEAR",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    40.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.2,
+    1.6,
+    2.2,
+    2.6,
+    4.0,
+    5.0,
+    6.0
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.2,
+     "bench_cases": [
+      "dot3:D5-1.2 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.6,
+     "bench_cases": [
+      "dot3:D5-1.6 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 2.2,
+     "bench_cases": [
+      "dot1:G2-2.2 [walker]",
+      "dot3:D5-2.2 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 2.6,
+     "bench_cases": [
+      "dot3:D5-2.6 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 4.0,
+     "bench_cases": [
+      "dot3:D5-4.0 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 5.0,
+     "bench_cases": [
+      "dot1:G2-5.0 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 6.0,
+     "bench_cases": [
+      "dot3:D5-6.0 [walker]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "etron-04",
+   "vehicle": "etron",
+   "vehicle_match": "e-tron",
+   "name": "AEB bench 04 · e-tron · CLEAR",
+   "weather": "CLEAR",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    40.0
+   ],
+   "trigger_distances_m": [
+    5.0,
+    15.0,
+    20.0,
+    30.0,
+    40.0,
+    60.0,
+    80.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 5.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:E5-trig-5 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 15.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G3-15 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 20.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G3-20 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 30.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G3-30 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 40.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G3-40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 60.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G3-60 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 80.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:E5-trig-80 [combined]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "etron-05",
+   "vehicle": "etron",
+   "vehicle_match": "e-tron",
+   "name": "AEB bench 05 · e-tron · CLEAR",
+   "weather": "CLEAR",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    40.0,
+    60.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    3.0
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 3.0,
+     "bench_cases": [
+      "dot1:G2-3.0 [walker]",
+      "dot3:D5-3.0 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 3.0,
+     "bench_cases": [
+      "dot2:E5-60-ped3.0 [combined]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "etron-06",
+   "vehicle": "etron",
+   "vehicle_match": "e-tron",
+   "name": "AEB bench 06 · e-tron · CLEAR",
+   "weather": "CLEAR",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    20.0,
+    40.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    0.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 0.5,
+     "bench_cases": [
+      "dot2:E5-20-ped0.5 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 0.5,
+     "bench_cases": [
+      "dot2:E4-0.5 [walker]",
+      "dot3:D5-0.5 [walker]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "etron-07",
+   "vehicle": "etron",
+   "vehicle_match": "e-tron",
+   "name": "AEB bench 07 · e-tron · CLEAR · dừng lề",
+   "weather": "CLEAR",
+   "stops_at_curb": true,
+   "ego_speeds_kmh": [
+    40.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    0.5,
+    0.8,
+    1.0,
+    1.2,
+    1.39,
+    1.5,
+    1.6,
+    1.8,
+    2.2,
+    2.6,
+    3.0,
+    4.0,
+    6.0
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 0.5,
+     "bench_cases": [
+      "dot2:E4-le-0.5 [walker]",
+      "dot3:D5-le-0.5 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 0.8,
+     "bench_cases": [
+      "dot3:D5-le-0.8 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.0,
+     "bench_cases": [
+      "dot1:G4-1.0 [walker]",
+      "dot3:D5-le-1.0 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.2,
+     "bench_cases": [
+      "dot3:D5-le-1.2 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.39,
+     "bench_cases": [
+      "dot2:B5-le-1.39 [walker]",
+      "dot3:D5-le-1.39 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G4-1.5 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.6,
+     "bench_cases": [
+      "dot3:D5-le-1.6 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.8,
+     "bench_cases": [
+      "dot3:D5-le-1.8 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 2.2,
+     "bench_cases": [
+      "dot1:G4-2.2 [walker]",
+      "dot3:D5-le-2.2 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 2.6,
+     "bench_cases": [
+      "dot3:D5-le-2.6 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 3.0,
+     "bench_cases": [
+      "dot1:G4-3.0 [walker]",
+      "dot3:D5-le-3.0 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 4.0,
+     "bench_cases": [
+      "dot3:D5-le-4.0 [walker]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 6.0,
+     "bench_cases": [
+      "dot3:D5-le-6.0 [walker]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "etron-08",
+   "vehicle": "etron",
+   "vehicle_match": "e-tron",
+   "name": "AEB bench 08 · e-tron · HEAVY_RAIN",
+   "weather": "HEAVY_RAIN",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    30.0,
+    40.0,
+    50.0,
+    70.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D7-HEAVY_RAIN-30-4.0 [brake]",
+      "dot3:D7-HEAVY_RAIN-30-8.0 [brake]",
+      "dot3:D7-HEAVY_RAIN-30-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G5-40-HEAVY [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D7-HEAVY_RAIN-50-4.0 [brake]",
+      "dot3:D7-HEAVY_RAIN-50-8.0 [brake]",
+      "dot3:D7-HEAVY_RAIN-50-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 70.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D7-HEAVY_RAIN-70-4.0 [brake]",
+      "dot3:D7-HEAVY_RAIN-70-8.0 [brake]",
+      "dot3:D7-HEAVY_RAIN-70-max [brake]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "etron-09",
+   "vehicle": "etron",
+   "vehicle_match": "e-tron",
+   "name": "AEB bench 09 · e-tron · RAIN",
+   "weather": "RAIN",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    30.0,
+    40.0,
+    50.0,
+    60.0,
+    70.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D7-RAIN-30-4.0 [brake]",
+      "dot3:D7-RAIN-30-8.0 [brake]",
+      "dot3:D7-RAIN-30-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G5-40-RAIN [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D7-RAIN-50-4.0 [brake]",
+      "dot3:D7-RAIN-50-8.0 [brake]",
+      "dot3:D7-RAIN-50-max [brake]",
+      "dot3:R3-D7-RAIN-50-8.0 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot1:G5-60-RAIN [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 70.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D7-RAIN-70-4.0 [brake]",
+      "dot3:D7-RAIN-70-8.0 [brake]",
+      "dot3:D7-RAIN-70-max [brake]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "model3-10",
+   "vehicle": "model3",
+   "vehicle_match": "model 3",
+   "name": "AEB bench 10 · Model 3 · CLEAR",
+   "weather": "CLEAR",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    20.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0,
+    65.0,
+    70.0,
+    75.0,
+    80.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X2-model3-20-1.5 [brake]",
+      "dot2:X2-model3-20-3.0 [brake]",
+      "dot2:X2-model3-20-max [brake]",
+      "dot3:D2-model3-20-0.5 [brake]",
+      "dot3:D2-model3-20-1.0 [brake]",
+      "dot3:D2-model3-20-1.5 [brake]",
+      "dot3:D2-model3-20-2.0 [brake]",
+      "dot3:D2-model3-20-3.0 [brake]",
+      "dot3:D2-model3-20-max [brake]",
+      "dot4:P2-model3_hc-20 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D2-model3-30-0.5 [brake]",
+      "dot3:D2-model3-30-1.0 [brake]",
+      "dot3:D2-model3-30-1.5 [brake]",
+      "dot3:D2-model3-30-2.0 [brake]",
+      "dot3:D2-model3-30-3.0 [brake]",
+      "dot3:D2-model3-30-max [brake]",
+      "dot4:P1-model3_hc-30-1.0 [brake]",
+      "dot4:P1-model3_hc-30-2.0 [brake]",
+      "dot4:P1-model3_hc-30-3.0 [brake]",
+      "dot4:P1-model3_hc-30-4.0 [brake]",
+      "dot4:P1-model3_hc-30-5.0 [brake]",
+      "dot4:P1-model3_hc-30-6.0 [brake]",
+      "dot4:P1-model3_hc-30-7.0 [brake]",
+      "dot4:P1-model3_hc-30-8.0 [brake]",
+      "dot4:P1-model3_hc-30-9.0 [brake]",
+      "dot4:P1-model3_hc-30-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 35.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-model3_hc-35-1.0 [brake]",
+      "dot4:P1-model3_hc-35-2.0 [brake]",
+      "dot4:P1-model3_hc-35-3.0 [brake]",
+      "dot4:P1-model3_hc-35-4.0 [brake]",
+      "dot4:P1-model3_hc-35-5.0 [brake]",
+      "dot4:P1-model3_hc-35-6.0 [brake]",
+      "dot4:P1-model3_hc-35-7.0 [brake]",
+      "dot4:P1-model3_hc-35-8.0 [brake]",
+      "dot4:P1-model3_hc-35-9.0 [brake]",
+      "dot4:P1-model3_hc-35-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-model3-t1.0-40 [brake]",
+      "dot2:X2-model3-40-1.5 [brake]",
+      "dot2:X2-model3-40-3.0 [brake]",
+      "dot2:X2-model3-40-max [brake]",
+      "dot2:R-X2-model3-40-1.5-r1 [brake]",
+      "dot2:R-X2-model3-40-1.5-r2 [brake]",
+      "dot3:D2-model3-40-1.0 [brake]",
+      "dot3:D2-model3-40-1.5 [brake]",
+      "dot3:D2-model3-40-2.0 [brake]",
+      "dot3:D2-model3-40-3.0 [brake]",
+      "dot3:D2-model3-40-max [brake]",
+      "dot3:R3-D2-model3-40-max-r1 [brake]",
+      "dot3:R3-D2-model3-40-max-r2 [brake]",
+      "dot4:P1-model3_hc-40-1.0 [brake]",
+      "dot4:P1-model3_hc-40-2.0 [brake]",
+      "dot4:P1-model3_hc-40-3.0 [brake]",
+      "dot4:P1-model3_hc-40-4.0 [brake]",
+      "dot4:P1-model3_hc-40-5.0 [brake]",
+      "dot4:P1-model3_hc-40-6.0 [brake]",
+      "dot4:P1-model3_hc-40-7.0 [brake]",
+      "dot4:P1-model3_hc-40-8.0 [brake]",
+      "dot4:P1-model3_hc-40-9.0 [brake]",
+      "dot4:P1-model3_hc-40-max [brake]",
+      "dot4:P2-model3_hc-40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 45.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-model3_hc-45-1.0 [brake]",
+      "dot4:P1-model3_hc-45-2.0 [brake]",
+      "dot4:P1-model3_hc-45-3.0 [brake]",
+      "dot4:P1-model3_hc-45-4.0 [brake]",
+      "dot4:P1-model3_hc-45-5.0 [brake]",
+      "dot4:P1-model3_hc-45-6.0 [brake]",
+      "dot4:P1-model3_hc-45-7.0 [brake]",
+      "dot4:P1-model3_hc-45-8.0 [brake]",
+      "dot4:P1-model3_hc-45-9.0 [brake]",
+      "dot4:P1-model3_hc-45-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-model3-t1.0-50 [brake]",
+      "dot2:X4-model3-r1 [brake]",
+      "dot2:X4-model3-r2 [brake]",
+      "dot3:D2-model3-50-1.0 [brake]",
+      "dot3:D2-model3-50-1.5 [brake]",
+      "dot3:D2-model3-50-2.0 [brake]",
+      "dot3:D2-model3-50-3.0 [brake]",
+      "dot3:D2-model3-50-max [brake]",
+      "dot4:P1-model3_hc-50-1.0 [brake]",
+      "dot4:P1-model3_hc-50-2.0 [brake]",
+      "dot4:P1-model3_hc-50-3.0 [brake]",
+      "dot4:P1-model3_hc-50-4.0 [brake]",
+      "dot4:P1-model3_hc-50-5.0 [brake]",
+      "dot4:P1-model3_hc-50-6.0 [brake]",
+      "dot4:P1-model3_hc-50-7.0 [brake]",
+      "dot4:P1-model3_hc-50-8.0 [brake]",
+      "dot4:P1-model3_hc-50-9.0 [brake]",
+      "dot4:P1-model3_hc-50-max [brake]",
+      "dot4:R4-P1-model3_hc-50-max-r1 [brake]",
+      "dot4:R4-P1-model3_hc-50-max-r2 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 55.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-model3_hc-55-1.0 [brake]",
+      "dot4:P1-model3_hc-55-2.0 [brake]",
+      "dot4:P1-model3_hc-55-3.0 [brake]",
+      "dot4:P1-model3_hc-55-4.0 [brake]",
+      "dot4:P1-model3_hc-55-5.0 [brake]",
+      "dot4:P1-model3_hc-55-6.0 [brake]",
+      "dot4:P1-model3_hc-55-7.0 [brake]",
+      "dot4:P1-model3_hc-55-8.0 [brake]",
+      "dot4:P1-model3_hc-55-9.0 [brake]",
+      "dot4:P1-model3_hc-55-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-model3-t1.0-60 [brake]",
+      "dot2:X2-model3-60-1.5 [brake]",
+      "dot2:X2-model3-60-3.0 [brake]",
+      "dot2:X2-model3-60-max [brake]",
+      "dot3:D2-model3-60-1.0 [brake]",
+      "dot3:D2-model3-60-1.5 [brake]",
+      "dot3:D2-model3-60-2.0 [brake]",
+      "dot3:D2-model3-60-3.0 [brake]",
+      "dot3:D2-model3-60-max [brake]",
+      "dot4:P1-model3_hc-60-1.0 [brake]",
+      "dot4:P1-model3_hc-60-2.0 [brake]",
+      "dot4:P1-model3_hc-60-3.0 [brake]",
+      "dot4:P1-model3_hc-60-4.0 [brake]",
+      "dot4:P1-model3_hc-60-5.0 [brake]",
+      "dot4:P1-model3_hc-60-6.0 [brake]",
+      "dot4:P1-model3_hc-60-7.0 [brake]",
+      "dot4:P1-model3_hc-60-8.0 [brake]",
+      "dot4:P1-model3_hc-60-9.0 [brake]",
+      "dot4:P1-model3_hc-60-max [brake]",
+      "dot4:P2-model3_hc-60 [combined]",
+      "dot4:R4-P1-model3_hc-60-4.0-r1 [brake]",
+      "dot4:R4-P1-model3_hc-60-4.0-r2 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 65.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-model3_hc-65-1.0 [brake]",
+      "dot4:P1-model3_hc-65-2.0 [brake]",
+      "dot4:P1-model3_hc-65-3.0 [brake]",
+      "dot4:P1-model3_hc-65-4.0 [brake]",
+      "dot4:P1-model3_hc-65-5.0 [brake]",
+      "dot4:P1-model3_hc-65-6.0 [brake]",
+      "dot4:P1-model3_hc-65-7.0 [brake]",
+      "dot4:P1-model3_hc-65-8.0 [brake]",
+      "dot4:P1-model3_hc-65-9.0 [brake]",
+      "dot4:P1-model3_hc-65-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 70.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-model3-t1.0-70 [brake]",
+      "dot4:P1-model3_hc-70-2.0 [brake]",
+      "dot4:P1-model3_hc-70-3.0 [brake]",
+      "dot4:P1-model3_hc-70-4.0 [brake]",
+      "dot4:P1-model3_hc-70-5.0 [brake]",
+      "dot4:P1-model3_hc-70-6.0 [brake]",
+      "dot4:P1-model3_hc-70-7.0 [brake]",
+      "dot4:P1-model3_hc-70-8.0 [brake]",
+      "dot4:P1-model3_hc-70-9.0 [brake]",
+      "dot4:P1-model3_hc-70-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 75.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-model3_hc-75-2.0 [brake]",
+      "dot4:P1-model3_hc-75-3.0 [brake]",
+      "dot4:P1-model3_hc-75-4.0 [brake]",
+      "dot4:P1-model3_hc-75-5.0 [brake]",
+      "dot4:P1-model3_hc-75-6.0 [brake]",
+      "dot4:P1-model3_hc-75-7.0 [brake]",
+      "dot4:P1-model3_hc-75-8.0 [brake]",
+      "dot4:P1-model3_hc-75-9.0 [brake]",
+      "dot4:P1-model3_hc-75-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 80.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-model3_hc-80-2.0 [brake]",
+      "dot4:P1-model3_hc-80-3.0 [brake]",
+      "dot4:P1-model3_hc-80-4.0 [brake]",
+      "dot4:P1-model3_hc-80-5.0 [brake]",
+      "dot4:P1-model3_hc-80-6.0 [brake]",
+      "dot4:P1-model3_hc-80-7.0 [brake]",
+      "dot4:P1-model3_hc-80-8.0 [brake]",
+      "dot4:P1-model3_hc-80-9.0 [brake]",
+      "dot4:P1-model3_hc-80-max [brake]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "model3-11",
+   "vehicle": "model3",
+   "vehicle_match": "model 3",
+   "name": "AEB bench 11 · Model 3 · HEAVY_RAIN",
+   "weather": "HEAVY_RAIN",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    40.0,
+    60.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-model3-40-HEAVY_RAIN [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-model3-60-HEAVY_RAIN [brake]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "model3-12",
+   "vehicle": "model3",
+   "vehicle_match": "model 3",
+   "name": "AEB bench 12 · Model 3 · RAIN",
+   "weather": "RAIN",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    40.0,
+    60.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-model3-40-RAIN [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-model3-60-RAIN [brake]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "patrol-13",
+   "vehicle": "patrol",
+   "vehicle_match": "patrol",
+   "name": "AEB bench 13 · Patrol · CLEAR",
+   "weather": "CLEAR",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    20.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0,
+    65.0,
+    70.0,
+    75.0,
+    80.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X2-patrol-20-1.5 [brake]",
+      "dot2:X2-patrol-20-3.0 [brake]",
+      "dot2:X2-patrol-20-max [brake]",
+      "dot3:D2-patrol-20-0.5 [brake]",
+      "dot3:D2-patrol-20-1.0 [brake]",
+      "dot3:D2-patrol-20-1.5 [brake]",
+      "dot3:D2-patrol-20-2.0 [brake]",
+      "dot3:D2-patrol-20-3.0 [brake]",
+      "dot3:D2-patrol-20-4.0 [brake]",
+      "dot3:D2-patrol-20-5.0 [brake]",
+      "dot3:D2-patrol-20-max [brake]",
+      "dot4:P2-patrol_hc-20 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D2-patrol-30-0.5 [brake]",
+      "dot3:D2-patrol-30-1.0 [brake]",
+      "dot3:D2-patrol-30-1.5 [brake]",
+      "dot3:D2-patrol-30-2.0 [brake]",
+      "dot3:D2-patrol-30-3.0 [brake]",
+      "dot3:D2-patrol-30-4.0 [brake]",
+      "dot3:D2-patrol-30-5.0 [brake]",
+      "dot3:D2-patrol-30-max [brake]",
+      "dot4:P1-patrol_hc-30-1.0 [brake]",
+      "dot4:P1-patrol_hc-30-2.0 [brake]",
+      "dot4:P1-patrol_hc-30-3.0 [brake]",
+      "dot4:P1-patrol_hc-30-4.0 [brake]",
+      "dot4:P1-patrol_hc-30-5.0 [brake]",
+      "dot4:P1-patrol_hc-30-6.0 [brake]",
+      "dot4:P1-patrol_hc-30-7.0 [brake]",
+      "dot4:P1-patrol_hc-30-8.0 [brake]",
+      "dot4:P1-patrol_hc-30-9.0 [brake]",
+      "dot4:P1-patrol_hc-30-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 35.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-patrol_hc-35-1.0 [brake]",
+      "dot4:P1-patrol_hc-35-2.0 [brake]",
+      "dot4:P1-patrol_hc-35-3.0 [brake]",
+      "dot4:P1-patrol_hc-35-4.0 [brake]",
+      "dot4:P1-patrol_hc-35-5.0 [brake]",
+      "dot4:P1-patrol_hc-35-6.0 [brake]",
+      "dot4:P1-patrol_hc-35-7.0 [brake]",
+      "dot4:P1-patrol_hc-35-8.0 [brake]",
+      "dot4:P1-patrol_hc-35-9.0 [brake]",
+      "dot4:P1-patrol_hc-35-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-patrol-t1.0-40 [brake]",
+      "dot2:X2-patrol-40-1.5 [brake]",
+      "dot2:X2-patrol-40-3.0 [brake]",
+      "dot2:X2-patrol-40-max [brake]",
+      "dot3:D2-patrol-40-1.0 [brake]",
+      "dot3:D2-patrol-40-1.5 [brake]",
+      "dot3:D2-patrol-40-2.0 [brake]",
+      "dot3:D2-patrol-40-3.0 [brake]",
+      "dot3:D2-patrol-40-4.0 [brake]",
+      "dot3:D2-patrol-40-5.0 [brake]",
+      "dot3:D2-patrol-40-max [brake]",
+      "dot3:R3-D2-patrol-40-max-r1 [brake]",
+      "dot3:R3-D2-patrol-40-max-r2 [brake]",
+      "dot4:P1-patrol_hc-40-1.0 [brake]",
+      "dot4:P1-patrol_hc-40-2.0 [brake]",
+      "dot4:P1-patrol_hc-40-3.0 [brake]",
+      "dot4:P1-patrol_hc-40-4.0 [brake]",
+      "dot4:P1-patrol_hc-40-5.0 [brake]",
+      "dot4:P1-patrol_hc-40-6.0 [brake]",
+      "dot4:P1-patrol_hc-40-7.0 [brake]",
+      "dot4:P1-patrol_hc-40-8.0 [brake]",
+      "dot4:P1-patrol_hc-40-9.0 [brake]",
+      "dot4:P1-patrol_hc-40-max [brake]",
+      "dot4:P2-patrol_hc-40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 45.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-patrol_hc-45-1.0 [brake]",
+      "dot4:P1-patrol_hc-45-2.0 [brake]",
+      "dot4:P1-patrol_hc-45-3.0 [brake]",
+      "dot4:P1-patrol_hc-45-4.0 [brake]",
+      "dot4:P1-patrol_hc-45-5.0 [brake]",
+      "dot4:P1-patrol_hc-45-6.0 [brake]",
+      "dot4:P1-patrol_hc-45-7.0 [brake]",
+      "dot4:P1-patrol_hc-45-8.0 [brake]",
+      "dot4:P1-patrol_hc-45-9.0 [brake]",
+      "dot4:P1-patrol_hc-45-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-patrol-t1.0-50 [brake]",
+      "dot2:X4-patrol-r1 [brake]",
+      "dot2:X4-patrol-r2 [brake]",
+      "dot3:D2-patrol-50-1.0 [brake]",
+      "dot3:D2-patrol-50-1.5 [brake]",
+      "dot3:D2-patrol-50-2.0 [brake]",
+      "dot3:D2-patrol-50-3.0 [brake]",
+      "dot3:D2-patrol-50-4.0 [brake]",
+      "dot3:D2-patrol-50-5.0 [brake]",
+      "dot3:D2-patrol-50-max [brake]",
+      "dot4:P1-patrol_hc-50-1.0 [brake]",
+      "dot4:P1-patrol_hc-50-2.0 [brake]",
+      "dot4:P1-patrol_hc-50-3.0 [brake]",
+      "dot4:P1-patrol_hc-50-4.0 [brake]",
+      "dot4:P1-patrol_hc-50-5.0 [brake]",
+      "dot4:P1-patrol_hc-50-6.0 [brake]",
+      "dot4:P1-patrol_hc-50-7.0 [brake]",
+      "dot4:P1-patrol_hc-50-8.0 [brake]",
+      "dot4:P1-patrol_hc-50-9.0 [brake]",
+      "dot4:P1-patrol_hc-50-max [brake]",
+      "dot4:R4-P1-patrol_hc-50-max-r1 [brake]",
+      "dot4:R4-P1-patrol_hc-50-max-r2 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 55.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-patrol_hc-55-1.0 [brake]",
+      "dot4:P1-patrol_hc-55-2.0 [brake]",
+      "dot4:P1-patrol_hc-55-3.0 [brake]",
+      "dot4:P1-patrol_hc-55-4.0 [brake]",
+      "dot4:P1-patrol_hc-55-5.0 [brake]",
+      "dot4:P1-patrol_hc-55-6.0 [brake]",
+      "dot4:P1-patrol_hc-55-7.0 [brake]",
+      "dot4:P1-patrol_hc-55-8.0 [brake]",
+      "dot4:P1-patrol_hc-55-9.0 [brake]",
+      "dot4:P1-patrol_hc-55-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-patrol-t1.0-60 [brake]",
+      "dot2:X2-patrol-60-1.5 [brake]",
+      "dot2:X2-patrol-60-3.0 [brake]",
+      "dot2:X2-patrol-60-max [brake]",
+      "dot3:D2-patrol-60-1.0 [brake]",
+      "dot3:D2-patrol-60-1.5 [brake]",
+      "dot3:D2-patrol-60-2.0 [brake]",
+      "dot3:D2-patrol-60-3.0 [brake]",
+      "dot3:D2-patrol-60-4.0 [brake]",
+      "dot3:D2-patrol-60-5.0 [brake]",
+      "dot3:D2-patrol-60-max [brake]",
+      "dot4:P1-patrol_hc-60-1.0 [brake]",
+      "dot4:P1-patrol_hc-60-2.0 [brake]",
+      "dot4:P1-patrol_hc-60-3.0 [brake]",
+      "dot4:P1-patrol_hc-60-4.0 [brake]",
+      "dot4:P1-patrol_hc-60-5.0 [brake]",
+      "dot4:P1-patrol_hc-60-6.0 [brake]",
+      "dot4:P1-patrol_hc-60-7.0 [brake]",
+      "dot4:P1-patrol_hc-60-8.0 [brake]",
+      "dot4:P1-patrol_hc-60-9.0 [brake]",
+      "dot4:P1-patrol_hc-60-max [brake]",
+      "dot4:P2-patrol_hc-60 [combined]",
+      "dot4:R4-P1-patrol_hc-60-4.0-r1 [brake]",
+      "dot4:R4-P1-patrol_hc-60-4.0-r2 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 65.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-patrol_hc-65-1.0 [brake]",
+      "dot4:P1-patrol_hc-65-2.0 [brake]",
+      "dot4:P1-patrol_hc-65-3.0 [brake]",
+      "dot4:P1-patrol_hc-65-4.0 [brake]",
+      "dot4:P1-patrol_hc-65-5.0 [brake]",
+      "dot4:P1-patrol_hc-65-6.0 [brake]",
+      "dot4:P1-patrol_hc-65-7.0 [brake]",
+      "dot4:P1-patrol_hc-65-8.0 [brake]",
+      "dot4:P1-patrol_hc-65-9.0 [brake]",
+      "dot4:P1-patrol_hc-65-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 70.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-patrol-t1.0-70 [brake]",
+      "dot4:P1-patrol_hc-70-2.0 [brake]",
+      "dot4:P1-patrol_hc-70-3.0 [brake]",
+      "dot4:P1-patrol_hc-70-4.0 [brake]",
+      "dot4:P1-patrol_hc-70-5.0 [brake]",
+      "dot4:P1-patrol_hc-70-6.0 [brake]",
+      "dot4:P1-patrol_hc-70-7.0 [brake]",
+      "dot4:P1-patrol_hc-70-8.0 [brake]",
+      "dot4:P1-patrol_hc-70-9.0 [brake]",
+      "dot4:P1-patrol_hc-70-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 75.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-patrol_hc-75-2.0 [brake]",
+      "dot4:P1-patrol_hc-75-3.0 [brake]",
+      "dot4:P1-patrol_hc-75-4.0 [brake]",
+      "dot4:P1-patrol_hc-75-5.0 [brake]",
+      "dot4:P1-patrol_hc-75-6.0 [brake]",
+      "dot4:P1-patrol_hc-75-7.0 [brake]",
+      "dot4:P1-patrol_hc-75-8.0 [brake]",
+      "dot4:P1-patrol_hc-75-9.0 [brake]",
+      "dot4:P1-patrol_hc-75-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 80.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-patrol_hc-80-2.0 [brake]",
+      "dot4:P1-patrol_hc-80-3.0 [brake]",
+      "dot4:P1-patrol_hc-80-4.0 [brake]",
+      "dot4:P1-patrol_hc-80-5.0 [brake]",
+      "dot4:P1-patrol_hc-80-6.0 [brake]",
+      "dot4:P1-patrol_hc-80-7.0 [brake]",
+      "dot4:P1-patrol_hc-80-8.0 [brake]",
+      "dot4:P1-patrol_hc-80-9.0 [brake]",
+      "dot4:P1-patrol_hc-80-max [brake]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "patrol-14",
+   "vehicle": "patrol",
+   "vehicle_match": "patrol",
+   "name": "AEB bench 14 · Patrol · HEAVY_RAIN",
+   "weather": "HEAVY_RAIN",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    40.0,
+    60.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-patrol-40-HEAVY_RAIN [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-patrol-60-HEAVY_RAIN [brake]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "patrol-15",
+   "vehicle": "patrol",
+   "vehicle_match": "patrol",
+   "name": "AEB bench 15 · Patrol · RAIN",
+   "weather": "RAIN",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    40.0,
+    60.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-patrol-40-RAIN [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-patrol-60-RAIN [brake]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "sprinter-16",
+   "vehicle": "sprinter",
+   "vehicle_match": "sprinter",
+   "name": "AEB bench 16 · Sprinter · CLEAR",
+   "weather": "CLEAR",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    20.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0,
+    65.0,
+    70.0,
+    75.0,
+    80.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 20.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X2-sprinter-20-1.5 [brake]",
+      "dot2:X2-sprinter-20-3.0 [brake]",
+      "dot2:X2-sprinter-20-max [brake]",
+      "dot3:D2-sprinter-20-0.5 [brake]",
+      "dot3:D2-sprinter-20-1.0 [brake]",
+      "dot3:D2-sprinter-20-1.5 [brake]",
+      "dot3:D2-sprinter-20-2.0 [brake]",
+      "dot3:D2-sprinter-20-3.0 [brake]",
+      "dot3:D2-sprinter-20-4.0 [brake]",
+      "dot3:D2-sprinter-20-5.0 [brake]",
+      "dot3:D2-sprinter-20-max [brake]",
+      "dot4:P2-sprinter_hc-20 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 30.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot3:D2-sprinter-30-0.5 [brake]",
+      "dot3:D2-sprinter-30-1.0 [brake]",
+      "dot3:D2-sprinter-30-1.5 [brake]",
+      "dot3:D2-sprinter-30-2.0 [brake]",
+      "dot3:D2-sprinter-30-3.0 [brake]",
+      "dot3:D2-sprinter-30-4.0 [brake]",
+      "dot3:D2-sprinter-30-5.0 [brake]",
+      "dot3:D2-sprinter-30-max [brake]",
+      "dot4:P1-sprinter_hc-30-1.0 [brake]",
+      "dot4:P1-sprinter_hc-30-2.0 [brake]",
+      "dot4:P1-sprinter_hc-30-3.0 [brake]",
+      "dot4:P1-sprinter_hc-30-4.0 [brake]",
+      "dot4:P1-sprinter_hc-30-5.0 [brake]",
+      "dot4:P1-sprinter_hc-30-6.0 [brake]",
+      "dot4:P1-sprinter_hc-30-7.0 [brake]",
+      "dot4:P1-sprinter_hc-30-8.0 [brake]",
+      "dot4:P1-sprinter_hc-30-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 35.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-sprinter_hc-35-1.0 [brake]",
+      "dot4:P1-sprinter_hc-35-2.0 [brake]",
+      "dot4:P1-sprinter_hc-35-3.0 [brake]",
+      "dot4:P1-sprinter_hc-35-4.0 [brake]",
+      "dot4:P1-sprinter_hc-35-5.0 [brake]",
+      "dot4:P1-sprinter_hc-35-6.0 [brake]",
+      "dot4:P1-sprinter_hc-35-7.0 [brake]",
+      "dot4:P1-sprinter_hc-35-8.0 [brake]",
+      "dot4:P1-sprinter_hc-35-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-sprinter-t1.0-40 [brake]",
+      "dot2:X2-sprinter-40-1.5 [brake]",
+      "dot2:X2-sprinter-40-3.0 [brake]",
+      "dot2:X2-sprinter-40-max [brake]",
+      "dot3:D2-sprinter-40-1.0 [brake]",
+      "dot3:D2-sprinter-40-1.5 [brake]",
+      "dot3:D2-sprinter-40-2.0 [brake]",
+      "dot3:D2-sprinter-40-3.0 [brake]",
+      "dot3:D2-sprinter-40-4.0 [brake]",
+      "dot3:D2-sprinter-40-5.0 [brake]",
+      "dot3:D2-sprinter-40-max [brake]",
+      "dot3:R3-D2-sprinter-40-max-r1 [brake]",
+      "dot3:R3-D2-sprinter-40-max-r2 [brake]",
+      "dot4:P1-sprinter_hc-40-1.0 [brake]",
+      "dot4:P1-sprinter_hc-40-2.0 [brake]",
+      "dot4:P1-sprinter_hc-40-3.0 [brake]",
+      "dot4:P1-sprinter_hc-40-4.0 [brake]",
+      "dot4:P1-sprinter_hc-40-5.0 [brake]",
+      "dot4:P1-sprinter_hc-40-6.0 [brake]",
+      "dot4:P1-sprinter_hc-40-7.0 [brake]",
+      "dot4:P1-sprinter_hc-40-8.0 [brake]",
+      "dot4:P1-sprinter_hc-40-max [brake]",
+      "dot4:P2-sprinter_hc-40 [combined]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 45.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-sprinter_hc-45-1.0 [brake]",
+      "dot4:P1-sprinter_hc-45-2.0 [brake]",
+      "dot4:P1-sprinter_hc-45-3.0 [brake]",
+      "dot4:P1-sprinter_hc-45-4.0 [brake]",
+      "dot4:P1-sprinter_hc-45-5.0 [brake]",
+      "dot4:P1-sprinter_hc-45-6.0 [brake]",
+      "dot4:P1-sprinter_hc-45-7.0 [brake]",
+      "dot4:P1-sprinter_hc-45-8.0 [brake]",
+      "dot4:P1-sprinter_hc-45-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 50.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-sprinter-t1.0-50 [brake]",
+      "dot2:X4-sprinter-r1 [brake]",
+      "dot2:X4-sprinter-r2 [brake]",
+      "dot3:D2-sprinter-50-1.0 [brake]",
+      "dot3:D2-sprinter-50-1.5 [brake]",
+      "dot3:D2-sprinter-50-2.0 [brake]",
+      "dot3:D2-sprinter-50-3.0 [brake]",
+      "dot3:D2-sprinter-50-4.0 [brake]",
+      "dot3:D2-sprinter-50-5.0 [brake]",
+      "dot3:D2-sprinter-50-max [brake]",
+      "dot4:P1-sprinter_hc-50-1.0 [brake]",
+      "dot4:P1-sprinter_hc-50-2.0 [brake]",
+      "dot4:P1-sprinter_hc-50-3.0 [brake]",
+      "dot4:P1-sprinter_hc-50-4.0 [brake]",
+      "dot4:P1-sprinter_hc-50-5.0 [brake]",
+      "dot4:P1-sprinter_hc-50-6.0 [brake]",
+      "dot4:P1-sprinter_hc-50-7.0 [brake]",
+      "dot4:P1-sprinter_hc-50-8.0 [brake]",
+      "dot4:P1-sprinter_hc-50-max [brake]",
+      "dot4:R4-P1-sprinter_hc-50-max-r1 [brake]",
+      "dot4:R4-P1-sprinter_hc-50-max-r2 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 55.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-sprinter_hc-55-1.0 [brake]",
+      "dot4:P1-sprinter_hc-55-2.0 [brake]",
+      "dot4:P1-sprinter_hc-55-3.0 [brake]",
+      "dot4:P1-sprinter_hc-55-4.0 [brake]",
+      "dot4:P1-sprinter_hc-55-5.0 [brake]",
+      "dot4:P1-sprinter_hc-55-6.0 [brake]",
+      "dot4:P1-sprinter_hc-55-7.0 [brake]",
+      "dot4:P1-sprinter_hc-55-8.0 [brake]",
+      "dot4:P1-sprinter_hc-55-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-sprinter-t1.0-60 [brake]",
+      "dot2:X2-sprinter-60-1.5 [brake]",
+      "dot2:X2-sprinter-60-3.0 [brake]",
+      "dot2:X2-sprinter-60-max [brake]",
+      "dot3:D2-sprinter-60-1.0 [brake]",
+      "dot3:D2-sprinter-60-1.5 [brake]",
+      "dot3:D2-sprinter-60-2.0 [brake]",
+      "dot3:D2-sprinter-60-3.0 [brake]",
+      "dot3:D2-sprinter-60-4.0 [brake]",
+      "dot3:D2-sprinter-60-5.0 [brake]",
+      "dot3:D2-sprinter-60-max [brake]",
+      "dot4:P1-sprinter_hc-60-1.0 [brake]",
+      "dot4:P1-sprinter_hc-60-2.0 [brake]",
+      "dot4:P1-sprinter_hc-60-3.0 [brake]",
+      "dot4:P1-sprinter_hc-60-4.0 [brake]",
+      "dot4:P1-sprinter_hc-60-5.0 [brake]",
+      "dot4:P1-sprinter_hc-60-6.0 [brake]",
+      "dot4:P1-sprinter_hc-60-7.0 [brake]",
+      "dot4:P1-sprinter_hc-60-8.0 [brake]",
+      "dot4:P1-sprinter_hc-60-max [brake]",
+      "dot4:P2-sprinter_hc-60 [combined]",
+      "dot4:R4-P1-sprinter_hc-60-4.0-r1 [brake]",
+      "dot4:R4-P1-sprinter_hc-60-4.0-r2 [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 65.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-sprinter_hc-65-1.0 [brake]",
+      "dot4:P1-sprinter_hc-65-2.0 [brake]",
+      "dot4:P1-sprinter_hc-65-3.0 [brake]",
+      "dot4:P1-sprinter_hc-65-4.0 [brake]",
+      "dot4:P1-sprinter_hc-65-5.0 [brake]",
+      "dot4:P1-sprinter_hc-65-6.0 [brake]",
+      "dot4:P1-sprinter_hc-65-7.0 [brake]",
+      "dot4:P1-sprinter_hc-65-8.0 [brake]",
+      "dot4:P1-sprinter_hc-65-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 70.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X1-sprinter-t1.0-70 [brake]",
+      "dot4:P1-sprinter_hc-70-2.0 [brake]",
+      "dot4:P1-sprinter_hc-70-3.0 [brake]",
+      "dot4:P1-sprinter_hc-70-4.0 [brake]",
+      "dot4:P1-sprinter_hc-70-5.0 [brake]",
+      "dot4:P1-sprinter_hc-70-6.0 [brake]",
+      "dot4:P1-sprinter_hc-70-7.0 [brake]",
+      "dot4:P1-sprinter_hc-70-8.0 [brake]",
+      "dot4:P1-sprinter_hc-70-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 75.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-sprinter_hc-75-2.0 [brake]",
+      "dot4:P1-sprinter_hc-75-3.0 [brake]",
+      "dot4:P1-sprinter_hc-75-4.0 [brake]",
+      "dot4:P1-sprinter_hc-75-5.0 [brake]",
+      "dot4:P1-sprinter_hc-75-6.0 [brake]",
+      "dot4:P1-sprinter_hc-75-7.0 [brake]",
+      "dot4:P1-sprinter_hc-75-8.0 [brake]",
+      "dot4:P1-sprinter_hc-75-max [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 80.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot4:P1-sprinter_hc-80-2.0 [brake]",
+      "dot4:P1-sprinter_hc-80-3.0 [brake]",
+      "dot4:P1-sprinter_hc-80-4.0 [brake]",
+      "dot4:P1-sprinter_hc-80-5.0 [brake]",
+      "dot4:P1-sprinter_hc-80-6.0 [brake]",
+      "dot4:P1-sprinter_hc-80-7.0 [brake]",
+      "dot4:P1-sprinter_hc-80-8.0 [brake]",
+      "dot4:P1-sprinter_hc-80-max [brake]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "sprinter-17",
+   "vehicle": "sprinter",
+   "vehicle_match": "sprinter",
+   "name": "AEB bench 17 · Sprinter · HEAVY_RAIN",
+   "weather": "HEAVY_RAIN",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    40.0,
+    60.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-sprinter-40-HEAVY_RAIN [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-sprinter-60-HEAVY_RAIN [brake]"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "sprinter-18",
+   "vehicle": "sprinter",
+   "vehicle_match": "sprinter",
+   "name": "AEB bench 18 · Sprinter · RAIN",
+   "weather": "RAIN",
+   "stops_at_curb": false,
+   "ego_speeds_kmh": [
+    40.0,
+    60.0
+   ],
+   "trigger_distances_m": [
+    25.0
+   ],
+   "pedestrian_speeds_mps": [
+    1.5
+   ],
+   "variants": [
+    {
+     "ego_speed_kmh": 40.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-sprinter-40-RAIN [brake]"
+     ]
+    },
+    {
+     "ego_speed_kmh": 60.0,
+     "trigger_distance_m": 25.0,
+     "pedestrian_speed_mps": 1.5,
+     "bench_cases": [
+      "dot2:X3-sprinter-60-RAIN [brake]"
+     ]
+    }
+   ]
+  }
+ ]
+}

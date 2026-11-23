@@ -1,0 +1,166 @@
+{
+ "projects": {
+  "etron": {
+   "id": 2,
+   "vehicle": "Audi e-tron"
+  },
+  "model3": {
+   "id": 3,
+   "vehicle": "Tesla Model 3"
+  },
+  "patrol": {
+   "id": 4,
+   "vehicle": "Nissan Patrol 2021"
+  },
+  "sprinter": {
+   "id": 5,
+   "vehicle": "Mercedes Sprinter"
+  }
+ },
+ "families": {
+  "etron-01": {
+   "scenario_id": 4,
+   "project_id": 2,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "etron-02": {
+   "scenario_id": 5,
+   "project_id": 2,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "etron-03": {
+   "scenario_id": 6,
+   "project_id": 2,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "etron-04": {
+   "scenario_id": 7,
+   "project_id": 2,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "etron-05": {
+   "scenario_id": 8,
+   "project_id": 2,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "etron-06": {
+   "scenario_id": 9,
+   "project_id": 2,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "etron-07": {
+   "scenario_id": 10,
+   "project_id": 2,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "etron-08": {
+   "scenario_id": 11,
+   "project_id": 2,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "etron-09": {
+   "scenario_id": 12,
+   "project_id": 2,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "model3-10": {
+   "scenario_id": 13,
+   "project_id": 3,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "model3-11": {
+   "scenario_id": 14,
+   "project_id": 3,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "model3-12": {
+   "scenario_id": 15,
+   "project_id": 3,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "patrol-13": {
+   "scenario_id": 16,
+   "project_id": 4,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "patrol-14": {
+   "scenario_id": 17,
+   "project_id": 4,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "patrol-15": {
+   "scenario_id": 18,
+   "project_id": 4,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "sprinter-16": {
+   "scenario_id": 19,
+   "project_id": 5,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "sprinter-17": {
+   "scenario_id": 20,
+   "project_id": 5,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  },
+  "sprinter-18": {
+   "scenario_id": 21,
+   "project_id": 5,
+   "ran": [
+    "carla",
+    "kinematic"
+   ]
+  }
+ }
+}
