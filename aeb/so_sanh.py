@@ -60,7 +60,10 @@ def bench_index(spec: dict) -> dict:
     out = {}
     for fam in spec["families"]:
         for v in fam["variants"]:
-            out[(fam["name"], float(v["ego_speed_kmh"]), float(v["trigger_distance_m"]), float(v["pedestrian_speed_mps"]))] = v["bench_cases"]
+            kinds = sorted({c.rsplit("[", 1)[-1].rstrip("]") for c in v["bench_cases"] if "[" in c})
+            out[(fam["name"], float(v["ego_speed_kmh"]), float(v["trigger_distance_m"]), float(v["pedestrian_speed_mps"]))] = {
+                "cases": v["bench_cases"], "kinds": ", ".join(kinds),
+                "weather": fam.get("weather", "CLEAR"), "stop": fam.get("stops_at_curb", False)}
     return out
 
 
@@ -108,7 +111,7 @@ def main() -> None:
     wb = Workbook()
     ws = wb.active
     ws.title = "AEB bật - cặp"
-    header = ["Họ", "Xe", "ego km/h", "trigger m", "người m/s", "Ca bench",
+    header = ["Họ", "Xe", "Thời tiết", "Dừng lề", "ego km/h", "trigger m", "người m/s", "Loại ca bench", "Số lượt bench", "Ca bench",
               "Kết luận CARLA", "Kết luận KIN", "Va chạm CARLA", "Va chạm KIN", "Khớp va chạm"]
     for _, label, _ in METRICS:
         header += [f"{label} CARLA", f"{label} KIN", f"Δ {label}"]
@@ -121,10 +124,11 @@ def main() -> None:
             continue
         c, k, m = pair["CARLA"], pair["KIN"], meta[v]
         cc, kc = flag(c["collision_occurred"]), flag(k["collision_occurred"])
-        row = [m["family"], m["vehicle"], m["ego"], m["trig"], m["ped"],
-               ", ".join(benches.get((m["family"], m["ego"], m["trig"], m["ped"]), [])) or "(không có)",
+        b = benches.get((m["family"], m["ego"], m["trig"], m["ped"]), {"cases": [], "kinds": "", "weather": "", "stop": None})
+        row = [m["family"], m["vehicle"], b["weather"], b["stop"], m["ego"], m["trig"], m["ped"], b["kinds"], len(b["cases"]),
+               ", ".join(b["cases"][:12]) + (" …" if len(b["cases"]) > 12 else "") or "(không có)",
                c["verdict"], k["verdict"], cc, kc, cc == kc]
-        marks = [] if cc == kc else [11]
+        marks = [] if cc == kc else [len(row)]
         for name, _, tol in METRICS:
             a, b = num(c[name]), num(k[name])
             d = None if a is None or b is None else round(a - b, 3)
@@ -178,6 +182,9 @@ def main() -> None:
         off = sum(1 for v in versions if flag(groups.get((v, "OFF"), {}).get(sim, {}).get("collision_occurred")))
         on = sum(1 for v in versions if flag(groups.get((v, "ON"), {}).get(sim, {}).get("collision_occurred")))
         ws3.append([f"{sim}: số biến thể va chạm, AEB tắt → bật", f"{off} → {on}"])
+        fp = sum(1 for v in versions if flag(groups.get((v, "ON"), {}).get(sim, {}).get("is_false_positive")))
+        fn = sum(1 for v in versions if flag(groups.get((v, "ON"), {}).get(sim, {}).get("is_false_negative")))
+        ws3.append([f"{sim}: AEB bật — phanh oan / bỏ lỡ", f"{fp} / {fn}"])
     ws3.append(["Ô được tô đỏ ở sheet cặp", "lệch vượt ngưỡng: T_AEB 0,05 s; khoảng cách 0,3 m; quãng phanh 0,5 m; v va chạm 0,5 m/s; TTC 0,1 s; "
                                        "hoặc một bên có số, bên kia không"])
     ws3.column_dimensions["A"].width = 45

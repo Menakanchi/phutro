@@ -1,9 +1,9 @@
-"""Chạy lại các ca xe + người của 4 đợt bench qua VehicSim, có AEB (và lượt AEB tắt làm mốc), trên CARLA và bộ động học.
+"""Chạy lại mọi ca của 4 đợt bench qua VehicSim (dựng thành ca xe + người), có AEB (và lượt AEB tắt làm mốc), trên CARLA và bộ động học.
 
 Cần: VehicSim đang chạy (backend :8001, MySQL trong Docker), một tài khoản EXPERIENCER (tự đăng ký trên web là EXPERIENCER).
 Mỗi xe một project cá nhân, vì xe của project bị khóa khi đã có run.
 
-  python aeb\\chay_aeb.py tao      --email <email>             # tạo 4 project + 6 họ (không chạy)
+  python aeb\\chay_aeb.py tao      --email <email>             # tạo 4 project + 18 họ (không chạy)
   python aeb\\chay_aeb.py chay     --email <email> --sim carla  # xếp hàng run AEB bật + tắt; backend phải đang ở chế độ đó
   python aeb\\chay_aeb.py trangthai --email <email>             # số run còn chờ / đang chạy
   python aeb\\chay_aeb.py xuat     --vehicsim <thư mục repo VehicSim>   # CSV run → runs\\aeb-v15-<ngày-giờ>\\
@@ -77,7 +77,7 @@ def cmd_tao(c: Client, args) -> None:
             if len(match) != 1:
                 raise SystemExit(f"Không xác định được xe '{fam['vehicle_match']}' trong {[o['name'] for o in options]}")
             p = c.call("POST", f"{API}/projects", {"name": f"AEB đối chiếu bench · {match[0]['name']}",
-                                                   "description": "Ca xe + người của 4 đợt carla-ped-bench, chạy lại có AEB (phutro aeb/).",
+                                                   "description": "Mọi ca của 4 đợt carla-ped-bench, chạy lại có AEB (phutro aeb/).",
                                                    "carla_vehicle_model_id": match[0]["id"]})
             state["projects"][bench_vehicle] = {"id": p["id"], "vehicle": match[0]["name"]}
             save_state(state)
@@ -88,10 +88,10 @@ def cmd_tao(c: Client, args) -> None:
         pid = state["projects"][bench_vehicle]["id"]
         created = c.call("POST", f"{API}/families", {
             "name": fam["name"], "category": "CP_CROSSING",
-            "description": "Ca combined của carla-ped-bench; AEB VehicSim thay lệnh phanh cố định.",
+            "description": "Ca của 4 đợt carla-ped-bench (phutro aeb/); AEB VehicSim thay lệnh phanh cố định.",
             "ego_speeds_kmh": fam["ego_speeds_kmh"], "trigger_distances_m": fam["trigger_distances_m"],
-            "pedestrian_speeds_mps": fam["pedestrian_speeds_mps"], "stops_at_curb": [False],
-            "weathers": ["CLEAR"], "times_of_day": ["DAY"], "run_baseline": False}, project=pid)
+            "pedestrian_speeds_mps": fam["pedestrian_speeds_mps"], "stops_at_curb": [fam["stops_at_curb"]],
+            "weathers": [fam["weather"]], "times_of_day": ["DAY"], "run_baseline": False}, project=pid)
         if created["variants"] != len(fam["variants"]):
             raise SystemExit(f"Họ {fam['key']}: VehicSim sinh {created['variants']} biến thể, bien_the.json có {len(fam['variants'])}")
         state["families"][fam["key"]] = {"scenario_id": created["scenario_id"], "project_id": pid, "ran": []}
